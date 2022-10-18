@@ -14,8 +14,8 @@
 	const nameChanger = (event: CustomEvent<any>) => {
 		const { id, name } = event.detail;
 		let currentItemIndex = listItems.findIndex((e: listItemInterface) => e.id === id);
-
 		let currentItem = listItems[currentItemIndex];
+
 		listItems = listItems.map((e: listItemInterface) => {
 			if (e.id - 1 === currentItemIndex) {
 				return { ...currentItem, name: currentItem.name + currentItem.id };

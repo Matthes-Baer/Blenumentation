@@ -4,7 +4,8 @@
 
 import '@testing-library/jest-dom';
 
-import { render, screen } from '@testing-library/svelte';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/svelte';
+import { debug } from 'svelte/internal';
 import Comp from '../components/comp.svelte';
 import routeComp from '../routes/+page.svelte';
 import type { listItemInterface } from '../utils/interfaces';
@@ -24,8 +25,21 @@ describe('comp.svelte', () => {
 
 	test('shows correct amount of listItems in Comp', () => {
 		render(Comp, { name: '', list: listItems });
-		const items = screen.getAllByTestId('listItem');
-		expect(items.length).toBe(3);
+		const button: HTMLElement[] = screen.getAllByRole('button', {
+			name: 'Click Here For a Change'
+		});
+		expect(button.length).toBe(3);
+	});
+
+	test('first render of listItems', async () => {
+		const results = render(Comp, { name: '', list: listItems });
+		// const button: HTMLElement[] = results.getAllByRole('button', {
+		// 	name: 'Click Here For a Change'
+		// });
+		expect(results.getByText('name: item1')).toBeInTheDocument();
+
+		// await fireEvent.click(button[0]);
+		// console.log(listItems);
 	});
 });
 

@@ -1,5 +1,8 @@
 <script lang="ts">
+	// dispatch action as forward to parent element (to the element where the state sits)
+	// Forwards between are not needed - just add the on:... logic and Svelte automatically passes it
 	import { createEventDispatcher } from 'svelte';
+
 	import type { listItemInterface } from '../utils/interfaces';
 
 	export let name: string;
@@ -26,7 +29,7 @@
 <button on:click={handleClick}>Button was pressed {counter} times</button>
 
 {#each list as listItem}
-	<ol data-testid="listItem">
+	<ol data-testid={listItem.id + 'itemID'}>
 		<li>id: {listItem.id}</li>
 		<li>name: {listItem.name}</li>
 		<li>
