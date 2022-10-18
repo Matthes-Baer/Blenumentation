@@ -27,8 +27,12 @@
 
 <h1>Hello {name} (inside the TestComponent)</h1>
 
-<button on:click={handleClick}>Button was pressed {counter} times & Show current</button>
-<input bind:value={bindInputText} placeholder="two-way bind with bindInputText..." />
+<button on:click={handleClick}>Button was pressed {counter} times</button>
+<input
+	data-testid="bindInputTextField"
+	bind:value={bindInputText}
+	placeholder="two-way bind with bindInputText..."
+/>
 
 {#each list as listItem}
 	<ol data-testid={listItem.id + 'itemID'}>
