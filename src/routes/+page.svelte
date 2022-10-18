@@ -1,6 +1,10 @@
 <script lang="ts">
+	import { bind } from 'svelte/internal';
+
+	// Use $: for rerender/update purposes of states
 	import TestComponent from '../components/comp.svelte';
 	import type { listItemInterface } from '../utils/interfaces';
+	export let bindInputText: string;
 
 	export let name: string;
 	name = 'Matthes';
@@ -18,7 +22,7 @@
 
 		listItems = listItems.map((e: listItemInterface) => {
 			if (e.id - 1 === currentItemIndex) {
-				return { ...currentItem, name: currentItem.name + currentItem.id };
+				return { ...currentItem, name: bindInputText };
 			} else {
 				return { ...e };
 			}
@@ -28,5 +32,11 @@
 
 <h1>Welcome to SvelteKit, {name}</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<p>This is the current bindInputText: {bindInputText}</p>
 <h2>Here is the TestComponent:</h2>
-<TestComponent name={'TestComponentPropName'} list={listItems} on:nameReducer={nameChanger} />
+<TestComponent
+	bind:bindInputText
+	name={'TestComponentPropName'}
+	list={listItems}
+	on:nameReducer={nameChanger}
+/>

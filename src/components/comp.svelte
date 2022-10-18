@@ -7,6 +7,7 @@
 
 	export let name: string;
 	export let list: listItemInterface[];
+	export let bindInputText: string;
 
 	let counter: number = 0;
 
@@ -26,7 +27,8 @@
 
 <h1>Hello {name} (inside the TestComponent)</h1>
 
-<button on:click={handleClick}>Button was pressed {counter} times</button>
+<button on:click={handleClick}>Button was pressed {counter} times & Show current</button>
+<input bind:value={bindInputText} placeholder="two-way bind with bindInputText..." />
 
 {#each list as listItem}
 	<ol data-testid={listItem.id + 'itemID'}>
