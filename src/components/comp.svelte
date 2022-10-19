@@ -18,6 +18,7 @@
 
 	// The unsubscribe (onDestroy) is important so the application stays efficient and fast
 	onMount(() => {
+		// onMount can be helpful when one would fetch the initial value of the store data from a database, for example. This way the store will be populated "onMount".
 		console.log('Component mounted');
 	});
 	onDestroy(() => {
