@@ -2,21 +2,31 @@
 	// dispatch action as forward to parent element (to the element where the state sits)
 	// Forwards between are not needed - just add the on:... logic and Svelte automatically passes it
 	import { createEventDispatcher } from 'svelte';
-
 	import type { listItemInterface } from '../utils/interfaces';
-
 	export let name: string;
 	export let list: listItemInterface[];
 	export let bindInputText: string;
 
-	let counter: number = 0;
+	// To access states more efficiently, the concept of stores is used
+	// The initial state is declared in the testStore.ts file
+	import { testStore } from '../stores/testStore';
+	let alltestData: string[];
+	let testStoreUnsub = testStore.subscribe((data) => (alltestData = data));
+	import { onMount, onDestroy } from 'svelte';
 
+	// The unsubscribe (onDestroy) is important so the application stays efficient and fast
+	onMount(() => {
+		console.log('Component mounted');
+	});
+	onDestroy(() => {
+		testStoreUnsub();
+	});
+
+	let counter: number = 0;
 	function handleClick(): void {
 		counter++;
 	}
-
 	const dispatch = createEventDispatcher();
-
 	const eventClick: <T, U>(id: T, name: U) => void = (id, name) => {
 		dispatch('nameReducer', {
 			id,
@@ -44,4 +54,11 @@
 			>
 		</li>
 	</ol>
+{/each}
+
+<h2>Data accessed via store:</h2>
+{#each alltestData as singleData}
+	<div>
+		{singleData}
+	</div>
 {/each}
