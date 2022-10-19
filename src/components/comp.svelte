@@ -66,9 +66,10 @@
 {/each}
 
 <h2>Data accessed via store:</h2>
-{#each alltestData as singleData}
+{#each alltestData as singleData, i}
 	<div>
 		{singleData}
+		<button on:click={() => testStore.deleteCurrentEntry(i)}>Delete current data entry</button>
 	</div>
 {/each}
 

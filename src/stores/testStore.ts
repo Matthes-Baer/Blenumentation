@@ -10,11 +10,19 @@ const createTestStore = () => {
 		update((e) => [...e, inputString]);
 	};
 
+	const deleteCurrentEntry = (id: number) => {
+		update((e) => {
+			e.splice(id, 1);
+			return e;
+		});
+	};
+
 	return {
 		subscribe,
 		set,
 		update,
-		addNewTestData
+		addNewTestData,
+		deleteCurrentEntry
 	};
 };
 
