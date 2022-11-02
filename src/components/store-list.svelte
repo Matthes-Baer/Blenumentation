@@ -42,7 +42,7 @@
 >
 
 <style>
-	.deny {
+	:global(.deny) {
 		color: red;
 	}
 
