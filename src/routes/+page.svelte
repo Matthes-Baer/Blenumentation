@@ -46,5 +46,5 @@
 	bind:bindInputText
 	name={'TestComponentPropName'}
 	list={listItems}
-	on:nameReducer={nameChanger}
+	on:nameChanger={nameChanger}
 />

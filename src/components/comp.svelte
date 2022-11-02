@@ -27,7 +27,7 @@
 
 	// The following logic is supposed to add a new entry to the current testStore data (I'm using the allTestData from the subscribe to access the current store value)
 	// In order to adjust the state, you can also add respective function within the store itself which can help to avoid DRY applications
-	let bindStoreEntryString: string;
+	let bindStoreEntryString: string = '';
 	// const createNewDataEntryInStore: (a: string) => void = (inputString: string): void => {
 	// 	testStore.set([...alltestData, inputString]);
 	// };
@@ -38,7 +38,8 @@
 	}
 	const dispatch = createEventDispatcher();
 	const eventClick: <T, U>(id: T, name: U) => void = (id, name) => {
-		dispatch('nameReducer', {
+		// With the dispatch I have access to a function I declared in the parent component
+		dispatch('nameChanger', {
 			id,
 			name
 		});
@@ -74,7 +75,21 @@
 	</div>
 {/each}
 
-<input type="text" bind:value={bindStoreEntryString} />
+<input
+	type="text"
+	bind:value={bindStoreEntryString}
+	class={bindStoreEntryString.length > 3 ? 'access' : 'deny'}
+/>
 <button on:click={() => testStore.addNewTestData(bindStoreEntryString)}
 	>Click in order to add {bindStoreEntryString} to the testStore data</button
 >
+
+<style>
+	.deny {
+		color: red;
+	}
+
+	.access {
+		color: black;
+	}
+</style>

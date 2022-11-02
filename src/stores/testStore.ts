@@ -5,9 +5,14 @@ import { writable } from 'svelte/store';
 
 // This approach actually allows to specify which functions one would like to use in order to adjust the testStore data (similar coding results as reducers in React Redux I think)
 const createTestStore = () => {
-	const { subscribe, set, update } = writable(['test1', 'test2', 'test3']);
+	const { subscribe, set, update } = writable<string[]>([]);
+
 	const addNewTestData = (inputString: string) => {
-		update((e) => [...e, inputString]);
+		if (inputString.length > 3) {
+			update((e) => [...e, inputString]);
+			return;
+		}
+		alert('input length not sufficient! (min 4 characters)');
 	};
 
 	const deleteCurrentEntry = (id: number) => {
