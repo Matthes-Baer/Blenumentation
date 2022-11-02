@@ -3,6 +3,7 @@
 	// Forwards between are not needed - just add the on:... logic and Svelte automatically passes it
 	import { createEventDispatcher } from 'svelte';
 	import type { listItemInterface } from '../utils/interfaces';
+	import type { storeListInterface } from '../utils/interfaces';
 	export let name: string;
 	export let list: listItemInterface[];
 	export let bindInputText: string;
@@ -12,7 +13,7 @@
 	// While you can define functions within the respective store to adjust the state,
 	// you would have to subscribe to this store in the corresponding file in order to have access to the store data (or pass it down)
 	import { testStore } from '../stores/testStore';
-	let alltestData: string[];
+	let alltestData: storeListInterface<string>[];
 	let testStoreUnsub = testStore.subscribe((data) => (alltestData = data));
 	import { onMount, onDestroy } from 'svelte';
 
@@ -24,13 +25,6 @@
 	onDestroy(() => {
 		testStoreUnsub();
 	});
-
-	// The following logic is supposed to add a new entry to the current testStore data (I'm using the allTestData from the subscribe to access the current store value)
-	// In order to adjust the state, you can also add respective function within the store itself which can help to avoid DRY applications
-	let bindStoreEntryString: string = '';
-	// const createNewDataEntryInStore: (a: string) => void = (inputString: string): void => {
-	// 	testStore.set([...alltestData, inputString]);
-	// };
 
 	let counter: number = 0;
 	function handleClick(): void {
@@ -66,30 +60,3 @@
 		</li>
 	</ol>
 {/each}
-
-<h2>Data accessed via store:</h2>
-{#each alltestData as singleData, i}
-	<div>
-		{singleData}
-		<button on:click={() => testStore.deleteCurrentEntry(i)}>Delete current data entry</button>
-	</div>
-{/each}
-
-<input
-	type="text"
-	bind:value={bindStoreEntryString}
-	class={bindStoreEntryString.length > 3 ? 'access' : 'deny'}
-/>
-<button on:click={() => testStore.addNewTestData(bindStoreEntryString)}
-	>Click in order to add {bindStoreEntryString} to the testStore data</button
->
-
-<style>
-	.deny {
-		color: red;
-	}
-
-	.access {
-		color: black;
-	}
-</style>

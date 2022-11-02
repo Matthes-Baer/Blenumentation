@@ -2,6 +2,7 @@
 	// Svelte provides out-of-the-box transitions like { fly } from 'svelte/transition'
 	// Use $: for rerender/update purposes of states
 	import TestComponent from '../components/comp.svelte';
+	import StoreListComponent from '../components/store-list.svelte';
 	import type { listItemInterface } from '../utils/interfaces';
 	export let bindInputText: string;
 	import { fly } from 'svelte/transition';
@@ -48,3 +49,4 @@
 	list={listItems}
 	on:nameChanger={nameChanger}
 />
+<StoreListComponent />
