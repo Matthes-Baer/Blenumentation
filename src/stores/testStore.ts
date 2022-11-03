@@ -12,13 +12,13 @@ const initialValue: storeListInterface<string>[] = [
 const createTestStore = () => {
 	const { subscribe, set, update } = writable<storeListInterface<string>[]>(initialValue);
 
-	// const addNewTestData = (inputString: string) => {
-	// 	if (inputString.length > 3) {
-	// 		update((e) => [...e, inputString]);
-	// 		return;
-	// 	}
-	// 	alert('input length not sufficient! (min 4 characters)');
-	// };
+	const addNewTestData = (inputObject: storeListInterface<string>) => {
+		if (inputObject.name.length > 3) {
+			update((e) => [...e, inputObject]);
+			return;
+		}
+		alert('input name length not sufficient! (min 4 characters)');
+	};
 
 	// const deleteCurrentEntry = (id: number) => {
 	// 	update((e) => {
@@ -30,8 +30,8 @@ const createTestStore = () => {
 	return {
 		subscribe,
 		set,
-		update
-		// addNewTestData,
+		update,
+		addNewTestData
 		// deleteCurrentEntry
 	};
 };
