@@ -6,5 +6,5 @@ export interface listItemInterface {
 export interface storeListInterface<T> {
 	id: string;
 	name: T;
-	significane: number;
+	significance: number;
 }

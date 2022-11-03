@@ -27,7 +27,7 @@
 <h2>Data accessed via store:</h2>
 {#each alltestData as singleData, i}
 	<div>
-		{singleData}
+		name: {singleData.name}
 		<button on:click={() => {}}>Delete current data entry</button>
 	</div>
 {/each}
@@ -37,7 +37,7 @@
 	bind:value={bindStoreEntryString}
 	class={bindStoreEntryString.length > 3 ? 'access' : 'deny'}
 />
-<button on:click={() => {}}
+<button on:click|preventDefault={() => {}}
 	>Click in order to add {bindStoreEntryString} to the testStore data</button
 >
 
