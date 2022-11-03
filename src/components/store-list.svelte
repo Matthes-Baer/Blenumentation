@@ -41,6 +41,10 @@
 	>Click in order to add {bindStoreEntryString} to the testStore data</button
 >
 
+<!-- <div on:click={() => console.log('parent div')}>
+	parent
+	<div on:click|stopPropagation={() => console.log('child div')}>child</div>
+</div> -->
 <style>
 	:global(.deny) {
 		color: red;
