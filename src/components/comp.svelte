@@ -43,8 +43,6 @@
 	};
 </script>
 
-<h1 class="deny">Hello {name} (inside the TestComponent)</h1>
-
 <button on:click={handleClick}>Button was pressed {counter} times</button>
 <input
 	data-testid="bindInputTextField"
