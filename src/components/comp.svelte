@@ -8,6 +8,9 @@
 	export let list: listItemInterface[];
 	export let bindInputText: string;
 
+	// this is a reactive declaration
+	$: reactiveDeclaration = 2;
+
 	// To access states more efficiently, the concept of stores is used
 	// The initial state is declared in the testStore.ts file
 	// While you can define functions within the respective store to adjust the state,

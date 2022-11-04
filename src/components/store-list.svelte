@@ -37,7 +37,7 @@
 	bind:value={bindStoreEntryString}
 	class={bindStoreEntryString.length > 3 ? 'access' : 'deny'}
 />
-<button on:click|preventDefault={() => {}}
+<button on:click|preventDefault|once|self={() => {}}
 	>Click in order to add {bindStoreEntryString} to the testStore data</button
 >
 
