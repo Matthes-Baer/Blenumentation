@@ -32,9 +32,16 @@
 			}
 		});
 	};
+
+	$: pageVariable = 'Welcome';
+	// function which gets passed to a component and is accessed in that component via dispatch
+	const pageFunction = (event: { detail: { id: string } }) => {
+		console.log('a function which got passed to a component', event.detail.id);
+		pageVariable = event.detail.id;
+	};
 </script>
 
-<h1>Welcome to SvelteKit, {name}</h1>
+<h1>{pageVariable} to SvelteKit, {name}</h1>
 <button on:click={() => (visible = !visible)}>click for visible change</button>
 {#if visible}
 	<p transition:fly={{ x: 200, duration: 1000 }}>
@@ -51,4 +58,4 @@
 	on:nameChanger={nameChanger}
 />
 <StoreListComponent />
-<Button testString={'Hello There'} />
+<Button on:pageFunction={pageFunction} testString={'Hello There'} />
