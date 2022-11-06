@@ -1,30 +1,26 @@
-import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/svelte';
-import StoreListComponent from '../components/store-list.svelte';
+import { fireEvent, render, screen } from '@testing-library/svelte';
+import Button from '../components/button.svelte';
 
-describe('comp.svelte', () => {
-	test('shows proper heading in component comp when rendered', () => {
-		render(StoreListComponent);
-		const heading = screen.getByRole('heading', { name: /Data accessed via store/i });
-		expect(heading).toBeInTheDocument();
+describe('Button Comp', () => {
+	test('find button', () => {
+		render(Button);
+		const button = screen.getByText('A button');
+
+		expect(button).toBeInTheDocument();
 	});
 
-	test('first render of initialValue of store', async () => {
-		const results = render(StoreListComponent);
-		// const button: HTMLElement[] = results.getAllByRole('button', {
-		// 	name: 'Click Here For a Change'
-		// });
-		expect(results.getByText('name: firstTest')).toBeInTheDocument();
+	test('find testString', () => {
+		render(Button, { props: { testString: '123Hello' } });
+		expect(screen.getByText('123Hello')).toBeInTheDocument();
+	});
 
-		// await fireEvent.click(button[0]);
-		// console.log(listItems);
+	test('text content does change on button click for testString', async () => {
+		render(Button, { props: { testString: 'start' } });
+		const button = screen.getByText('A button');
+		const textContent = screen.getByTestId('testVariableTestID');
+
+		expect(textContent).toHaveTextContent('start');
+		await fireEvent.click(button);
+		expect(textContent).toHaveTextContent('new one');
 	});
 });
-
-// describe('+page.svelte in /', () => {
-// 	test('shows proper in route +page when rendered', () => {
-// 		render(routeComp, { name: 'Matthes' });
-// 		const heading = screen.getByText(/Matthes/i);
-// 		expect(heading).toBeInTheDocument();
-// 	});
-// });

@@ -3,6 +3,7 @@
 	// Use $: for rerender/update purposes of states
 	import TestComponent from '../components/comp.svelte';
 	import StoreListComponent from '../components/store-list.svelte';
+	import Button from '../components/button.svelte';
 	import type { listItemInterface } from '../utils/interfaces';
 	export let bindInputText: string;
 	import { fly } from 'svelte/transition';
@@ -50,3 +51,4 @@
 	on:nameChanger={nameChanger}
 />
 <StoreListComponent />
+<Button testString={'Hello There'} />
