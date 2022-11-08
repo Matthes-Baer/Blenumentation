@@ -4,6 +4,7 @@
 	import TestComponent from '../components/comp.svelte';
 	import StoreListComponent from '../components/store-list.svelte';
 	import Button from '../components/button.svelte';
+	import Form from '../components/form.svelte';
 	import type { listItemInterface } from '../utils/interfaces';
 	export let bindInputText: string;
 	import { fly } from 'svelte/transition';
@@ -61,3 +62,5 @@
 />
 <StoreListComponent />
 <Button on:pageFunction={pageFunction} {testString} />
+
+<Form />

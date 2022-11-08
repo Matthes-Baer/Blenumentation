@@ -12,6 +12,7 @@
 </script>
 
 <div style="margin-top: 100px;">
+	<!-- Can also just be class:positive if the name of the class and the variable in the brackets is equal -->
 	<h1 class:positive={checker > 0}>
 		This is the grandchild.svelte component <button on:click={() => checker++}
 			>Make it greenyellow</button
