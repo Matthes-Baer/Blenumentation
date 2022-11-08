@@ -45,6 +45,7 @@
 </script>
 
 <h1>{pageVariable} to SvelteKit, {name}</h1>
+<p>This project is just like a playground to test different concepts of Svelte.</p>
 <button on:click={() => (visible = !visible)}>click for visible change</button>
 {#if visible}
 	<p transition:fly={{ x: 200, duration: 1000 }}>

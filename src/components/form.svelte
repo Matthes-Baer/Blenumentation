@@ -1,9 +1,10 @@
 <script lang="ts">
 	let options: string[] = [];
+	let textInput: { value: string };
 </script>
 
 <div class="d-flex align-items-center flex-column">
-	<h2>What is your favourite activty?</h2>
+	<h2>What is your favourite activty? bind:group testing</h2>
 	<label>
 		<input type="checkbox" name="sports" value="sports" bind:group={options} />
 		sports
@@ -25,4 +26,10 @@
 	</label>
 
 	<h3>{options.join(', ')}</h3>
+
+	<h2>bind:this testing</h2>
+	<label>
+		<input type="text" name="textInput" value="" bind:this={textInput} />
+	</label>
+	<button on:click={() => (textInput.value = '')}>reset textInput via bind:this</button>
 </div>
