@@ -14,5 +14,6 @@
 	<h2 data-testid="testVariableTestID">{testString}</h2>
 	<button type="submit" on:click={mockFunction}>A button</button>
 	For event forwarding, you don't have to recreate any bubbling effects - just put "on:dispatchname"
-	on the component in between to hand it out to the further corresponding parent component.
+	on the component in between to hand it out to the further corresponding parent component. This also
+	works as attribute for elements (dispatch with the same name is output)
 </div>
