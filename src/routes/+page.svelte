@@ -34,10 +34,12 @@
 	};
 
 	$: pageVariable = 'Welcome';
+	$: testString = 'start';
 	// function which gets passed to a component and is accessed in that component via dispatch
 	const pageFunction = (event: { detail: { id: string } }) => {
 		console.log('a function which got passed to a component', event.detail.id);
 		pageVariable = event.detail.id;
+		testString = 'afterwards';
 	};
 </script>
 
@@ -58,4 +60,4 @@
 	on:nameChanger={nameChanger}
 />
 <StoreListComponent />
-<Button on:pageFunction={pageFunction} testString={'Hello There'} />
+<Button on:pageFunction={pageFunction} {testString} />

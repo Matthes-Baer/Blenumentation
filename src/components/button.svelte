@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Grandchild from './grandchild.svelte';
 	// Testing around following youtube course
 	import { tick } from 'svelte';
 	let count: number = 2;
@@ -15,22 +16,14 @@
 		// });
 	};
 
-	// this is necessary in order to access function which got sent as a prop to this component (event)
-	import { createEventDispatcher } from 'svelte';
-	const dispatch = createEventDispatcher();
-
 	export let testString: string;
-	export const mockFunction = (): void => {
-		testString = 'new one';
-
-		// dispatch logic to access function in the parent route
-		dispatch('pageFunction', { id: 'Hello' });
-	};
 </script>
 
-<div>
+<div style="margin-top: 100px;">
 	<h1>This is a button:</h1>
 	<h2 data-testid="testVariableTestID">{testString}</h2>
-	<button type="submit" on:click={mockFunction}>A button</button>
 	<button on:click={tickFunction}>reactive Variable and Tick Testing</button>
+	For event forwarding, you don't have to recreate any bubbling effects - just put "on:dispatchname"
+	on the component in between to hand it out to the further corresponding parent component.
+	<Grandchild on:pageFunction {testString} />
 </div>
