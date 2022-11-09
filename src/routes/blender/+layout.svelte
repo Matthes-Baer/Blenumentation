@@ -1,5 +1,8 @@
 <script>
 	import { sortedDocumentationData } from '../../data/blender/documentationData';
+	// Dahin gehdn responsive machen, dass es beispielsweise bei 1000px verschwindet und man dann auf eine Schaltfläche drücken muss, um es erneut anzuzeigen.
+	// Dann nicht mehr mit absolute arbeiten, sondern es so einstellen, dass es über die ganze Breite geht und es ganz oben am Anfang steht.
+	// Man sollte es auch wieder einklappen können
 </script>
 
 <nav class="nav-container d-flex flex-column">

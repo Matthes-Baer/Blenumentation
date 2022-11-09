@@ -5,7 +5,7 @@
 
 <div class="mainContainer">
 	<h1>This is a blender documentation</h1>
-	<div class="container">
+	<div class="">
 		{#each sortedDocumentationData as entry}
 			<SingleEntry name={entry.name} description={entry.description} keystroke={entry.keystroke} />
 		{/each}
