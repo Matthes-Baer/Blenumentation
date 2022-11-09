@@ -28,6 +28,8 @@
 	<h3>{options.join(', ')}</h3>
 
 	<h2>bind:this testing</h2>
+	<!-- This works both for elements and for components -->
+	<!-- Provides a reference one can reach out to -->
 	<label>
 		<input type="text" name="textInput" value="" bind:this={textInput} />
 	</label>

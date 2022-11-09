@@ -1,4 +1,4 @@
-<nav class="nav-container d-flex justify-content-end">
+<nav class="nav-container d-flex justify-content-end align-items-center">
 	<a href="/" class="nav-link-element">Home</a>
 	<a href="/about" class="nav-link-element">About</a>
 </nav>
@@ -8,7 +8,8 @@
 <style>
 	.nav-container {
 		width: 100%;
-		padding: 15px;
+		height: 75px;
+		padding: 10px;
 		box-shadow: 1px 2px 2px 2px #252525;
 		background-color: aliceblue;
 	}
