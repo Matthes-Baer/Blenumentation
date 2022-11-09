@@ -25,6 +25,13 @@
 		margin-right: 10px;
 		text-decoration: none;
 		color: #252525;
-		font-size: 25px;
+		font-size: 15px;
+		padding: 10px;
+		border-bottom: 1px solid black;
+		transition: all 0.1s;
+	}
+
+	.nav-link-element:hover {
+		font-weight: bold;
 	}
 </style>
