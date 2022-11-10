@@ -6,7 +6,7 @@
 <div class="mainContainer">
 	<h1>This is a blender documentation</h1>
 	<div class="">
-		{#each sortedDocumentationData as entry}
+		{#each sortedDocumentationData as entry (entry.name)}
 			<SingleEntry name={entry.name} description={entry.description} keystroke={entry.keystroke} />
 		{/each}
 	</div>

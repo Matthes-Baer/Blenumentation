@@ -6,7 +6,7 @@
 </script>
 
 <nav class="nav-container d-flex flex-column">
-	{#each sortedDocumentationData as entry}
+	{#each sortedDocumentationData as entry (entry.name)}
 		<a href={`#${entry.name}`} class="nav-link-element">{entry.name}</a>
 	{/each}
 </nav>
