@@ -8,8 +8,8 @@
 	export let list: listItemInterface[];
 	export let bindInputText: string;
 
-	// this is a reactive declaration
-	$: reactiveDeclaration = 2;
+	// this would be a reactive declaration template (every time the parameter (a value, for example) changes, this gets reinitialized/computed again/rerendered):
+	// $: function(parameter)
 
 	// To access states more efficiently, the concept of stores is used
 	// The initial state is declared in the testStore.ts file
