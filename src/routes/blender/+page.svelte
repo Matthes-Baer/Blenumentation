@@ -17,5 +17,13 @@
 		width: 90%;
 		margin-left: 10%;
 		background-color: green;
+		transition: all 0.1s;
+	}
+
+	@media only screen and (max-width: 1200px) {
+		.mainContainer {
+			width: 100%;
+			margin-left: 0;
+		}
 	}
 </style>
