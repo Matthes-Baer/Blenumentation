@@ -7,6 +7,7 @@
 	export let name: string;
 	export let list: listItemInterface[];
 	export let bindInputText: string;
+	import { tweened } from 'svelte/motion';
 
 	// this would be a reactive declaration template (every time the parameter (a value, for example) changes, this gets reinitialized/computed again/rerendered):
 	// $: function(parameter)
@@ -41,9 +42,22 @@
 			name
 		});
 	};
+
+	let value = tweened(0, { duration: 5000 });
 </script>
 
 <button on:click={handleClick}>Button was pressed {counter} times</button>
+<button
+	on:click={() => {
+		$value = 10;
+	}}>+</button
+>
+<button
+	on:click={() => {
+		$value = -10;
+	}}>-</button
+>
+<h3>{$value}</h3>
 <input
 	data-testid="bindInputTextField"
 	bind:value={bindInputText}
