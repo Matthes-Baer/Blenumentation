@@ -21,6 +21,7 @@ const documentationData: documentationDataInterface[] = [
 	}
 ];
 
+// alphabetical sort function
 export const sortedDocumentationData = documentationData.sort(
 	(a: documentationDataInterface, b: documentationDataInterface) => {
 		const upperCaseA = a.name.toUpperCase();
