@@ -1,10 +1,16 @@
 <script lang="ts">
+	import { getContext } from 'svelte';
+
+	const count = getContext('value');
+
 	let options: string[] = [];
 	let textInput: { value: string };
 </script>
 
 <div class="d-flex align-items-center flex-column">
 	<h2>What is your favourite activty? bind:group testing</h2>
+	<!-- Zwar Fehlermeldung im Editor, aber es funktioniert -->
+	<h3>{$count}</h3>
 	<label>
 		<input type="checkbox" name="sports" value="sports" bind:group={options} />
 		sports

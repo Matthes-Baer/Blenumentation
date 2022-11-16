@@ -9,6 +9,12 @@
 	export let bindInputText: string;
 	import { fly } from 'svelte/transition';
 
+	import { setContext } from 'svelte';
+	import { writable } from 'svelte/store';
+
+	const count = writable(100);
+	setContext('value', count);
+
 	export let name: string;
 	name = 'Matthes';
 
@@ -54,6 +60,8 @@
 {/if}
 
 <p>This is the current bindInputText: {bindInputText}</p>
+<button on:click={() => $count++}>+ für store (für setContext)</button>
+<button on:click={() => $count--}>- für store (für setContext)</button>
 <h2>Here is the TestComponent:</h2>
 <TestComponent
 	bind:bindInputText
