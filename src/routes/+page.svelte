@@ -60,8 +60,7 @@
 {/if}
 
 <p>This is the current bindInputText: {bindInputText}</p>
-<button on:click={() => $count++}>+ für store (für setContext)</button>
-<button on:click={() => $count--}>- für store (für setContext)</button>
+
 <h2>Here is the TestComponent:</h2>
 <TestComponent
 	bind:bindInputText
@@ -72,4 +71,7 @@
 <StoreListComponent />
 <Button on:pageFunction={pageFunction} {testString} />
 
+<button on:click={() => $count++}>+ für store (für setContext) - reactive</button>
+<h3>{$count}</h3>
+<button on:click={() => $count--}>- für store (für setContext) - reactive</button>
 <Form />
