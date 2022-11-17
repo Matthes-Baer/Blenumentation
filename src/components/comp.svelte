@@ -45,6 +45,13 @@
 	};
 
 	let value = tweened(0, { duration: 5000, easing: cubicOut });
+
+	// Wählt Input-Feld ab bei Escape-Taste
+	function escapeFunction(event: any) {
+		if (event.key === 'Escape') {
+			event.currentTarget.blur();
+		}
+	}
 </script>
 
 <button on:click={handleClick}>Button was pressed {counter} times</button>
@@ -63,6 +70,7 @@
 	data-testid="bindInputTextField"
 	bind:value={bindInputText}
 	placeholder="two-way bind with bindInputText..."
+	on:keydown={escapeFunction}
 />
 
 {#each list as listItem}
