@@ -48,6 +48,21 @@
 		pageVariable = event.detail.id;
 		testString = 'afterwards';
 	};
+
+	// function used as a action event handler (important: remove eventListener on return (destroy))
+	function actionHandler(element: HTMLButtonElement) {
+		function onClick() {
+			console.log('clicked on by action event handler');
+		}
+
+		element.addEventListener('click', onClick);
+
+		return {
+			destroy() {
+				element.removeEventListener('click', onClick);
+			}
+		};
+	}
 </script>
 
 <svelte:head>
@@ -78,4 +93,5 @@
 <button on:click={() => $count++}>+ für store (für setContext) - reactive</button>
 <h3>{$count}</h3>
 <button on:click={() => $count--}>- für store (für setContext) - reactive</button>
+<button use:actionHandler>Action Event Handler on Click</button>
 <Form />
