@@ -18,6 +18,11 @@ const documentationData: documentationDataInterface[] = [
 		description:
 			'Click on multiple objects to group them together. It is important which object gets selected last since this decides where the main axis is for rotating the group, for example',
 		keystroke: 'Strg + J'
+	},
+	{
+		name: 'Add Object to collection',
+		description: 'Click on the object and select the respective collection',
+		keystroke: 'm'
 	}
 ];
 
