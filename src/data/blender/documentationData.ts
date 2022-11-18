@@ -23,7 +23,8 @@ const documentationData: documentationDataInterface[] = [
 		name: 'Add Object to collection',
 		description: 'Click on the object and select the respective collection',
 		keystroke: 'm'
-	}
+	},
+	{ name: 'Pan View', description: 'Freely move the camera around', keystroke: 'Shift + MMB' }
 ];
 
 // alphabetical sort function
