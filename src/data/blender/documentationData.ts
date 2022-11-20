@@ -24,14 +24,22 @@ const documentationData: documentationDataInterface[] = [
 		description: 'Click on the object and select the respective collection',
 		keystroke: 'm'
 	},
-	{ name: 'Pan View', description: 'Freely move the camera around', keystroke: 'Shift + MMB' }
+	{ name: 'Pan View', description: 'Freely move the camera around', keystroke: 'Shift + MMB' },
+	{ name: 'Move view to an object', description: 'Click on an object', keystroke: '.' }
 ];
 
 // alphabetical sort function
 export const sortedDocumentationData = documentationData.sort(
-	(a: documentationDataInterface, b: documentationDataInterface) => {
-		const upperCaseA = a.name.toUpperCase();
-		const upperCaseB = b.name.toUpperCase();
-		return upperCaseA.charCodeAt(0) - upperCaseB.charCodeAt(0);
+	(a: documentationDataInterface, b: documentationDataInterface): any => {
+		const upperCaseA = a.name.toUpperCase().split('');
+		const upperCaseB = b.name.toUpperCase().split('');
+
+		for (let i = 0; i < Math.max(upperCaseA.length, upperCaseB.length); i++) {
+			if (upperCaseA[i] == upperCaseB[i]) {
+				continue;
+			} else {
+				return upperCaseA.join('').charCodeAt(i) - upperCaseB.join('').charCodeAt(i);
+			}
+		}
 	}
 );
