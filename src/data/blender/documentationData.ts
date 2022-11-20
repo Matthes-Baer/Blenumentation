@@ -37,9 +37,8 @@ export const sortedDocumentationData = documentationData.sort(
 		for (let i = 0; i < Math.max(upperCaseA.length, upperCaseB.length); i++) {
 			if (upperCaseA[i] == upperCaseB[i]) {
 				continue;
-			} else {
-				return upperCaseA.join('').charCodeAt(i) - upperCaseB.join('').charCodeAt(i);
 			}
+			return upperCaseA.join('').charCodeAt(i) - upperCaseB.join('').charCodeAt(i) || 0;
 		}
 	}
 );

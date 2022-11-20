@@ -15,14 +15,15 @@
 
 <style>
 	.nav-container {
-		width: 10%;
-		height: 500px;
+		width: 15%;
+		height: 50%;
 		padding: 15px;
 		border: 1px solid black;
 		background-color: aliceblue;
 		position: absolute;
 		top: 75px;
 		transition: all 0.1s;
+		overflow-y: scroll;
 	}
 	.nav-link-element {
 		margin-left: 10px;
@@ -37,6 +38,11 @@
 
 	.nav-link-element:hover {
 		font-weight: bold;
+	}
+
+	/* This way the scroll bar disappears - https://www.geeksforgeeks.org/how-to-change-the-position-of-scrollbar-using-css/ */
+	::-webkit-scrollbar {
+		width: 0px;
 	}
 
 	@media only screen and (max-width: 1200px) {

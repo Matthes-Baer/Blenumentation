@@ -14,8 +14,8 @@
 
 <style>
 	.mainContainer {
-		width: 90%;
-		margin-left: 10%;
+		width: 85%;
+		margin-left: 15%;
 		background-color: green;
 		transition: all 0.1s;
 	}
