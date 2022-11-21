@@ -22,10 +22,26 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Add Object to collection',
 		description: 'Click on the object and select the respective collection',
-		keystroke: 'm'
+		keystroke: 'M'
 	},
 	{ name: 'Pan View', description: 'Freely move the camera around', keystroke: 'Shift + MMB' },
-	{ name: 'Move view to an object', description: 'Click on an object', keystroke: '.' }
+	{ name: 'Move view to an object', description: 'Click on an object', keystroke: '.' },
+	{
+		name: 'Switch between different Shading modes',
+		description: 'Switch between "Rendered", "Solid", "Material Preview", and "Wireframe"',
+		keystroke: 'Z'
+	},
+	{
+		name: 'Enter Edit Mode',
+		description: 'Change edges, vertices and faces of an object',
+		keystroke: 'Tab'
+	},
+	{
+		name: 'Receive specific location data for an object',
+		description:
+			'Click on an object and press the corresponding key. It Opens the menu for "Item", "Tool", "View", "Edit"',
+		keystroke: 'N'
+	}
 ];
 
 // alphabetical sort function
