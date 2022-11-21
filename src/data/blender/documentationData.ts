@@ -41,6 +41,17 @@ const documentationData: documentationDataInterface[] = [
 		description:
 			'Click on an object and press the corresponding key. It Opens the menu for "Item", "Tool", "View", "Edit"',
 		keystroke: 'N'
+	},
+	{
+		name: 'Loop Select',
+		description: 'Click on an Edge, Vertex or face with Edit Mode on (Tab)',
+		keystroke: 'Alt'
+	},
+	{
+		name: 'Shortest Path Selection Tool',
+		description:
+			'Click on an Edge, Vertex or face with Edit Mode on (Tab), then click on another one',
+		keystroke: 'Strg'
 	}
 ];
 
