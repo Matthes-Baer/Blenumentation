@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { fade, slide, fly, scale } from 'svelte/transition';
+
 	export let name: string;
 	export let description: string;
 	export let keystroke: string;
@@ -51,7 +53,7 @@
 	</div>
 
 	{#if hovered}
-		<div style="top: {y}px; left: {x}px;" class="modalTest text-center">
+		<div in:scale out:scale style="top: {y}px; left: {x}px;" class="modalTest text-center">
 			<h1>{keystroke}</h1>
 		</div>
 	{/if}
