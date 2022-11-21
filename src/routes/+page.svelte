@@ -95,3 +95,9 @@
 <button on:click={() => $count--}>- für store (für setContext) - reactive</button>
 <button use:actionHandler>Action Event Handler on Click</button>
 <Form />
+
+<div>
+	Install for Svelte (SvelteKit), incl. TypeScript:
+	https://blog.stranianelli.com/test-sveltekit-app-with-jest-english/ Add SCSS to Svelte:
+	https://blog.hao.dev/how-to-add-scss-or-sass-to-sveltekit
+</div>
