@@ -9,13 +9,23 @@
 
 	function mouseOver(event: { pageX: number; pageY: number }) {
 		hovered = true;
-		x = event.pageX + 10;
-		y = event.pageY + 10;
+		x = event.pageX - 250;
+		y = event.pageY + 15;
+
+		if (x < 0) {
+			x = 0;
+		}
 	}
 
 	function mouseMove(event: { pageX: number; pageY: number }) {
-		x = event.pageX + 10;
-		y = event.pageY + 10;
+		x = event.pageX - 250;
+		y = event.pageY + 15;
+
+		if (x < 0) {
+			x = 0;
+		}
+
+		console.log(x, y);
 	}
 
 	function mouseLeave() {
@@ -24,13 +34,18 @@
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-<div on:mouseover={mouseOver} on:mouseleave={mouseLeave} on:mousemove={mouseMove} class="row">
+<div
+	on:mouseover={mouseOver}
+	on:mouseleave={mouseLeave}
+	on:mousemove={mouseMove}
+	class="row p-2 ms-1 singleEntry"
+>
 	<h3 class="col-sm-3" id={name}>{name}:</h3>
-	<div class="col-sm-7 row" style="background-color: blue ;">
-		<div class="col-sm-8">
+	<div class="col-sm-7 row">
+		<div class="col-sm-8 singleEntryDescription">
 			{description}
 		</div>
-		<div class="col-sm-4">
+		<div class="col-sm-4 d-flex singleEntryKeystroke">
 			{keystroke}
 		</div>
 	</div>
@@ -42,11 +57,28 @@
 	{/if}
 </div>
 
-<style>
+<style lang="scss">
+	.single {
+		&Entry {
+			border-bottom: 1px solid #252525;
+
+			&Description {
+				font-size: 25px;
+				border-right: 1px solid #252525;
+			}
+
+			&Keystroke {
+				margin-top: auto;
+				margin-bottom: auto;
+				font-size: 30px;
+				font-weight: 700;
+			}
+		}
+	}
+
 	.modalTest {
 		position: absolute;
 		width: 250px;
-		background-color: antiquewhite;
 		border: 1px solid black;
 	}
 </style>

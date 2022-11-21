@@ -10,8 +10,8 @@
 		width: 100%;
 		height: 75px;
 		padding: 10px;
-		box-shadow: 1px 2px 2px 2px #252525;
 		background-color: aliceblue;
+		border-bottom: 1px solid #252525;
 	}
 	.nav-link-element {
 		margin-left: 10px;

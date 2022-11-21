@@ -18,8 +18,7 @@
 		width: 15%;
 		height: 50%;
 		padding: 15px;
-		border: 1px solid black;
-		background-color: aliceblue;
+		border-right: 1px solid black;
 		position: absolute;
 		top: 75px;
 		transition: all 0.1s;

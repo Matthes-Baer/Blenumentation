@@ -4,8 +4,8 @@
 </script>
 
 <div class="mainContainer">
-	<h1>This is a blender documentation</h1>
-	<div class="">
+	<h1 class="ms-2">This is a blender documentation</h1>
+	<div>
 		{#each sortedDocumentationData as entry (entry.name)}
 			<SingleEntry name={entry.name} description={entry.description} keystroke={entry.keystroke} />
 		{/each}
@@ -13,10 +13,14 @@
 </div>
 
 <style>
+	:global(div) {
+		background-color: #edede9;
+		overflow-x: hidden;
+	}
+
 	.mainContainer {
 		width: 85%;
 		margin-left: 15%;
-		background-color: green;
 		transition: all 0.1s;
 	}
 
