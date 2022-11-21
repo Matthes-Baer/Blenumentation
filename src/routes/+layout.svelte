@@ -10,7 +10,7 @@
 		width: 100%;
 		height: 75px;
 		padding: 10px;
-		background-color: aliceblue;
+		background-color: #d6ccc2;
 		border-bottom: 1px solid #252525;
 	}
 	.nav-link-element {

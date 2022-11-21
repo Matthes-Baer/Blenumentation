@@ -23,6 +23,7 @@
 		top: 75px;
 		transition: all 0.1s;
 		overflow-y: scroll;
+		background-color: #f5ebe0;
 	}
 	.nav-link-element {
 		margin-left: 10px;
@@ -51,6 +52,7 @@
 			width: 100%;
 			height: 200px;
 			overflow-y: scroll;
+			border-right: none;
 		}
 	}
 </style>

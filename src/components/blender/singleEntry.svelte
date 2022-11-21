@@ -26,8 +26,6 @@
 		if (x < 0) {
 			x = 0;
 		}
-
-		console.log(x, y);
 	}
 
 	function mouseLeave() {
@@ -83,4 +81,10 @@
 		width: 250px;
 		border: 1px solid black;
 	}
+
+	// @media (prefers-reduced-motion: reduce) {
+	// 	* {
+	// 		animation-duration: 0 !important;
+	// 	}
+	// }
 </style>
