@@ -12,9 +12,9 @@ describe('Testing singleEntry component', () => {
 			description: firstDataEntry?.description || 'TS-fallback',
 			keystroke: firstDataEntry?.keystroke || 'TS-fallback'
 		});
-		const name = await screen.findByTestId('data-entry-name');
-		const description = await screen.findByTestId('data-entry-description');
-		const keystroke = await screen.findByTestId('data-entry-keystroke');
+		const name = await screen.findByText(firstDataEntry?.name + ':' || 'TS-fallback');
+		const description = await screen.findByText(firstDataEntry?.description || 'TS-fallback');
+		const keystroke = await screen.findByText(firstDataEntry?.keystroke || 'TS-fallback');
 
 		expect(name).toBeInTheDocument();
 		expect(description).toBeInTheDocument();
