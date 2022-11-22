@@ -1,0 +1,29 @@
+<script>
+</script>
+
+<section>
+	<p>
+		This project is my first Svelte application. Besides some beginner information, there is also a
+		hotkey documentation for Blender I created while learning Blender. There are some components
+		which are included in the GitHub repository but not implemented. These components solely serve
+		the purpose of trying out some Svelte stuff.
+	</p>
+
+	<h3>How to install Svelte with SvelteKit</h3>
+	<p>
+		<b>npm init svelte@next</b>
+		<a
+			href="https://blog.stranianelli.com/test-sveltekit-app-with-jest-english/"
+			alt="article on how to install Svelte and how to test Svelte applications with Jest"
+			>(see here)</a
+		>
+	</p>
+	<h3>How to add SCSS to a Svelte application</h3>
+	<p>
+		<b>npm i -D sass</b>
+		<a
+			href="https://blog.hao.dev/how-to-add-scss-or-sass-to-sveltekit"
+			alt="article on how to add scss to a svelte application">(see here)</a
+		>
+	</p>
+</section>

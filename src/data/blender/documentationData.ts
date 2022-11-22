@@ -69,6 +69,11 @@ const documentationData: documentationDataInterface[] = [
 		description:
 			'Adjust the origin point (Pivot point). Especially helpful when being in Edit Mode (Tab), for example to put the origin on an edge',
 		keystroke: 'Shift + S'
+	},
+	{
+		name: 'Reset Pivot Point',
+		description: 'Brings back the Pivot point to the starting position',
+		keystroke: 'Shift + C'
 	}
 ];
 
