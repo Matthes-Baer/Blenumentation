@@ -33,7 +33,8 @@ const documentationData: documentationDataInterface[] = [
 	},
 	{
 		name: 'Enter Edit Mode',
-		description: 'Change edges, vertices and faces of an object',
+		description:
+			'Change edges, vertices and faces of an object. This also helps with not changing the origin point (Pivot point) (for different rotations).',
 		keystroke: 'Tab'
 	},
 	{
@@ -57,6 +58,17 @@ const documentationData: documentationDataInterface[] = [
 		name: 'Proportional Editing Mode',
 		description: 'Click on the object',
 		keystroke: 'O'
+	},
+	{
+		name: 'Select the whole object in Edit Mode',
+		description: 'Click on the object and be within the Edit Mode (Tab)',
+		keystroke: 'A'
+	},
+	{
+		name: 'Cursor to selected',
+		description:
+			'Adjust the origin point (Pivot point). Especially helpful when being in Edit Mode (Tab), for example to put the origin on an edge',
+		keystroke: 'Shift + S'
 	}
 ];
 
