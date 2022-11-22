@@ -66,19 +66,45 @@
 </script>
 
 <svelte:head>
-	<title>Main Page</title>
+	<title>Home</title>
 </svelte:head>
 
-<h1>{pageVariable} to SvelteKit, {name}</h1>
-<p>This project is just like a playground to test different concepts of Svelte.</p>
-<button on:click={() => (visible = !visible)}>click for visible change</button>
-{#if visible}
+<main>
+	<h1>Home</h1>
+	<p>
+		This project is my first Svelte application. Besides some beginner information, there is also a
+		hotkey documentation for Blender I created while learning Blender.
+	</p>
+
+	<section />
+	<h3>How to install Svelte with SvelteKit</h3>
+	<p>
+		<b>npm init svelte@next</b>
+		<a
+			href="https://blog.stranianelli.com/test-sveltekit-app-with-jest-english/"
+			alt="article on how to install Svelte and how to test Svelte applications with Jest"
+			>(see here)</a
+		>
+	</p>
+	<h3>How to add SCSS to a Svelte application</h3>
+	<p>
+		<b>npm i -D sass</b>
+		<a
+			href="https://blog.hao.dev/how-to-add-scss-or-sass-to-sveltekit"
+			alt="article on how to add scss to a svelte application">(see here)</a
+		>
+	</p>
+</main>
+
+<!-- <button on:click={() => (visible = !visible)}>click for visible change</button> -->
+
+<!-- {#if visible}
 	<p transition:fly={{ x: 200, duration: 1000 }}>
 		Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
 	</p>
-{/if}
+{/if} -->
 
-<p>This is the current bindInputText: {bindInputText}</p>
+<!-- <p>This is the current bindInputText: {bindInputText}</p>
 
 <h2>Here is the TestComponent:</h2>
 <TestComponent
@@ -94,10 +120,4 @@
 <h3>{$count}</h3>
 <button on:click={() => $count--}>- für store (für setContext) - reactive</button>
 <button use:actionHandler>Action Event Handler on Click</button>
-<Form />
-
-<div>
-	Install for Svelte (SvelteKit), incl. TypeScript:
-	https://blog.stranianelli.com/test-sveltekit-app-with-jest-english/ Add SCSS to Svelte:
-	https://blog.hao.dev/how-to-add-scss-or-sass-to-sveltekit
-</div>
+<Form /> -->

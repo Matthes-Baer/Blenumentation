@@ -3,6 +3,10 @@
 	import { sortedDocumentationData } from '../../data/blender/documentationData';
 </script>
 
+<svelte:head>
+	<title>Blender Hotkey Documentation</title>
+</svelte:head>
+
 <div class="mainContainer">
 	<h1 class="ms-2">This is a blender documentation</h1>
 	<div>

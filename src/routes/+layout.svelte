@@ -1,6 +1,6 @@
 <nav class="nav-container d-flex justify-content-end align-items-center">
 	<a href="/" class="nav-link-element">Home</a>
-	<a href="/about" class="nav-link-element">About</a>
+	<a href="/blender" class="nav-link-element">Blender Hotkey Documentation</a>
 </nav>
 
 <slot />
@@ -19,5 +19,10 @@
 		text-decoration: none;
 		color: #252525;
 		font-size: 25px;
+		transition: all 0.1s;
+	}
+
+	.nav-link-element:hover {
+		transform: translateY(5px);
 	}
 </style>
