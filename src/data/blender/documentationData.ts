@@ -52,6 +52,11 @@ const documentationData: documentationDataInterface[] = [
 		description:
 			'Click on an Edge, Vertex or face with Edit Mode on (Tab), then click on another one',
 		keystroke: 'Strg'
+	},
+	{
+		name: 'Proportional Editing Mode',
+		description: 'Click on the object',
+		keystroke: 'O'
 	}
 ];
 

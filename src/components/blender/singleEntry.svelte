@@ -82,6 +82,7 @@
 		border: 1px solid black;
 	}
 
+	// Siehe Youtube-Kurs ca. 20:19:00
 	// @media (prefers-reduced-motion: reduce) {
 	// 	* {
 	// 		animation-duration: 0 !important;
