@@ -40,12 +40,12 @@
 	on:mousemove={mouseMove}
 	class="row p-2 ms-1 singleEntry"
 >
-	<h3 class="col-sm-3" id={name}>{name}:</h3>
+	<h3 class="col-sm-3" id={name} data-testid="data-entry-name">{name}:</h3>
 	<div class="col-sm-7 row">
-		<div class="col-sm-8 singleEntryDescription">
+		<div class="col-sm-8 singleEntryDescription" data-testid="data-entry-description">
 			{description}
 		</div>
-		<div class="col-sm-4 d-flex singleEntryKeystroke">
+		<div class="col-sm-4 d-flex singleEntryKeystroke" data-testid="data-entry-keystroke">
 			{keystroke}
 		</div>
 	</div>
