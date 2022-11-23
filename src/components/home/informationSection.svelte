@@ -11,7 +11,8 @@
 			some beginner information and some sections where I tried out different Svelte features, there
 			is also a hotkey documentation for Blender I created while learning Blender. In addition,
 			there are some components that are included in the GitHub repository but are not implemented.
-			These components solely serve the purpose of trying out some Svelte stuff in the background.
+			These components solely serve the purpose of trying out some Svelte stuff in the background. I
+			also worked on unit tests with Jest for learning purposes.
 		</p>
 	</div>
 
