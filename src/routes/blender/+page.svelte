@@ -17,7 +17,7 @@
 </div>
 
 <style>
-	:global(div) {
+	:global(div, body, section) {
 		background-color: #edede9;
 		overflow-x: hidden;
 	}
