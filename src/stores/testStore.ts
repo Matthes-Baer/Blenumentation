@@ -10,29 +10,45 @@ const initialValue: storeListInterface<string>[] = [
 
 // This approach actually allows to specify which functions one would like to use in order to adjust the testStore data (similar coding results as reducers in React Redux I think)
 const createTestStore = () => {
-	const { subscribe, set, update } = writable<storeListInterface<string>[]>(initialValue);
+	const { subscribe, set, update } = writable(initialValue as storeListInterface<string>[]);
 
 	const addNewTestData = (inputObject: storeListInterface<string>) => {
-		if (inputObject.name.length > 3) {
-			update((e) => [...e, inputObject]);
+		if (inputObject.name.length <= 3) {
+			alert('input name length not sufficient! (min 4 characters)');
 			return;
 		}
-		alert('input name length not sufficient! (min 4 characters)');
+		update((e) => {
+			if (e.length > 10) {
+				alert('store array too big');
+				return [...e];
+			}
+			return [...e, inputObject];
+		});
 	};
 
-	// const deleteCurrentEntry = (id: number) => {
-	// 	update((e) => {
-	// 		e.splice(id, 1);
-	// 		return e;
-	// 	});
-	// };
+	const changeFirstDataEntry = (input: string) => {
+		update((e) => {
+			let element = e.at(0)!;
+			element = { ...element, name: input };
+			e.splice(0, 1);
+			return [element, ...e];
+		});
+	};
+
+	const deleteFirstEntry = () => {
+		update((e) => {
+			e.splice(0, 1);
+			return e;
+		});
+	};
 
 	return {
 		subscribe,
 		set,
 		update,
-		addNewTestData
-		// deleteCurrentEntry
+		addNewTestData,
+		changeFirstDataEntry,
+		deleteFirstEntry
 	};
 };
 

@@ -1,4 +1,7 @@
-<script>
+<script lang="ts">
+	import Button from '../../components/home/button.svelte';
+
+	let showStoreEntries: any;
 </script>
 
 <section class="row">
@@ -40,5 +43,14 @@
 			href="https://www.youtube.com/watch?v=UGBJHYpHPvA&t"
 			alt="Learn Svelte – Full Course for Beginners">Learn Svelte – Full Course for Beginners</a
 		>
+	</div>
+	<div class="col-md-12 text-center">
+		<div class="d-flex flex-column mb-3">
+			<h3>Showing off store logic</h3>
+			<!-- svelte-ignore a11y-label-has-associated-control -->
+			<label htmlfor="showStoreEntriesCheckbox">show/hide store entries</label>
+			<input id="showStoreEntriesCheckbox" type="checkbox" bind:checked={showStoreEntries} />
+		</div>
+		<Button bind:showStoreEntries />
 	</div>
 </section>
