@@ -8,9 +8,10 @@
 	<div class="col-md-12">
 		<p>
 			This project is my first Svelte application and is mainly used for learning purposes. Besides
-			some beginner information, there is also a hotkey documentation for Blender I created while
-			learning Blender. There are some components which are included in the GitHub repository but
-			not implemented. These components solely serve the purpose of trying out some Svelte stuff.
+			some beginner information and some sections where I tried out different Svelte features, there
+			is also a hotkey documentation for Blender I created while learning Blender. In addition,
+			there are some components that are included in the GitHub repository but are not implemented.
+			These components solely serve the purpose of trying out some Svelte stuff in the background.
 		</p>
 	</div>
 
@@ -44,7 +45,7 @@
 			alt="Learn Svelte – Full Course for Beginners">Learn Svelte – Full Course for Beginners</a
 		>
 	</div>
-	<div class="col-md-12 text-center">
+	<div class="col-md-12 text-center mt-3">
 		<div class="d-flex flex-column mb-3">
 			<h3>Showing off store logic</h3>
 			<!-- svelte-ignore a11y-label-has-associated-control -->
