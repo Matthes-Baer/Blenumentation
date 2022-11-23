@@ -4,7 +4,7 @@
 	let showStoreEntries: any;
 </script>
 
-<section class="row">
+<section class="row d-flex justify-content-center">
 	<div class="col-md-12">
 		<p>
 			This project is my first Svelte application and is mainly used for learning purposes. Besides
@@ -16,7 +16,7 @@
 		</p>
 	</div>
 
-	<div class="col-md-4 text-center">
+	<div class="col-md-3 text-center card">
 		<h3>How to install Svelte with SvelteKit</h3>
 		<p>
 			<b>npm init svelte@next</b>
@@ -28,7 +28,7 @@
 		</p>
 	</div>
 
-	<div class="col-md-4 text-center">
+	<div class="col-md-3 text-center card">
 		<h3>How to add SCSS to a Svelte application</h3>
 		<p>
 			<b>npm i -D sass</b>
@@ -39,14 +39,14 @@
 		</p>
 	</div>
 
-	<div class="col-md-4 text-center">
+	<div class="col-md-3 text-center card">
 		<h3>YouTube Svelte Course</h3>
 		<a
 			href="https://www.youtube.com/watch?v=UGBJHYpHPvA&t"
 			alt="Learn Svelte – Full Course for Beginners">Learn Svelte – Full Course for Beginners</a
 		>
 	</div>
-	<div class="col-md-12 text-center mt-3">
+	<div class="col-md-12 text-center mt-3 card">
 		<div class="d-flex flex-column mb-3">
 			<h3>Showing off store logic</h3>
 			<!-- svelte-ignore a11y-label-has-associated-control -->
@@ -56,3 +56,16 @@
 		<Button bind:showStoreEntries />
 	</div>
 </section>
+
+<style lang="scss">
+	.card {
+		background-color: #e3d5ca;
+		padding: 10px;
+		border-radius: 10px;
+		margin: 10px;
+
+		& div {
+			background-color: #e3d5ca;
+		}
+	}
+</style>
