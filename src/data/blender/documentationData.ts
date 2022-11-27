@@ -40,7 +40,7 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Receive specific location data for an object',
 		description:
-			'Click on an object and press the corresponding key. It Opens the menu for "Item", "Tool", "View", "Edit"',
+			'Click on an object and press the corresponding key on the keyboard. It Opens the menu for "Item", "Tool", "View", "Edit"',
 		keystroke: 'N'
 	},
 	{
