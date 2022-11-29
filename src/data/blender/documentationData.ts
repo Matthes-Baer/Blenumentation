@@ -45,7 +45,7 @@ const documentationData: documentationDataInterface[] = [
 	},
 	{
 		name: 'Loop Select',
-		description: 'Click on an Edge, Vertex or face with Edit Mode on (Tab)',
+		description: 'Click on an edge, vertex or face with Edit Mode on (Tab)',
 		keystroke: 'Alt'
 	},
 	{
@@ -61,19 +61,25 @@ const documentationData: documentationDataInterface[] = [
 	},
 	{
 		name: 'Select the whole object in Edit Mode',
-		description: 'Click on the object and be within the Edit Mode (Tab)',
+		description: 'Click on the object and be within the Edit Mode (Tab).',
 		keystroke: 'A'
 	},
 	{
 		name: 'Cursor to selected',
 		description:
-			'Adjust the origin point (Pivot point). Especially helpful when being in Edit Mode (Tab), for example to put the origin on an edge',
+			'Adjust the origin point (Pivot point). Especially helpful when being in Edit Mode (Tab), for example to put the origin on an edge.',
 		keystroke: 'Shift + S'
 	},
 	{
 		name: 'Reset Pivot Point',
-		description: 'Brings back the Pivot point to the starting position',
+		description: 'Brings back the Pivot point to the starting position.',
 		keystroke: 'Shift + C'
+	},
+	{
+		name: 'Select all in Edit Mode',
+		description:
+			'Click on face, edge, vertex while being in Edit Mode (Tab), then use the keystroke to select the whole object.',
+		keystroke: 'L'
 	}
 ];
 
