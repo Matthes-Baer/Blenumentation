@@ -78,7 +78,7 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Select all in Edit Mode',
 		description:
-			'Click on face, edge, vertex while being in Edit Mode (Tab), then use the keystroke to select the whole object.',
+			'Click on face, edge, vertex while being in Edit Mode (Tab), then use the corresponding keystroke to select the whole object.',
 		keystroke: 'L'
 	}
 ];
