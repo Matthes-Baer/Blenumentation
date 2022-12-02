@@ -3,6 +3,7 @@
 	// Use $: for rerender/update purposes of states
 	// function used as a action event handler (important: remove eventListener on return (destroy))
 	import InformationSection from '../components/home/informationSection.svelte';
+	import TitleTextTop from '../components/home/titleTextTop.svelte';
 </script>
 
 <svelte:head>
@@ -10,13 +11,18 @@
 </svelte:head>
 
 <main style="width: 95%;" class="mx-auto">
-	<h1>Home - start information</h1>
+	<TitleTextTop />
 	<InformationSection />
 </main>
 
 <style>
+	:global(:root) {
+		--main-color: #002025;
+		--secondary-color: #21454a;
+	}
 	:global(div, main, section, body) {
-		background-color: #edede9;
+		background-color: var(--main-color);
 		overflow-x: hidden;
+		color: #ffffff;
 	}
 </style>

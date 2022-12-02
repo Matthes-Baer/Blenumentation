@@ -81,7 +81,9 @@ const documentationData: documentationDataInterface[] = [
 			'Click on face, edge, vertex while being in Edit Mode (Tab), then use the corresponding keystroke to select the whole object.',
 		keystroke: 'L'
 	},
-	{ name: 'Toggle sidebar on/off', description: 'the sidebar on the left', keystroke: 'T' }
+	{ name: 'Toggle sidebar on/off', description: 'the sidebar on the left', keystroke: 'T' },
+	{ name: 'Extrude', description: 'Click on face, vertex, edge', keystroke: 'E' },
+	{ name: 'Merge', description: 'Select multiple on faces, vertices, edges', keystroke: 'M' }
 ];
 
 // alphabetical sort function
