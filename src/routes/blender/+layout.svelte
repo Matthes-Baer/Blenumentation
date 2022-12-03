@@ -23,7 +23,7 @@
 		top: 75px;
 		transition: all 0.1s;
 		overflow-y: scroll;
-		background-color: #f5ebe0;
+		background-color: var(--header-footer-color);
 	}
 	.nav-link-element {
 		margin-left: 10px;

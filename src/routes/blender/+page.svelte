@@ -17,11 +17,6 @@
 </div>
 
 <style>
-	:global(div, body, section) {
-		background-color: #edede9;
-		overflow-x: hidden;
-	}
-
 	.mainContainer {
 		width: 85%;
 		margin-left: 15%;

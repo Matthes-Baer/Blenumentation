@@ -4,6 +4,7 @@
 	// function used as a action event handler (important: remove eventListener on return (destroy))
 	import InformationSection from '../components/home/informationSection.svelte';
 	import TitleTextTop from '../components/home/titleTextTop.svelte';
+	import Footer from '../components/footer.svelte';
 </script>
 
 <svelte:head>
@@ -14,11 +15,13 @@
 	<TitleTextTop />
 	<InformationSection />
 </main>
+<Footer />
 
 <style>
 	:global(:root) {
 		--main-color: #002025;
 		--secondary-color: #21454a;
+		--header-footer-color: #d6ccc2;
 	}
 	:global(div, main, section, body) {
 		background-color: var(--main-color);
