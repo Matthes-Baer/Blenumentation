@@ -84,7 +84,19 @@ const documentationData: documentationDataInterface[] = [
 	{ name: 'Toggle sidebar on/off', description: 'the sidebar on the left', keystroke: 'T' },
 	{ name: 'Extrude', description: 'Click on face, vertex, edge', keystroke: 'E' },
 	{ name: 'Merge', description: 'Select multiple on faces, vertices, edges', keystroke: 'M' },
-	{ name: 'Delete Mode', description: 'Select object (with or without Edit Mode)', keystroke: 'X' }
+	{ name: 'Delete Mode', description: 'Select object (with or without Edit Mode)', keystroke: 'X' },
+	{
+		name: 'Fill',
+		description:
+			'Selecting two edges/multiple vertices, will fill in the "gap" between. If face is provided, by clicking on the corresponding edge, it will copy it.',
+		keystroke: 'F'
+	},
+	{
+		name: 'Join',
+		description:
+			'Similar to Fill but it will divide the face, for example, instead of having a line filled between two vertices and having one face on both sides of that line.',
+		keystroke: 'J'
+	}
 ];
 
 // alphabetical sort function
