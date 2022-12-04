@@ -12,6 +12,7 @@
 </svelte:head>
 
 <main style="width: 95%;" class="mx-auto">
+	Mit Farbverläufen und Cards arbeiten farblich? Shadows
 	<TitleTextTop />
 	<InformationSection />
 </main>
