@@ -96,6 +96,12 @@ const documentationData: documentationDataInterface[] = [
 		description:
 			'Similar to Fill but it will divide the face, for example, instead of having a line filled between two vertices and having one face on both sides of that line.',
 		keystroke: 'J'
+	},
+	{
+		name: 'Loop Cut',
+		description:
+			'While being in Edit Mode. With scrolling the number of loops are increased/decreased',
+		keystroke: 'Strg + R'
 	}
 ];
 
