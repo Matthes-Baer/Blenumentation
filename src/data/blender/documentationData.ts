@@ -102,6 +102,12 @@ const documentationData: documentationDataInterface[] = [
 		description:
 			'While being in Edit Mode. With scrolling the number of loops are increased/decreased',
 		keystroke: 'Strg + R'
+	},
+	{
+		name: 'Subdivide',
+		description:
+			'While being in Edit Mode. Choose Subdivide from the appearing list. Works on edges, multiple vertices and faces.',
+		keystroke: 'Right Mouse Button'
 	}
 ];
 
