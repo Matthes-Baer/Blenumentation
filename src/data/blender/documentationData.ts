@@ -108,6 +108,27 @@ const documentationData: documentationDataInterface[] = [
 		description:
 			'While being in Edit Mode. Choose Subdivide from the appearing list. Works on edges, multiple vertices and faces.',
 		keystroke: 'Right Mouse Button'
+	},
+	{
+		name: 'Bevel',
+		description: 'While being in Edit Mode. Works on edges, multiple vertices and faces.',
+		keystroke: 'Strg + B'
+	},
+	{
+		name: 'Inset',
+		description:
+			'While being in Edit Mode. Works on faces. Would also be achievable by using E + S in Edit Mode. This can be applied on the whole object with the individual mode of inset being activated.',
+		keystroke: 'I'
+	},
+	{
+		name: 'Toggle Snap on/off',
+		description: 'The snap mode makes it easier to stay in the grid.',
+		keystroke: 'Shift + Tab'
+	},
+	{
+		name: 'Get in/off local view',
+		description: 'Makes all the other objects disappear except the one that is selected.',
+		keystroke: 'NumpadSlash'
 	}
 ];
 
