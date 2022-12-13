@@ -129,6 +129,12 @@ const documentationData: documentationDataInterface[] = [
 		name: 'Get in/off local view',
 		description: 'Makes all the other objects disappear except the one that is selected.',
 		keystroke: 'NumpadSlash'
+	},
+	{
+		name: 'Separate',
+		description:
+			'While in Edit Mode the separate function is responsible for unlinking the selected face, for example, from the overall grid that was selected.',
+		keystroke: 'P'
 	}
 ];
 
