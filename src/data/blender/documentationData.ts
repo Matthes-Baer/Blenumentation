@@ -76,7 +76,7 @@ const documentationData: documentationDataInterface[] = [
 		keystroke: 'Shift + C'
 	},
 	{
-		name: 'Select all in Edit Mode',
+		name: 'Select everything that is linked in Edit Mode',
 		description:
 			'Click on face, edge, vertex while being in Edit Mode (Tab), then use the corresponding keystroke to select the whole object.',
 		keystroke: 'L'
@@ -135,6 +135,12 @@ const documentationData: documentationDataInterface[] = [
 		description:
 			'While in Edit Mode the separate function is responsible for unlinking the selected face, for example, from the overall grid that was selected.',
 		keystroke: 'P'
+	},
+	{
+		name: 'Repeat previous command',
+		description:
+			'Repeats the previous command. This can be helpful when trying to perform symmetrical actions on an object on different faces, for example.',
+		keystroke: 'Shift + R'
 	}
 ];
 
