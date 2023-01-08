@@ -141,6 +141,18 @@ const documentationData: documentationDataInterface[] = [
 		description:
 			'Repeats the previous command. This can be helpful when trying to perform symmetrical actions on an object on different faces, for example.',
 		keystroke: 'Shift + R'
+	},
+	{
+		name: 'Reset Vectors',
+		description:
+			'This is a helpful technique if the shading of an object goes kinda funky as soon as it was edited to smooth, for example (when beveling or modyfing a lot in general).',
+		keystroke: 'Alt + N -> Reset Vectors'
+	},
+	{
+		name: 'Knife',
+		description:
+			'Basically similar to loop cuts but with more control to it. Hit "Enter" to confirm the selection.',
+		keystroke: 'K'
 	}
 ];
 
