@@ -153,6 +153,11 @@ const documentationData: documentationDataInterface[] = [
 		description:
 			'Basically similar to loop cuts but with more control to it. Hit "Enter" to confirm the selection.',
 		keystroke: 'K'
+	},
+	{
+		name: 'Biset',
+		description: 'Basically similar to loop cuts or Knive but with more control to it.',
+		keystroke: 'Spacebar + Shift menu'
 	}
 ];
 
