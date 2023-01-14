@@ -156,8 +156,44 @@ const documentationData: documentationDataInterface[] = [
 	},
 	{
 		name: 'Biset',
-		description: 'Basically similar to loop cuts or Knive but with more control to it.',
-		keystroke: 'Spacebar + Shift menu'
+		description:
+			'Basically similar to loop cuts or Knive but with more control to it. Can be found in the menu that pops up.',
+		keystroke: 'Spacebar + Shift'
+	},
+	{
+		name: 'Toggle Toolbar',
+		description: 'The toolbar gives access to multiple tools without accessing them via hotkeys.',
+		keystroke: 'T'
+	},
+	{
+		name: 'Spin',
+		description:
+			'Gives access to create duplicates in a circle shape. Can be found in the menu that pops up. Also includes the Spin Duplicates function',
+		keystroke: 'Spacebar + Shift'
+	},
+	{
+		name: 'Smooth',
+		description:
+			'Flatten angles of selected vertices. Can be found in the menu that pops up. Also includes the Randomize function',
+		keystroke: 'Spacebar + Shift'
+	},
+	{
+		name: 'Poly Build',
+		description:
+			'Basically gives access to execute the same actions as with Grabbing, for example, but with just the mouse. While pressing Shift one can also delete faces, for example. Can be found in the menu that pops up.',
+		keystroke: 'Spacebar + Shift'
+	},
+	{
+		name: 'Shear',
+		description:
+			'Shear selected items along the horizontal screen axis. Can be found in the menu that pops up. Also includes the To Sphere function',
+		keystroke: 'Spacebar + Shift'
+	},
+	{
+		name: 'Rip Region',
+		description:
+			'Rip polygons and move the result. Use it in Vertex Select. Can be found in the menu that pops up. Also includes the Rip Edge function',
+		keystroke: 'Spacebar + Shift'
 	}
 ];
 
