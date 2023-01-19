@@ -3,25 +3,26 @@
 	import { onMount } from 'svelte';
 
 	let x: number = 50;
-	let hovered: boolean = false;
 
-	const hoverHandler = (e: any) => {
-		let type = e.type;
-		if (type === 'mouseenter') {
-			x += 50;
-			hovered = true;
-		} else if (type === 'mouseleave') {
-			x -= 50;
-			hovered = false;
-		}
-	};
+	onMount(() => {
+		const scrollEventListener = () => {
+			if (window.pageYOffset > 100) {
+				x = 100;
+			} else {
+				x = 50;
+			}
+		};
+		window.addEventListener('scroll', scrollEventListener, false);
+
+		return () => {
+			window.removeEventListener('scroll', scrollEventListener, false);
+		};
+	});
 </script>
 
 <nav
 	class="nav-container d-flex flex-wrap justify-content-end align-items-center"
 	style="height: {x}px;"
-	on:mouseenter={hoverHandler}
-	on:mouseleave={hoverHandler}
 >
 	<a href="/" class="me-3">Home</a>
 	<a href="/blender" class="me-3">Blender Hotkey Documentation</a>
