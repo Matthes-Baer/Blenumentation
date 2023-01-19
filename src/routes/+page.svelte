@@ -3,7 +3,7 @@
 	// Use $: for rerender/update purposes of states
 	// function used as a action event handler (important: remove eventListener on return (destroy))
 	import InformationSection from '../components/home/informationSection.svelte';
-	import TitleTextTop from '../components/home/titleTextTop.svelte';
+	import FirstPart from '../components/home/FirstPart.svelte';
 	import Footer from '../components/footer.svelte';
 </script>
 
@@ -12,21 +12,33 @@
 </svelte:head>
 
 <main style="width: 95%;" class="mx-auto">
-	Mit Farbverläufen und Cards arbeiten farblich? Shadows
-	<TitleTextTop />
-	<InformationSection />
+	<FirstPart />
+	<!-- <InformationSection /> -->
 </main>
 <Footer />
 
 <style>
+	/* Import of custom font-family: */
+	@font-face {
+		font-family: 'ContrailOne';
+		font-style: normal;
+		font-weight: 400;
+		src: local('ContrailOne Regular'), local('ContrailOne-Regular'),
+			url('../../static/fonts/ContrailOne-Regular.ttf') format('ttf');
+		unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+			U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+
 	:global(:root) {
-		--main-color: #002025;
-		--secondary-color: #21454a;
-		--header-footer-color: #d6ccc2;
+		--main-color: rgb(40, 40, 40);
 	}
 	:global(div, main, section, body) {
 		background-color: var(--main-color);
 		overflow-x: hidden;
 		color: #ffffff;
+	}
+
+	:global(*) {
+		font-family: ContrailOne;
 	}
 </style>
