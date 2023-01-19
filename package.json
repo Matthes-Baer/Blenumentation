@@ -17,6 +17,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"@sveltejs/svelte-scroller": "^2.0.7",
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/svelte": "^3.2.2",
 		"@types/jest": "^29.1.2",
@@ -40,6 +41,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"jest-environment-jsdom": "^29.2.0"
+		"jest-environment-jsdom": "^29.2.0",
+		"svelte-scrollto-element": "^0.7.0"
 	}
 }

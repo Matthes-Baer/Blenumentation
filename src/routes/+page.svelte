@@ -14,10 +14,18 @@
 <main style="width: 95%;" class="mx-auto">
 	<FirstPart />
 	<!-- <InformationSection /> -->
-</main>
-<Footer />
 
-<style>
+	<!-- <picture>
+		<source srcset="img_pink_flowers.webp" type="image/webp" />
+		<source srcset="img_white_flower.jpg" type="image/jpeg" />
+		<img src="img_orange_flowers.jpg" alt="Flowers" />
+	  </picture> -->
+</main>
+
+<!-- <Footer /> -->
+<style lang="scss">
+	@import '../styles/animations.scss';
+	@import '../styles/colors.scss';
 	/* Import of custom font-family: */
 	@font-face {
 		font-family: 'ContrailOne';
@@ -29,16 +37,11 @@
 			U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 	}
 
-	:global(:root) {
-		--main-color: rgb(40, 40, 40);
-	}
-	:global(div, main, section, body) {
-		background-color: var(--main-color);
-		overflow-x: hidden;
-		color: #ffffff;
-	}
-
 	:global(*) {
+		background-color: var(--main-color);
+		color: var(--font-color);
 		font-family: ContrailOne;
+		box-sizing: border-box;
+		overflow-x: hidden;
 	}
 </style>
