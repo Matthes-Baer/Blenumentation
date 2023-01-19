@@ -16,7 +16,9 @@
 	</div>
 </div>
 
-<style>
+<style lang="scss">
+	@import '../../styles/animations.scss';
+	@import '../../styles/colors.scss';
 	.mainContainer {
 		width: 85%;
 		margin-left: 15%;
@@ -28,5 +30,16 @@
 			width: 100%;
 			margin-left: 0;
 		}
+	}
+
+	:global(*) {
+		background-color: var(--main-color);
+		color: var(--font-color);
+		font-family: ContrailOne;
+		box-sizing: border-box;
+	}
+
+	:global(body) {
+		overflow-x: hidden;
 	}
 </style>

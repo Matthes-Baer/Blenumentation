@@ -7,7 +7,7 @@
 
 <nav class="nav-container d-flex flex-column">
 	{#each sortedDocumentationData as entry (entry.name)}
-		<a href={`#${entry.name}`} class="nav-link-element">{entry.name}</a>
+		<a href={`#${entry.name}`} class="nav-link-element text-center">{entry.name}</a>
 	{/each}
 </nav>
 
@@ -16,24 +16,21 @@
 <style>
 	.nav-container {
 		width: 15%;
-		height: 50%;
+		height: 700px;
 		padding: 15px;
-		border-right: 1px solid black;
+		border-right: 1px solid white;
 		position: absolute;
 		top: 75px;
 		transition: all 0.1s;
 		overflow-y: scroll;
-		background-color: var(--header-footer-color);
 	}
 	.nav-link-element {
-		margin-left: 10px;
-		margin-right: 10px;
 		text-decoration: none;
-		color: #252525;
-		font-size: 15px;
-		padding: 10px;
-		border-bottom: 1px solid black;
-		transition: all 0.1s;
+		color: var(--font-color);
+		font-size: 1.5vw;
+		height: 100%;
+		border-bottom: 1px solid white;
+		transition: all 0.25s;
 	}
 
 	.nav-link-element:hover {

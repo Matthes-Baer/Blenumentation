@@ -42,6 +42,9 @@
 		color: var(--font-color);
 		font-family: ContrailOne;
 		box-sizing: border-box;
+	}
+
+	:global(body) {
 		overflow-x: hidden;
 	}
 </style>
