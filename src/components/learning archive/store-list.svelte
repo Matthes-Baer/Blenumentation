@@ -1,10 +1,10 @@
 <script lang="ts">
 	// import { createEventDispatcher } from 'svelte';
 	// import type { listItemInterface } from '../utils/interfaces';
-	import type { storeListInterface } from '../utils/interfaces';
+	import type { storeListInterface } from '../../utils/interfaces';
 	// const dispatch = createEventDispatcher();
 
-	import { testStore } from '../stores/testStore';
+	import { testStore } from '../../stores/testStore';
 	let alltestData: storeListInterface<string>[];
 	let testStoreUnsub = testStore.subscribe((data) => (alltestData = data));
 	import { onMount, onDestroy } from 'svelte';

@@ -2,8 +2,8 @@
 	// dispatch action as forward to parent element (to the element where the state sits)
 	// Forwards between are not needed - just add the on:... logic and Svelte automatically passes it
 	import { createEventDispatcher } from 'svelte';
-	import type { listItemInterface } from '../utils/interfaces';
-	import type { storeListInterface } from '../utils/interfaces';
+	import type { listItemInterface } from '../../utils/interfaces';
+	import type { storeListInterface } from '../../utils/interfaces';
 	export let name: string;
 	export let list: listItemInterface[];
 	export let bindInputText: string;
@@ -17,7 +17,7 @@
 	// The initial state is declared in the testStore.ts file
 	// While you can define functions within the respective store to adjust the state,
 	// you would have to subscribe to this store in the corresponding file in order to have access to the store data (or pass it down)
-	import { testStore } from '../stores/testStore';
+	import { testStore } from '../../stores/testStore';
 	let alltestData: storeListInterface<string>[];
 	let testStoreUnsub = testStore.subscribe((data) => (alltestData = data));
 	import { onMount, onDestroy } from 'svelte';

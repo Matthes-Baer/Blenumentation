@@ -12,6 +12,11 @@
 		<li>Einbindung für reactive statemets & für reactive Zugriff auf Store überlegen</li>
 		<li>Info Route bearbeiten mit Informationen</li>
 		<li>Info Route bearbeiten mit Styling</li>
+		<li>Unit Tests hinzufügen</li>
+		<li>Child Components mit Props etc.</li>
+		<li>
+			https://svelte.dev/tutorial/basics durchgehen für weitere Dinge zum Einfügen oder für Hilfe
+		</li>
 		<li>...</li>
 	</ul>
 </section>
