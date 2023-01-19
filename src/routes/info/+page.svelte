@@ -14,6 +14,8 @@
 		<li>Info Route bearbeiten mit Styling</li>
 		<li>Unit Tests hinzufügen</li>
 		<li>Child Components mit Props etc.</li>
+		<li>responsive designs</li>
+		<li>Alles auf eine Route mit Components?</li>
 		<li>
 			https://svelte.dev/tutorial/basics durchgehen für weitere Dinge zum Einfügen oder für Hilfe
 		</li>

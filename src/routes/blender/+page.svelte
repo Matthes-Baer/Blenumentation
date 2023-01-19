@@ -35,7 +35,7 @@
 	:global(*) {
 		background-color: var(--main-color);
 		color: var(--font-color);
-		font-family: ContrailOne;
+		font-family: 'Courier New', Courier, monospace;
 		box-sizing: border-box;
 	}
 
