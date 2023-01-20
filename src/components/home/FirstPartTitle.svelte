@@ -1,7 +1,8 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 	const layers: number[] = [1, 2, 3];
-	let visible: boolean;
+	let visible: boolean = false;
 
 	function typewriter(node: any) {
 		const valid = node.childNodes.length === 1 && node.childNodes[0].nodeType === Node.TEXT_NODE;
@@ -23,6 +24,10 @@
 	}
 
 	let y: number;
+
+	onMount(() => {
+		visible = true;
+	});
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -30,11 +35,16 @@
 <section class="row mt-5">
 	<div class="col-lg-12 d-flex flex-column align-items-end">
 		<h1>Blenumentation</h1>
-		<p class="ms-5 bounce-in-bottom align-self-start">A Blender documentation</p>
-		<div style="height:100vh">TESTING</div>
-		<div id="Test" style="height:100vh">TESTING ID</div>
+		<div style="min-height: 200px;" class="align-self-start">
+			{#if visible}
+				<p class="ms-5 " transition:typewriter>A Blender documentation</p>
+			{/if}
+		</div>
+
+		<!-- <div style="height:100vh">TESTING</div> -->
+		<!-- <div id="Test" style="height:100vh">TESTING ID</div> -->
 	</div>
-	{#each layers as layer}
+	<!-- {#each layers as layer}
 		<div
 			class="col-lg-12"
 			style="border-bottom: 1px solid red; transform: translate(0, {(-y * layer) /
@@ -51,7 +61,7 @@
 
 	{#if visible}
 		<p transition:typewriter>The quick brown fox jumps over the lazy dog</p>
-	{/if}
+	{/if} -->
 </section>
 
 <style lang="scss">

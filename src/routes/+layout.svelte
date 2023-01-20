@@ -2,14 +2,14 @@
 	import { animateScroll } from 'svelte-scrollto-element';
 	import { onMount } from 'svelte';
 
-	let x: number = 50;
+	let x: number = 100;
 
 	onMount(() => {
 		const scrollEventListener = () => {
 			if (window.pageYOffset > 100) {
-				x = 100;
-			} else {
 				x = 50;
+			} else {
+				x = 100;
 			}
 		};
 		window.addEventListener('scroll', scrollEventListener, false);

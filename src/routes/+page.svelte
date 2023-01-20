@@ -3,8 +3,9 @@
 	// Use $: for rerender/update purposes of states
 	// function used as a action event handler (important: remove eventListener on return (destroy))
 	import InformationSection from '../components/home/informationSection.svelte';
-	import FirstPart from '../components/home/FirstPartTitle.svelte';
+	import FirstPartTitle from '../components/home/FirstPartTitle.svelte';
 	import Footer from '../components/footer.svelte';
+	import SecondPartInformation from '../components/home/SecondPartInformation.svelte';
 </script>
 
 <svelte:head>
@@ -12,8 +13,9 @@
 </svelte:head>
 
 <main style="width: 95%;" class="mx-auto">
-	<FirstPart />
-	TEST
+	<FirstPartTitle />
+	<SecondPartInformation />
+
 	<!-- <InformationSection /> -->
 
 	<!-- <picture>
