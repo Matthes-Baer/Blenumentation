@@ -1,6 +1,25 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	import { slide, fade } from 'svelte/transition';
 	let visible: boolean = true;
+
+	let clicked: boolean = false;
+	const text: string = `This is an example text for this svelte project.`;
+	const textArr: Array<string> = text.split(' ');
+	let word: string;
+	let x: number;
+	let y: number;
+
+	const clickHandler = (event: { pageY: number; pageX: number }) => {
+		if (clicked) {
+			clicked = false;
+		} else {
+			word = textArr[Math.floor(Math.random() * textArr.length)];
+			clicked = true;
+			x = event.pageX - 250;
+			y = event.pageY + 15;
+		}
+	};
 </script>
 
 <section>
@@ -16,11 +35,20 @@
 
 	<div class="slide-main">
 		{#if visible}
-			<div in:slide={{ duration: 2000 }} out:slide={{ duration: 2000 }} class="slide-input">
-				This is Text Lurum Ipsum This is Text Lurum Ipsum This is Text Lurum Ipsum This is Text
-				Lurum Ipsum This is Text Lurum Ipsum This is Text Lurum Ipsum This is Text Lurum Ipsum This
-				is Text Lurum IpsumThis is Text Lurum Ipsum This is Text Lurum Ipsum This is Text Lurum
-				IpsumThis is Text Lurum Ipsum
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<div
+				in:slide={{ duration: 2000 }}
+				out:slide={{ duration: 2000 }}
+				class="slide-input"
+				on:click={clickHandler}
+			>
+				{text}
+
+				{#if clicked}
+					<div style="position: absolute; left: {x}px; top: {y}px" in:fade out:fade>
+						{word}
+					</div>
+				{/if}
 			</div>
 		{/if}
 	</div>
