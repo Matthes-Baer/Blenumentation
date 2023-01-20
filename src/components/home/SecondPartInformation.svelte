@@ -16,9 +16,13 @@
 		} else {
 			word = textArr[Math.floor(Math.random() * textArr.length)];
 			clicked = true;
-			x = event.pageX - 250;
-			y = event.pageY + 15;
+			x = event.pageX - 100;
+			y = event.pageY + 5;
 		}
+	};
+
+	const mouseMoveClickedHandler = () => {
+		clicked = false;
 	};
 </script>
 
@@ -41,6 +45,7 @@
 				out:slide={{ duration: 2000 }}
 				class="slide-input"
 				on:click={clickHandler}
+				on:mouseleave={mouseMoveClickedHandler}
 			>
 				{text}
 
