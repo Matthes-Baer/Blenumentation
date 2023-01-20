@@ -4,7 +4,7 @@
 </script>
 
 <section>
-	<div class="d-flex justify-content-center" style="width: inherit;">
+	<div class="d-flex justify-content-center slide-button-container" style="width: inherit;">
 		<button on:click={() => (visible = !visible)} class="slide-button"
 			>{#if visible}
 				True
@@ -47,6 +47,16 @@
 
 		&-button {
 			background-color: blue;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			&-container {
+				background-color: yellow;
+				height: 5px;
+				position: relative;
+			}
 		}
 	}
 
