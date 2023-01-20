@@ -3,7 +3,7 @@
 	// Use $: for rerender/update purposes of states
 	// function used as a action event handler (important: remove eventListener on return (destroy))
 	import InformationSection from '../components/home/informationSection.svelte';
-	import FirstPart from '../components/home/FirstPart.svelte';
+	import FirstPart from '../components/home/FirstPartTitle.svelte';
 	import Footer from '../components/footer.svelte';
 </script>
 
