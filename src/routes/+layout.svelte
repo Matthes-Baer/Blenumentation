@@ -21,15 +21,14 @@
 </script>
 
 <nav class="nav-container d-flex justify-content-end align-items-center" style="min-height: {x}px;">
-	<div class="nav-title">
-		Test
+	<a href="/" class="nav-title">
+		Blenumentation
 		<picture>
 			<source srcset="images/icon-cube.webp" type="image/webp" width="50px" height="50px" />
 			<img src="images/icon-cube.png" alt="icon cube in navbar" width="50px" height="50px" />
 		</picture>
-	</div>
-	<a href="/" class="me-3">Home</a>
-	<a href="/blender" class="me-3">Blender Hotkey Documentation</a>
+	</a>
+	<a href="/blender" class="me-3">Basic Hotkey Documentation</a>
 	<!-- svelte-ignore a11y-missing-attribute -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- <a
@@ -54,7 +53,6 @@
 	.nav {
 		&-container {
 			width: 100%;
-			/* height: 75px; */
 			padding: 10px;
 			position: -webkit-fixed;
 			position: fixed;

@@ -37,7 +37,7 @@
 		<h1>Blenumentation</h1>
 		<div class="align-self-start subtitle">
 			{#if visible}
-				<p class="text-center" transition:typewriter>A Personal Blender Documentation</p>
+				<p class="text-center" transition:typewriter|local>A Personal Blender Documentation</p>
 			{/if}
 		</div>
 

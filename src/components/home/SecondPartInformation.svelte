@@ -53,14 +53,14 @@
 			>{#if visible}
 				<i
 					class="fa-solid fa-lock-open slide-button-icon"
-					in:fly={{ y: -25, duration: 750 }}
-					out:fly={{ y: 25, duration: 750 }}
+					in:fly|local={{ y: -25, duration: 750 }}
+					out:fly|local={{ y: 25, duration: 750 }}
 				/>
 			{:else}
 				<i
 					class="fa-solid fa-lock slide-button-icon"
-					in:fly={{ y: -25, duration: 750 }}
-					out:fly={{ y: 25, duration: 750 }}
+					in:fly|local={{ y: -25, duration: 750 }}
+					out:fly|local={{ y: 25, duration: 750 }}
 				/>
 			{/if}
 		</button>
@@ -70,8 +70,8 @@
 		{#if visible}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
-				in:slide={{ duration: 2000 }}
-				out:slide={{ duration: 2000 }}
+				in:slide|local={{ duration: 2000 }}
+				out:slide|local={{ duration: 2000 }}
 				class="slide-input"
 				on:click={clickHandler}
 				on:mouseleave={mouseMoveClickedHandler}
@@ -81,8 +81,8 @@
 				{#if clicked}
 					<div
 						style="position: absolute; left: {x}px; top: {y}px"
-						in:fade
-						out:fade
+						in:fade|local
+						out:fade|local
 						class="click-effect-word"
 					>
 						{word}
