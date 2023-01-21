@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from '../../components/home/button.svelte';
+	import Button from './button2.svelte';
 
 	let showStoreEntries: any;
 </script>

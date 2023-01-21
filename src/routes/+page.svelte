@@ -2,7 +2,7 @@
 	// Svelte provides out-of-the-box transitions like { fly } from 'svelte/transition'
 	// Use $: for rerender/update purposes of states
 	// function used as a action event handler (important: remove eventListener on return (destroy))
-	import InformationSection from '../components/home/informationSection.svelte';
+	import InformationSection from '../components/learning archive/informationSection.svelte';
 	import FirstPartTitle from '../components/home/FirstPartTitle.svelte';
 	import Footer from '../components/footer.svelte';
 	import SecondPartInformation from '../components/home/SecondPartInformation.svelte';

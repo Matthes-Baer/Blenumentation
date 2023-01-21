@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { slide, fade } from 'svelte/transition';
-	let visible: boolean = true;
 
+	let visible: boolean = true;
 	let clicked: boolean = false;
-	const text: string = `This is an example text for this svelte project.`;
+	const text: string = `Blenumentation serves the purpose of being a personal short documentation for some major functions of the 3D software called Blender. While focusing on basic functions as well as shading, for example, sculpting isn't covered since this function area was not of interested for me by the time I created Blenumentation.`;
 	const textArr: Array<string> = text.split(' ');
 	let word: string;
 	let x: number;
@@ -16,8 +16,12 @@
 		} else {
 			word = textArr[Math.floor(Math.random() * textArr.length)];
 			clicked = true;
-			x = event.pageX - 100;
-			y = event.pageY + 5;
+			x = event.pageX - 250;
+			y = event.pageY + 15;
+
+			if (x < 0) {
+				x = 0;
+			}
 		}
 	};
 
@@ -50,7 +54,12 @@
 				{text}
 
 				{#if clicked}
-					<div style="position: absolute; left: {x}px; top: {y}px" in:fade out:fade>
+					<div
+						style="position: absolute; left: {x}px; top: {y}px"
+						in:fade
+						out:fade
+						class="click-effect-word"
+					>
 						{word}
 					</div>
 				{/if}
@@ -60,12 +69,16 @@
 </section>
 
 <style lang="scss">
-	section {
-		background-color: red;
-	}
-
 	div {
 		background-color: transparent;
+	}
+
+	.click-effect-word {
+		// --main-color as rgba
+		background-color: rgba(40, 40, 40, 0.85);
+		padding: 15px;
+		border: 1px solid var(--font-color);
+		border-radius: 10px;
 	}
 
 	.slide {
@@ -76,6 +89,8 @@
 		}
 		&-input {
 			height: inherit;
+			cursor: pointer;
+			text-align: justify;
 		}
 
 		&-button {
