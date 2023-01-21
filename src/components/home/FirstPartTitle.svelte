@@ -73,6 +73,7 @@
 	}
 	.subtitle {
 		font-size: 2.5vw;
+		min-height: 85px;
 	}
 
 	@media only screen and (max-width: 900px) {

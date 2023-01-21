@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { slide, fade } from 'svelte/transition';
+	import { slide, fade, fly } from 'svelte/transition';
 
-	let visible: boolean = true;
+	let visible: boolean = false;
 	let clicked: boolean = false;
 	const text: string = `Blenumentation serves the purpose of being a personal short documentation for some major functions of the 3D software called Blender. While focusing on basic functions as well as shading, for example, sculpting isn't covered since this function area was not of interested for me by the time I created Blenumentation.`;
 	const textArr: Array<string> = text.split(' ');
@@ -28,15 +28,40 @@
 	const mouseMoveClickedHandler = () => {
 		clicked = false;
 	};
+
+	onMount(() => {
+		const visibleTimeout = setTimeout(() => {
+			visible = true;
+		}, 1500);
+
+		return () => {
+			clearTimeout(visibleTimeout);
+		};
+	});
 </script>
+
+<svelte:head
+	><link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+	/></svelte:head
+>
 
 <section>
 	<div class="d-flex justify-content-center slide-button-container" style="width: inherit;">
 		<button on:click={() => (visible = !visible)} class="slide-button"
 			>{#if visible}
-				True
+				<i
+					class="fa-solid fa-lock-open slide-button-icon"
+					in:fly={{ y: -25, duration: 750 }}
+					out:fly={{ y: 25, duration: 750 }}
+				/>
 			{:else}
-				False
+				<i
+					class="fa-solid fa-lock slide-button-icon"
+					in:fly={{ y: -25, duration: 750 }}
+					out:fly={{ y: 25, duration: 750 }}
+				/>
 			{/if}
 		</button>
 	</div>
@@ -83,7 +108,7 @@
 
 	.slide {
 		&-main {
-			border-top: 2px solid var(--secondary-color);
+			border-top: 4px solid var(--secondary-color);
 			font-size: 45px;
 			min-height: 750px;
 			font-size: 35px;
@@ -92,18 +117,25 @@
 			height: inherit;
 			cursor: pointer;
 			text-align: justify;
+			margin-top: 50px;
 		}
 
 		&-button {
-			background-color: blue;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			padding: 25px;
+			border: none;
+
+			&-icon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
 
 			&-container {
-				background-color: yellow;
-				height: 5px;
 				position: relative;
 			}
 		}
