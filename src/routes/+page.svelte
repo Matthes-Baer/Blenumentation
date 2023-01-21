@@ -12,7 +12,7 @@
 	<title>Home</title>
 </svelte:head>
 
-<main style="width: 95%;" class="mx-auto">
+<main class="mx-auto main-container">
 	<FirstPartTitle />
 	<SecondPartInformation />
 
@@ -30,6 +30,12 @@
 	@import '../styles/animations.scss';
 	@import '../styles/colors.scss';
 
+	.main-container {
+		width: 95%;
+		margin-top: 100px;
+		transition: all 0.25s;
+	}
+
 	:global(*) {
 		background-color: var(--main-color);
 		color: var(--font-color);
@@ -38,5 +44,11 @@
 	}
 	:global(body) {
 		overflow-x: hidden;
+	}
+
+	@media only screen and (max-width: 400px) {
+		.main-container {
+			margin-top: 150px;
+		}
 	}
 </style>

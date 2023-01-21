@@ -86,6 +86,7 @@
 			border-top: 2px solid var(--secondary-color);
 			font-size: 45px;
 			min-height: 750px;
+			font-size: 35px;
 		}
 		&-input {
 			height: inherit;

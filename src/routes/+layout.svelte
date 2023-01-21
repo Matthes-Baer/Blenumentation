@@ -32,7 +32,7 @@
 	<a href="/blender" class="me-3">Blender Hotkey Documentation</a>
 	<!-- svelte-ignore a11y-missing-attribute -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<a
+	<!-- <a
 		on:click={() =>
 			animateScroll.scrollTo({
 				//@ts-ignore
@@ -45,7 +45,7 @@
 			})}
 	>
 		Testing Id div scroll
-	</a>
+	</a> -->
 </nav>
 
 <slot />

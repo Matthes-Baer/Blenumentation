@@ -33,11 +33,11 @@
 <svelte:window bind:scrollY={y} />
 
 <section class="row mt-5">
-	<div class="col-lg-12 d-flex flex-column align-items-end">
+	<div class="col-lg-12 d-flex flex-column div-container">
 		<h1>Blenumentation</h1>
-		<div style="min-height: 200px;" class="align-self-start">
+		<div class="align-self-start subtitle">
 			{#if visible}
-				<p class="ms-5 " transition:typewriter>A Blender documentation</p>
+				<p class="text-center" transition:typewriter>A Personal Blender Documentation</p>
 			{/if}
 		</div>
 
@@ -65,14 +65,26 @@
 </section>
 
 <style lang="scss">
-	h1 {
-		font-size: 10vw;
+	.div-container {
+		& h1 {
+			font-size: 10vw;
+		}
+		align-items: flex-end;
 	}
-
-	div {
-		font-size: 5vw;
+	.subtitle {
+		font-size: 2.5vw;
 	}
 
 	@media only screen and (max-width: 900px) {
+		.subtitle {
+			font-size: 25px;
+			align-items: center;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		.div-container {
+			align-items: center;
+		}
 	}
 </style>
