@@ -1,4 +1,5 @@
 <script lang="ts">
+	// Bei animations/transition auf |local achten, damit die Route gewechselt werden kann.
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
 	const layers: number[] = [1, 2, 3];
