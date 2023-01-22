@@ -2,7 +2,7 @@
 	// Bei animations/transition auf |local achten, damit die Route gewechselt werden kann.
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
-	const layers: number[] = [1, 2, 3];
+
 	let visible: boolean = false;
 
 	function typewriter(node: any) {
@@ -24,14 +24,10 @@
 		};
 	}
 
-	let y: number;
-
 	onMount(() => {
 		visible = true;
 	});
 </script>
-
-<svelte:window bind:scrollY={y} />
 
 <section class="row mt-5">
 	<div class="col-lg-12 d-flex flex-column div-container">
@@ -41,28 +37,7 @@
 				<p class="text-center" transition:typewriter|local>A Personal Blender Documentation</p>
 			{/if}
 		</div>
-
-		<!-- <div style="height:100vh">TESTING</div> -->
-		<!-- <div id="Test" style="height:100vh">TESTING ID</div> -->
 	</div>
-	<!-- {#each layers as layer}
-		<div
-			class="col-lg-12"
-			style="border-bottom: 1px solid red; transform: translate(0, {(-y * layer) /
-				(layers.length - 1)}px)"
-		>
-			This is layer: {layer}
-		</div>
-	{/each}
-
-	<label>
-		<input type="checkbox" bind:checked={visible} />
-		visible
-	</label>
-
-	{#if visible}
-		<p transition:typewriter>The quick brown fox jumps over the lazy dog</p>
-	{/if} -->
 </section>
 
 <style lang="scss">

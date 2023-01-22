@@ -6,6 +6,7 @@
 	import FirstPartTitle from '../components/home/FirstPartTitle.svelte';
 	import Footer from '../components/footer.svelte';
 	import SecondPartInformation from '../components/home/SecondPartInformation.svelte';
+	import ThirdPartTopicOverview from '../components/home/ThirdPart/ThirdPartTopicOverview.svelte';
 </script>
 
 <svelte:head>
@@ -15,14 +16,7 @@
 <main class="mx-auto main-container">
 	<FirstPartTitle />
 	<SecondPartInformation />
-
-	<!-- <InformationSection /> -->
-
-	<!-- <picture>
-		<source srcset="img_pink_flowers.webp" type="image/webp" />
-		<source srcset="img_white_flower.jpg" type="image/jpeg" />
-		<img src="img_orange_flowers.jpg" alt="Flowers" />
-	  </picture> -->
+	<ThirdPartTopicOverview />
 </main>
 
 <!-- <Footer /> -->

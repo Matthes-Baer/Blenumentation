@@ -8,3 +8,9 @@ export interface storeListInterface<T> {
 	name: T;
 	significance: number;
 }
+
+export interface ThirdPartSingleTileDataInterface {
+	id: number;
+	name: string;
+	png: string;
+}
