@@ -17,6 +17,10 @@
 		<li>Child Components mit Props etc.</li>
 		<li>responsive designs</li>
 		<li>
+			Hotkeys Part, Material Part (Baking, ...), Basics Part (Steuerung, Allgemeines, Export, ...) -
+			jeweils eine Route für jeden Bereich - Bilder verwenden für bessere Visualisierungen.
+		</li>
+		<li>
 			https://svelte.dev/tutorial/basics durchgehen für weitere Dinge zum Einfügen oder für Hilfe
 		</li>
 		<li>...</li>
