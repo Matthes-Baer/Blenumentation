@@ -17,7 +17,9 @@
 
 <div
 	class="main-container d-flex flex-column"
-	style="align-self: flex-{direction}; margin-top: {layer !== 1 ? '50px' : '0px'}"
+	style="align-self: flex-{direction}; margin-top: {layer !== 1
+		? '150px'
+		: '0px'}; transform: translate(0, {(-y * layer) / 5 / (layersLength - 1)}px)"
 >
 	<h2 style="align-self: flex-{direction};" class="title">{title}</h2>
 	<div
@@ -32,8 +34,7 @@
 	</div>
 </div>
 
-<!-- style="border-bottom: 1px solid red; transform: translate(0, {(-y * layer) /
-    (layersLength - 1)}px)" -->
+<!-- style="" -->
 
 <!--  -->
 <style>
@@ -56,6 +57,7 @@
 		.main-container {
 			margin-left: auto;
 			margin-right: auto;
+			margin-top: 150px !important;
 		}
 		.description-picture-container {
 			flex-direction: column !important;
