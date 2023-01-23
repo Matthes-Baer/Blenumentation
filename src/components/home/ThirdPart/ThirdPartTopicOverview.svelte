@@ -4,7 +4,7 @@
 </script>
 
 <section>
-	<div class="d-flex flex-column">
+	<div class="main-div-container">
 		{#each DATA as DATA_ENTRY (DATA_ENTRY)}
 			<SingleTile
 				layer={DATA_ENTRY.id}
@@ -17,3 +17,13 @@
 		{/each}
 	</div>
 </section>
+
+<style>
+	.main-div-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	@media only screen and (max-width: 900px) {
+	}
+</style>

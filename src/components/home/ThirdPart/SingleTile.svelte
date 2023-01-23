@@ -11,12 +11,6 @@
 
 	const layersLength = 3;
 	let y: number;
-
-	// const PNGURL = new URL(PNG, import.meta.url).href;
-	onMount(() => {
-		// console.log(PNGURL);
-		console.log(PNG);
-	});
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -33,6 +27,10 @@
 <!-- style="border-bottom: 1px solid red; transform: translate(0, {(-y * layer) /
     (layersLength - 1)}px)" -->
 <style>
-	.main-container {
+	@media only screen and (max-width: 900px) {
+		.main-container {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 </style>
