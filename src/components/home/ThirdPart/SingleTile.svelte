@@ -15,22 +15,59 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="main-container" style="align-self: flex-{direction};">
-	<h2>{title}</h2>
-	<p>{description}</p>
-	<picture>
-		<source srcset={webp} />
-		<img src={PNG} alt="something" />
-	</picture>
+<div
+	class="main-container d-flex flex-column"
+	style="align-self: flex-{direction}; margin-top: {layer !== 1 ? '50px' : '0px'}"
+>
+	<h2 style="align-self: flex-{direction};" class="title">{title}</h2>
+	<div
+		class="description-picture-container"
+		style="flex-direction: {direction === 'start' ? 'row-reverse' : 'row'}"
+	>
+		<p class="description">{description}</p>
+		<picture>
+			<source srcset={webp} />
+			<img src={PNG} alt="something" />
+		</picture>
+	</div>
 </div>
 
 <!-- style="border-bottom: 1px solid red; transform: translate(0, {(-y * layer) /
     (layersLength - 1)}px)" -->
+
+<!--  -->
 <style>
+	img,
+	source {
+		width: 100%;
+		height: auto;
+	}
+	.description {
+		font-size: 35px;
+		padding: 15px;
+		text-align: justify;
+		border: 1px solid red;
+	}
+	.description-picture-container {
+		display: flex;
+		flex-direction: row;
+	}
 	@media only screen and (max-width: 900px) {
 		.main-container {
 			margin-left: auto;
 			margin-right: auto;
 		}
+		.description-picture-container {
+			flex-direction: column !important;
+		}
+		.title {
+			align-self: center !important;
+		}
+		.description {
+			text-align: center;
+		}
+	}
+
+	@media only screen and (max-width: 800px) {
 	}
 </style>
