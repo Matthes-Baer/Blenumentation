@@ -1,9 +1,14 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
+	// Props:
 	export let layer: number;
 	export let direction: string;
+	export let title: string;
 	export let PNG: string;
+	export let webp: string;
+	export let description: string;
+
 	const layersLength = 3;
 	let y: number;
 
@@ -17,8 +22,10 @@
 <svelte:window bind:scrollY={y} />
 
 <div class="main-container" style="align-self: flex-{direction};">
-	This is layer: {layer}
+	<h2>{title}</h2>
+	<p>{description}</p>
 	<picture>
+		<source srcset={webp} />
 		<img src={PNG} alt="something" />
 	</picture>
 </div>

@@ -11,6 +11,8 @@ export interface storeListInterface<T> {
 
 export interface ThirdPartSingleTileDataInterface {
 	id: number;
-	name: string;
+	title: string;
 	png: string;
+	webp: string;
+	description: string;
 }

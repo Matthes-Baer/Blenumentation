@@ -9,7 +9,10 @@
 			<SingleTile
 				layer={DATA_ENTRY.id}
 				direction={DATA_ENTRY.id % 2 === 0 ? 'end' : 'start'}
+				title={DATA_ENTRY.title}
 				PNG={DATA_ENTRY.png}
+				webp={DATA_ENTRY.webp}
+				description={DATA_ENTRY.description}
 			/>
 		{/each}
 	</div>
