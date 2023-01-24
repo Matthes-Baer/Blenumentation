@@ -48,13 +48,13 @@
 		align-items: flex-end;
 	}
 	.subtitle {
-		font-size: 2.5vw;
+		font-size: 50px;
 		min-height: 150px;
+		transition: all 0.25s;
 	}
 
 	@media only screen and (max-width: 900px) {
 		.subtitle {
-			font-size: 25px;
 			align-items: center;
 		}
 	}
@@ -62,6 +62,12 @@
 	@media only screen and (max-width: 600px) {
 		.div-container {
 			align-items: center;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		.subtitle {
+			font-size: 35px;
 		}
 	}
 </style>

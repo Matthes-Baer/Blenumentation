@@ -21,6 +21,10 @@
 			jeweils eine Route für jeden Bereich - Bilder verwenden für bessere Visualisierungen.
 		</li>
 		<li>
+			Bei Second Part wegen responsive design: Alle 50px Height anpassen? Auch abhängig, welche
+			font-size der silde-input im Endeffekt haben wird.
+		</li>
+		<li>
 			https://svelte.dev/tutorial/basics durchgehen für weitere Dinge zum Einfügen oder für Hilfe
 		</li>
 		<li>...</li>

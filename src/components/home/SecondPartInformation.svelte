@@ -109,7 +109,6 @@
 	.slide {
 		&-main {
 			border-top: 4px solid var(--secondary-color);
-			font-size: 45px;
 			min-height: 550px;
 			font-size: 35px;
 		}
@@ -160,7 +159,7 @@
 	@media only screen and (max-width: 700px) {
 		.slide {
 			&-main {
-				min-height: 800px;
+				min-height: 900px;
 			}
 		}
 	}
@@ -168,7 +167,7 @@
 	@media only screen and (max-width: 600px) {
 		.slide {
 			&-main {
-				min-height: 1000px;
+				min-height: 1100px;
 			}
 		}
 	}
@@ -176,14 +175,14 @@
 	@media only screen and (max-width: 500px) {
 		.slide {
 			&-main {
-				min-height: 1300px;
+				min-height: 1400px;
 			}
 		}
 	}
 	@media only screen and (max-width: 400px) {
 		.slide {
 			&-main {
-				min-height: 1700px;
+				min-height: 1800px;
 			}
 		}
 	}
@@ -191,7 +190,7 @@
 	@media only screen and (max-width: 350px) {
 		.slide {
 			&-main {
-				min-height: 1900px;
+				min-height: 2000px;
 			}
 		}
 	}
@@ -199,7 +198,7 @@
 	@media only screen and (max-width: 300px) {
 		.slide {
 			&-main {
-				min-height: 2100px;
+				min-height: 2200px;
 			}
 		}
 	}
