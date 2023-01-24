@@ -7,6 +7,10 @@
 	import Footer from '../components/footer.svelte';
 	import SecondPartInformation from '../components/home/SecondPartInformation.svelte';
 	import ThirdPartTopicOverview from '../components/home/ThirdPart/ThirdPartTopicOverview.svelte';
+	import HomepageBackgroundStuff from '../components/ui/HomepageBackgroundStuff.svelte';
+	import { onMount } from 'svelte';
+
+	const layers: number[] = [1, 2, 3, 4, 5];
 </script>
 
 <svelte:head>
@@ -17,6 +21,9 @@
 	<FirstPartTitle />
 	<SecondPartInformation />
 	<ThirdPartTopicOverview />
+	{#each layers as layer (layer)}
+		<HomepageBackgroundStuff {layer} layersLength={layers.length} />
+	{/each}
 </main>
 
 <!-- <Footer /> -->
@@ -35,6 +42,7 @@
 		color: var(--font-color);
 		font-family: 'Courier New', Courier, monospace;
 		box-sizing: border-box;
+		z-index: 9000;
 	}
 	:global(body) {
 		overflow-x: hidden;

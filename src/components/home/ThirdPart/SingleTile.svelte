@@ -35,6 +35,9 @@
 </div>
 
 <style>
+	* {
+		background-color: transparent;
+	}
 	img,
 	source {
 		width: 100%;
