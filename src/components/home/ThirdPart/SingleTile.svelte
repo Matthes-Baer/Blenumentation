@@ -18,8 +18,8 @@
 <div
 	class="main-container d-flex flex-column"
 	style="align-self: flex-{direction}; margin-top: {layer !== 1
-		? '150px'
-		: '0px'}; transform: translate(0, {(-y * layer) / 5 / (layersLength - 1)}px)"
+		? '250px'
+		: '0px'}; transform: translate(0, {(-y * layer) / 3.5 / (layersLength - 1)}px)"
 >
 	<h2 style="align-self: flex-{direction};" class="title">{title}</h2>
 	<div
@@ -40,11 +40,17 @@
 		width: 100%;
 		height: auto;
 	}
+
+	h2 {
+		font-size: 50px;
+	}
 	.description {
 		font-size: 35px;
-		padding: 15px;
+		padding-left: 25px;
+		padding-right: 25px;
 		text-align: justify;
-		border: 1px solid red;
+		width: 60%;
+		margin: auto;
 	}
 	.description-picture-container {
 		display: flex;
@@ -54,7 +60,6 @@
 		.main-container {
 			margin-left: auto;
 			margin-right: auto;
-			margin-top: 150px !important;
 		}
 		.description-picture-container {
 			flex-direction: column !important;
@@ -67,6 +72,11 @@
 		}
 	}
 
-	@media only screen and (max-width: 800px) {
+	@media only screen and (max-width: 900px) {
+		.description {
+			border-top: 1px solid var(--secondary-color);
+			width: 100%;
+			text-align: justify;
+		}
 	}
 </style>
