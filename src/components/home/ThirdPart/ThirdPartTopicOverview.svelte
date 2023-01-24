@@ -13,6 +13,7 @@
 				PNG={DATA_ENTRY.png}
 				webp={DATA_ENTRY.webp}
 				description={DATA_ENTRY.description}
+				link={DATA_ENTRY.link}
 			/>
 		{/each}
 	</div>

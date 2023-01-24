@@ -15,4 +15,5 @@ export interface ThirdPartSingleTileDataInterface {
 	png: string;
 	webp: string;
 	description: string;
+	link: string;
 }

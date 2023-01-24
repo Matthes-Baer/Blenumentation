@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { fade, slide, fly, scale } from 'svelte/transition';
 
 	export let name: string;
@@ -39,6 +40,7 @@
 	on:mouseleave={mouseLeave}
 	on:mousemove={mouseMove}
 	class="row p-2 ms-1 singleEntry"
+	data-aos="fade-up"
 >
 	<h3 class="col-sm-3" id={name} data-testid="data-entry-name">{name}:</h3>
 	<div class="col-sm-7 row">

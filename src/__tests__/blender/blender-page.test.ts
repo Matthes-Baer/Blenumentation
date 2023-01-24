@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/svelte';
-import BlenderPage from '../../routes/blender/+page.svelte';
+import BlenderPage from '../../routes/hotkeys-part/+page.svelte';
 
 describe('Test blender page', () => {
 	test('Render blender page', () => {

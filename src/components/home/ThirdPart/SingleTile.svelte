@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	// Props:
 	export let layer: number;
 	export let direction: string;
@@ -8,6 +6,7 @@
 	export let PNG: string;
 	export let webp: string;
 	export let description: string;
+	export let link: string;
 
 	const layersLength = 3;
 	let y: number;
@@ -27,10 +26,12 @@
 		style="flex-direction: {direction === 'start' ? 'row-reverse' : 'row'}"
 	>
 		<p class="description">{description}</p>
-		<picture>
-			<source srcset={webp} />
-			<img src={PNG} alt="something" />
-		</picture>
+		<a href={link}
+			><picture>
+				<source srcset={webp} />
+				<img src={PNG} alt="something" />
+			</picture></a
+		>
 	</div>
 </div>
 
@@ -47,6 +48,11 @@
 	h2 {
 		font-size: 50px;
 	}
+
+	a {
+		cursor: pointer;
+	}
+
 	.description {
 		font-size: 35px;
 		padding-left: 25px;

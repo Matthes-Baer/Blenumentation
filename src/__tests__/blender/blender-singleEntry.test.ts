@@ -1,6 +1,6 @@
 import { sortedDocumentationData } from '../../data/blender/documentationData';
 import { render, screen } from '@testing-library/svelte';
-import SingleEntry__SvelteComponent_ from '../../components/blender/singleEntry.svelte';
+import SingleEntry__SvelteComponent_ from '../../components/hotkeys-part/singleEntry.svelte';
 
 describe('Testing singleEntry component', () => {
 	const firstDataEntry = sortedDocumentationData.at(0);

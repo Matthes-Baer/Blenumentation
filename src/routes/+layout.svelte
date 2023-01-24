@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { animateScroll } from 'svelte-scrollto-element';
 	import { onMount } from 'svelte';
 
 	let x: number = 100;
@@ -28,7 +27,9 @@
 			<img src="images/icon-cube.png" alt="icon cube in navbar" width="50px" height="50px" />
 		</picture>
 	</a>
-	<a href="/blender" class="me-3">Basic Hotkey Documentation</a>
+	<a href="/basics-part" class="me-3">Basics</a>
+	<a href="/materials-part" class="me-3">Materials</a>
+	<a href="/hotkeys-part" class="me-3">Hotkeys</a>
 	<!-- svelte-ignore a11y-missing-attribute -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- <a
@@ -79,6 +80,12 @@
 	a {
 		color: var(--font-color);
 		text-decoration: none;
+	}
+
+	a,
+	source,
+	img {
+		background-color: transparent;
 	}
 
 	@media only screen and (max-width: 400px) {
