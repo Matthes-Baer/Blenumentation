@@ -58,7 +58,7 @@
 			position: fixed;
 			top: 0;
 			transition: all 0.5s;
-			z-index: 9000;
+			z-index: 9001;
 			overflow-y: hidden;
 			background-color: var(--main-color);
 		}
