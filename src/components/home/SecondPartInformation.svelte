@@ -110,14 +110,14 @@
 		&-main {
 			border-top: 4px solid var(--secondary-color);
 			font-size: 45px;
-			min-height: 750px;
+			min-height: 550px;
 			font-size: 35px;
 		}
 		&-input {
 			height: inherit;
 			cursor: pointer;
 			text-align: justify;
-			margin-top: 50px;
+			margin-top: 20px;
 		}
 
 		&-button {
@@ -144,15 +144,23 @@
 	@media only screen and (max-width: 900px) {
 		.slide {
 			&-main {
-				min-height: 900px;
+				min-height: 600px;
 			}
 		}
 	}
 
-	@media only screen and (max-width: 780px) {
+	@media only screen and (max-width: 800px) {
 		.slide {
 			&-main {
-				min-height: 1100px;
+				min-height: 700px;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 700px) {
+		.slide {
+			&-main {
+				min-height: 800px;
 			}
 		}
 	}
@@ -160,7 +168,7 @@
 	@media only screen and (max-width: 600px) {
 		.slide {
 			&-main {
-				min-height: 1400px;
+				min-height: 1000px;
 			}
 		}
 	}
@@ -168,7 +176,30 @@
 	@media only screen and (max-width: 500px) {
 		.slide {
 			&-main {
-				min-height: 1800px;
+				min-height: 1300px;
+			}
+		}
+	}
+	@media only screen and (max-width: 400px) {
+		.slide {
+			&-main {
+				min-height: 1700px;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 350px) {
+		.slide {
+			&-main {
+				min-height: 1900px;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 300px) {
+		.slide {
+			&-main {
+				min-height: 2100px;
 			}
 		}
 	}
