@@ -60,7 +60,7 @@
 			transition: all 0.5s;
 			z-index: 9001;
 			overflow-y: hidden;
-			background-color: var(--main-color);
+			background-color: rgba(40, 40, 40, 0.5);
 		}
 
 		&-title {

@@ -16,11 +16,11 @@
 <style>
 	.nav-container {
 		width: 15%;
-		height: 700px;
+		height: 100%;
 		padding: 15px;
 		border-right: 1px solid white;
-		position: absolute;
-		top: 75px;
+		position: fixed;
+		top: 85px;
 		transition: all 0.1s;
 		overflow-y: scroll;
 	}

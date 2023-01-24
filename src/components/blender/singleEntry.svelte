@@ -51,7 +51,7 @@
 	</div>
 
 	{#if hovered}
-		<div in:scale out:scale style="top: {y}px; left: {x}px;" class="modalTest text-center">
+		<div in:scale out:scale style="top: {y}px; left: {x}px;" class="hover-text text-center">
 			<h1>{keystroke}</h1>
 		</div>
 	{/if}
@@ -76,10 +76,12 @@
 		}
 	}
 
-	.modalTest {
+	.hover-text {
 		position: absolute;
-		width: 250px;
+		width: 300px;
+		padding: 25px;
 		border: 1px solid black;
+		z-index: 9001;
 	}
 
 	// Siehe Youtube-Kurs ca. 20:19:00

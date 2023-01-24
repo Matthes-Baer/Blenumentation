@@ -8,12 +8,9 @@
 </svelte:head>
 
 <div class="mainContainer">
-	<h1 class="ms-2">This is a blender documentation</h1>
-	<div>
-		{#each sortedDocumentationData as entry (entry.name)}
-			<SingleEntry name={entry.name} description={entry.description} keystroke={entry.keystroke} />
-		{/each}
-	</div>
+	{#each sortedDocumentationData as entry (entry.name)}
+		<SingleEntry name={entry.name} description={entry.description} keystroke={entry.keystroke} />
+	{/each}
 </div>
 
 <style lang="scss">
@@ -22,7 +19,8 @@
 	.mainContainer {
 		width: 85%;
 		margin-left: 15%;
-		transition: all 0.1s;
+		margin-top: 125px;
+		transition: all 0.25s;
 	}
 
 	@media only screen and (max-width: 1200px) {
