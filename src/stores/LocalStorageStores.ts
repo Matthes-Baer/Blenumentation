@@ -6,3 +6,5 @@ export const basicsPartProgressStore = persisted('basicsPartProgress', {
 	First: false,
 	Second: false
 });
+
+export const materialsPartProgressStore = persisted('materialsPartProgress', {});

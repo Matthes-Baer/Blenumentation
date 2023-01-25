@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { basicsPartProgressStore } from '../../stores/BasicsPartLocalStorageStore';
+	import { basicsPartProgressStore } from '../../stores/LocalStorageStores';
 </script>
 
 <h1>Materials Part {$basicsPartProgressStore.First}</h1>

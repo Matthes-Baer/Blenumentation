@@ -3,6 +3,7 @@
 	import Second from '../../components/basics-part/Second.svelte';
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div>
 	<First />
 	<Second />

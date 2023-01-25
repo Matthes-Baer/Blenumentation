@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { basicsPartProgressStore } from '../stores/LocalStorageStores';
 
 	let x: number = 100;
 
@@ -30,6 +31,7 @@
 	<a href="/basics-part" class="me-3">Basics</a>
 	<a href="/materials-part" class="me-3">Materials</a>
 	<a href="/hotkeys-part" class="me-3">Hotkeys</a>
+
 	<!-- svelte-ignore a11y-missing-attribute -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- <a

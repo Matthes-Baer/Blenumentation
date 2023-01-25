@@ -32,5 +32,9 @@
 			materials-part (jeweils eine progress mit jeweils einem local storage store) - progress bar
 			jeweils in +layout?
 		</li>
+		<li>
+			dark & white mode funktioniert nicht wegen rerender mit initial value beim Laden (flackert
+			dann)
+		</li>
 	</ul>
 </section>
