@@ -1,12 +1,12 @@
 <script lang="ts">
-	import First from '../../components/basics-part/First.svelte';
-	import Second from '../../components/basics-part/Second.svelte';
+	import { onMount } from 'svelte';
+	import GeneralNavigation from '../../components/basics-part/GeneralNavigation.svelte';
+	import Modifiers from '../../components/basics-part/Modifiers.svelte';
 </script>
 
-<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div>
-	<First />
-	<Second />
+	<GeneralNavigation />
+	<Modifiers />
 </div>
 
 <style lang="scss">
