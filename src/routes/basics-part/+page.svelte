@@ -1,7 +1,12 @@
 <script lang="ts">
+	import First from '../../components/basics-part/First.svelte';
+	import Second from '../../components/basics-part/Second.svelte';
 </script>
 
-<h1>Basics Part</h1>
+<div>
+	<First />
+	<Second />
+</div>
 
 <style lang="scss">
 	@import '../../styles/colors.scss';

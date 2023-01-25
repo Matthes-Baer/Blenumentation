@@ -1,7 +1,8 @@
 <script lang="ts">
+	import { basicsPartProgressStore } from '../../stores/BasicsPartLocalStorageStore';
 </script>
 
-<h1>Materials Part</h1>
+<h1>Materials Part {$basicsPartProgressStore.First}</h1>
 
 <style lang="scss">
 	@import '../../styles/colors.scss';

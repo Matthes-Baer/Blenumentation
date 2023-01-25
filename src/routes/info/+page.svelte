@@ -27,6 +27,10 @@
 		<li>
 			https://svelte.dev/tutorial/basics durchgehen für weitere Dinge zum Einfügen oder für Hilfe
 		</li>
-		<li>...</li>
+		<li>
+			Local Storage Stores und svelte-inview nutzen für Progress Bars in Basics-part und
+			materials-part (jeweils eine progress mit jeweils einem local storage store) - progress bar
+			jeweils in +layout?
+		</li>
 	</ul>
 </section>
