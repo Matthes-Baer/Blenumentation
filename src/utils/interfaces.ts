@@ -17,3 +17,11 @@ export interface ThirdPartSingleTileDataInterface {
 	description: string;
 	link: string;
 }
+
+export interface MaterialsPartDataInterface {
+	id: number;
+	title: string;
+	png: string;
+	webp: string;
+	description: string;
+}
