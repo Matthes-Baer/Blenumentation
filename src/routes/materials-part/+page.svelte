@@ -20,6 +20,7 @@
 				png={SINGLE_ENTRY.png}
 				webp={SINGLE_ENTRY.webp}
 				description={SINGLE_ENTRY.description}
+				marginTop={SINGLE_ENTRY.id !== 1 ? '100px' : '0px'}
 			/>{/each}
 	</div>
 </div>

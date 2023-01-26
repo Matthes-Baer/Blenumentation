@@ -29,7 +29,7 @@ export const MATERIALS_PART_SHADING_DATA: MaterialsPartDataInterface[] = [
 	},
 	{
 		id: 4,
-		title: 'Background HDR Image',
+		title: 'Background HDR Image Change',
 		png: '/images/materials/png/background-image-change.png',
 		webp: '/images/materials/webp/background-image-change.webp',
 		description:
