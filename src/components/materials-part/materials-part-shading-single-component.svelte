@@ -16,7 +16,6 @@
 
 	const onEnterReadHandler = ({ detail }: CustomEvent<ObserverEventDetails>) => {
 		($materialsPartProgressStore as MaterialsPartProgressStoreInterface)[adjustedTitle] = true;
-		console.log('entered');
 	};
 </script>
 
@@ -30,7 +29,7 @@
 	<div class="d-flex justify-content-evenly align-items-center image-description-container">
 		<div class="image-container">
 			<picture>
-				<source class="image" srcset={webp} />
+				<source class="image" type="image/webp" srcset={webp} />
 				<img class="image" alt={title} src={png} />
 			</picture>
 		</div>

@@ -53,6 +53,9 @@
 <slot />
 
 <style lang="scss">
+	picture {
+		background-color: transparent;
+	}
 	.nav {
 		&-container {
 			width: 100%;

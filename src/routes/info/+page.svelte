@@ -14,7 +14,6 @@
 		<li>Einbindung für reactive statemets & für reactive Zugriff auf Store überlegen</li>
 		<li>SecondPartInformation ggf. anpassen mit anderem Text</li>
 		<li>Unit Tests hinzufügen</li>
-		<li>Child Components mit Props etc.</li>
 		<li>responsive designs</li>
 		<li>
 			Hotkeys Part, Material Part (Baking, ...), Basics Part (Steuerung, Allgemeines, Export, ...) -
@@ -29,12 +28,14 @@
 		</li>
 		<li>
 			Local Storage Stores und svelte-inview nutzen für Progress Bars in Basics-part und
-			materials-part (jeweils eine progress mit jeweils einem local storage store) - progress bar
-			jeweils in +layout?
+			materials-part (jeweils eine progress mit jeweils einem local storage store) - siehe bei
+			materials-part
 		</li>
 		<li>
 			dark & white mode funktioniert nicht wegen rerender mit initial value beim Laden (flackert
 			dann)
 		</li>
+		<li>materials-part mit Content erweitern</li>
+		<li>basics-part mit Content erweitern</li>
 	</ul>
 </section>
