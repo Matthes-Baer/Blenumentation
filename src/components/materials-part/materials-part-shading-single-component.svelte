@@ -25,6 +25,7 @@
 <style lang="scss">
 	.image-container {
 		margin-right: 15px;
+		width: 50%;
 	}
 	.title {
 		margin-top: 0;
@@ -32,6 +33,7 @@
 
 	.text {
 		text-align: justify;
+		width: 75%;
 	}
 
 	* {
@@ -42,6 +44,7 @@
 		width: 100%;
 		height: auto;
 		min-width: 300px;
+		max-width: 600px;
 	}
 
 	@media only screen and (max-width: 900px) {
