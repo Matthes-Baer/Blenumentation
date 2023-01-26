@@ -25,3 +25,7 @@ export interface MaterialsPartDataInterface {
 	webp: string;
 	description: string;
 }
+
+export interface MaterialsPartProgressStoreInterface {
+	[ShadingWorkspaceSelection: string]: boolean;
+}

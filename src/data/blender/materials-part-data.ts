@@ -52,7 +52,7 @@ export const MATERIALS_PART_SHADING_DATA: MaterialsPartDataInterface[] = [
 	},
 	{
 		id: 7,
-		title: 'Diffuse BSDF / Principled BSDF',
+		title: 'Diffuse BSDF And Principled BSDF',
 		png: '/images/materials/png/shading-principled-and-diffuse.png',
 		webp: '/images/materials/webp/shading-principled-and-diffuse.webp',
 		description: 'The Diffuse BSDF is a legacy node that got replaced by the Principled BSDF node.'
