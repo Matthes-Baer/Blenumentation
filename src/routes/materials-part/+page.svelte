@@ -17,7 +17,6 @@
 		{#each MATERIALS_PART_SHADING_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}
 			<MaterialsPartShadingSingleComponent
 				title={SINGLE_ENTRY.title}
-				png={SINGLE_ENTRY.png}
 				webp={SINGLE_ENTRY.webp}
 				description={SINGLE_ENTRY.description}
 				marginTop={SINGLE_ENTRY.id !== 1 ? '100px' : '0px'}

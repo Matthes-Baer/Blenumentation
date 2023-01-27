@@ -6,12 +6,11 @@
 	import type { MaterialsPartProgressStoreInterface } from '../../utils/interfaces';
 
 	export let title: string;
-	export let png: string;
 	export let webp: string;
 	export let description: string;
 	export let marginTop: string;
 
-	const options: Options = { threshold: 1 };
+	const options: Options = { threshold: 0.5 };
 	let adjustedTitle: string = title.replaceAll(' ', '');
 
 	const onEnterReadHandler = ({ detail }: CustomEvent<ObserverEventDetails>) => {
@@ -59,7 +58,7 @@
 		width: 100%;
 		height: auto;
 		min-width: 300px;
-		max-width: 600px;
+		max-width: 500px;
 	}
 
 	@media only screen and (max-width: 900px) {
