@@ -72,5 +72,21 @@ export const MATERIALS_PART_SHADING_DATA: MaterialsPartDataInterface[] = [
 		webp: '/images/materials/webp/node-types.webp',
 		description:
 			'There are different type of nodes to work with such as color, vector or shader nodes.'
+	},
+	{
+		id: 10,
+		title: 'Texture Inputs',
+		png: '/images/materials/png/texture-inputs.png',
+		webp: '/images/materials/webp/texture-inputs.webp',
+		description:
+			'Normal pictures can be used as texture inputs for different nodes to work with. This is as easy as dragging a image into the Shading Editor in order to convert this image to an image node within the Shader Editor.'
+	},
+	{
+		id: 11,
+		title: 'Roughness Map Input',
+		png: '/images/materials/png/roughness-map-input.png',
+		webp: '/images/materials/webp/roughness-map-input.webp',
+		description:
+			'A roughness map image can be connected to the roughness of an object to give specific instructions. It is important that the image is in black an white. The more white, the rougher the texture will be a the specific point, the more black, it will be less rough.'
 	}
 ];

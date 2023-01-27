@@ -17,5 +17,7 @@ export const materialsPartProgressStore = persisted('materialsPartProgress', {
 	MaterialOutputNode: false,
 	DiffuseBSDFAndPrincipledBSDF: false,
 	HelpWithConnectingNodes: false,
-	NodeTypes: false
+	NodeTypes: false,
+	TextureInputs: false,
+	RoughnessMapInput: false
 } as MaterialsPartProgressStoreInterface);
