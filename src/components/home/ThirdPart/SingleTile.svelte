@@ -3,7 +3,6 @@
 	export let layer: number;
 	export let direction: string;
 	export let title: string;
-	export let PNG: string;
 	export let webp: string;
 	export let description: string;
 	export let link: string;
@@ -26,12 +25,9 @@
 		style="flex-direction: {direction === 'start' ? 'row-reverse' : 'row'}"
 	>
 		<p class="description">{description}</p>
-		<a href={link}
-			><picture>
-				<source srcset={webp} />
-				<img src={PNG} alt="something" />
-			</picture></a
-		>
+		<a href={link} class="d-flex justify-content-center">
+			<img src={webp} alt="something" />
+		</a>
 	</div>
 </div>
 
@@ -39,10 +35,12 @@
 	* {
 		background-color: transparent;
 	}
-	img,
-	source {
+	img {
 		width: 100%;
 		height: auto;
+		align-self: center;
+		max-width: 700px;
+		max-height: 700px;
 	}
 
 	h2 {
