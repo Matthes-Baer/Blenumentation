@@ -49,7 +49,10 @@
 
 <section>
 	<div class="d-flex justify-content-center slide-button-container" style="width: inherit;">
-		<button on:click={() => (visible = !visible)} class="slide-button"
+		<button
+			on:click={() => (visible = !visible)}
+			class="slide-button"
+			aria-label="Open/Close Information Section"
 			>{#if visible}
 				<i
 					class="fa-solid fa-lock-open slide-button-icon"
