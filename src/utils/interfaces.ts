@@ -27,5 +27,5 @@ export interface MaterialsPartDataInterface {
 }
 
 export interface MaterialsPartProgressStoreInterface {
-	[ShadingWorkspaceSelection: string]: boolean;
+	[key: string]: boolean;
 }

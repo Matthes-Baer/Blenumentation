@@ -1,6 +1,6 @@
 <script>
 	import SingleEntry from '../../components/hotkeys-part/singleEntry.svelte';
-	import { sortedDocumentationData } from '../../data/blender/documentationData';
+	import { sortedDocumentationData } from '../../data/blender/hotkeys-data';
 </script>
 
 <svelte:head>

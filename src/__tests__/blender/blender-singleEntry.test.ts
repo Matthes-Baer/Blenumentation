@@ -1,4 +1,4 @@
-import { sortedDocumentationData } from '../../data/blender/documentationData';
+import { sortedDocumentationData } from '../../data/blender/hotkeys-data';
 import { render, screen } from '@testing-library/svelte';
 import SingleEntry__SvelteComponent_ from '../../components/hotkeys-part/singleEntry.svelte';
 

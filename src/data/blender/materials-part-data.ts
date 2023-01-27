@@ -64,5 +64,13 @@ export const MATERIALS_PART_SHADING_DATA: MaterialsPartDataInterface[] = [
 		webp: '/images/materials/webp/help-with-connecting.webp',
 		description:
 			'By selecting the in- and outputs of a node, Blender will give examples of where to connect the corresponding in- and outputs to.'
+	},
+	{
+		id: 9,
+		title: 'Node Types',
+		png: '/images/materials/png/node-types.png',
+		webp: '/images/materials/png/node-types.webp',
+		description:
+			'There are different type of nodes to work with such as color, vector or shader nodes.'
 	}
 ];

@@ -28,10 +28,7 @@
 	<h3 class="col-lg-12 title">{title}</h3>
 	<div class="d-flex justify-content-evenly align-items-center image-description-container">
 		<div class="image-container">
-			<picture>
-				<source class="image" type="image/webp" srcset={webp} />
-				<img class="image" alt={title} src={png} />
-			</picture>
+			<img class="image" alt={title} src={webp} />
 		</div>
 
 		<div class="text">

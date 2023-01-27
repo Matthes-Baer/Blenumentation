@@ -9,5 +9,13 @@ export const basicsPartProgressStore = persisted('basicsPartProgress', {
 } as { First: boolean; Second: boolean });
 
 export const materialsPartProgressStore = persisted('materialsPartProgress', {
-	ShadingWorkspaceSelection: false
+	ShadingWorkspaceSelection: false,
+	ShadingWorkspace: false,
+	BackgroundHDRImage: false,
+	BackgroundHDRImageChange: false,
+	NodeEditor: false,
+	MaterialOutputNode: false,
+	DiffuseBSDFAndPrincipledBSDF: false,
+	HelpWithConnectingNodes: false,
+	NodeTypes: false
 } as MaterialsPartProgressStoreInterface);
