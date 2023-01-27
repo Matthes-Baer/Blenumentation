@@ -25,6 +25,10 @@
 	};
 </script>
 
+<svelte:window
+	on:keydown|preventDefault={(event) => (event.key === 'Escape' ? (modalView = false) : null)}
+/>
+
 <div
 	class="row mx-auto"
 	style:margin-top={marginTop}
@@ -34,6 +38,7 @@
 	<h3 class="col-lg-12 title">{title}</h3>
 	<div class="d-flex justify-content-evenly align-items-center image-description-container">
 		<div class="image-container">
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<img class="image" alt={title} src={webp} on:click={() => modalViewHandler(true)} />
 		</div>
 
@@ -44,6 +49,7 @@
 </div>
 
 {#if modalView}
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div
 		class="modal-view-container"
 		in:fade|local={{ duration: 500 }}
