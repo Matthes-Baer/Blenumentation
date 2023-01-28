@@ -26,6 +26,20 @@
 			};
 		}}>CLEAR</button
 	>
+
+	<div>
+		Besides the basic navigation and information on how to create objects which mainly can be used
+		for architecture and similar topics, applying appropriate materials is especially important for
+		me in Blender.
+		<br />
+		Therefore this section is specifically dedicated to information on working with materials. While
+		there are possibilites to apply general material features to objects, the shading editor can be used
+		for advanced material adding processes.
+		<br />
+		Based on this section one should be able to work with some fundamental shading and general material
+		features.
+	</div>
+
 	<!-- <h1>Materials Part {$basicsPartProgressStore.First}</h1>
 
 	<h2>Normal materials</h2>
@@ -33,7 +47,7 @@
 		One way to work with materials is to navigate to the materials properties of an object
 		(material-properties)
 	</div> -->
-	<h2>Shading</h2>
+	<h1>Shading</h1>
 	<div>
 		{#each MATERIALS_PART_SHADING_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}
 			<MaterialsPartShadingSingleComponent
