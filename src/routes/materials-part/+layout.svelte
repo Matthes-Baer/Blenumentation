@@ -75,7 +75,7 @@
 			on:click={() => progressBarToggleHandler(true)}
 			class="button button-open"
 		>
-			<div style="margin-top: 15px;">
+			<div class="button-open-content">
 				<i class="fa-solid fa-square-up-right" />
 				<p style="background-color: transparent;">Read List</p>
 			</div>
@@ -92,7 +92,7 @@
 	.container {
 		&-layout {
 			width: 5%;
-			min-width: 50px;
+			min-width: 85px;
 			position: fixed;
 			top: 100px;
 			left: 0px;
@@ -141,6 +141,10 @@
 			border-top: 1px solid var(--secondary-color);
 			border-bottom: 1px solid var(--secondary-color);
 			background-color: var(--main-color);
+
+			&-content {
+				margin-top: 15px;
+			}
 		}
 		&-close {
 			position: absolute;
