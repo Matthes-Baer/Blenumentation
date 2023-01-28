@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
-	import { onMount } from 'svelte';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
 	import { materialsPartProgressStore } from '../../stores/LocalStorageStores';
 	import type { MaterialsPartProgressStoreInterface } from '../../utils/interfaces';

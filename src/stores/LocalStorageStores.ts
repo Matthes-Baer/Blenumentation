@@ -9,6 +9,7 @@ export const basicsPartProgressStore = persisted('basicsPartProgress', {
 } as { First: boolean; Second: boolean });
 
 export const materialsPartProgressStore = persisted('materialsPartProgress', {
+	MaterialPropertyView: false,
 	ShadingWorkspaceSelection: false,
 	ShadingWorkspace: false,
 	BackgroundHDRImage: false,

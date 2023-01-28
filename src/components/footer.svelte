@@ -59,12 +59,6 @@
 		}
 	}
 
-	.grid {
-		&-part {
-			height: 100%;
-		}
-	}
-
 	@media (max-width: 219px) {
 		.rights-reserved {
 			flex-direction: column;

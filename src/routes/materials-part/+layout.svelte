@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { fly, fade } from 'svelte/transition';
-	import { onMount } from 'svelte';
 	import LayoutShadingProgressTile from '../../components/materials-part/layout-shading-progress-tile.svelte';
-	import { MATERIALS_PART_SHADING_DATA } from '../../data/blender/materials-part-data';
+	import { materialsPartAllData } from '../../data/blender/materials-part-data';
 
 	// So könnte man es womöglich machen, um den Flackereffekt beim Neuladen zu umgehen?
 	// onMount(() => {
@@ -58,12 +57,12 @@
 		>
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 
-			{#each MATERIALS_PART_SHADING_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}
+			{#each materialsPartAllData() as SINGLE_ENTRY (SINGLE_ENTRY.id)}
 				<LayoutShadingProgressTile
 					adjustedTitle={SINGLE_ENTRY.title.replaceAll(' ', '')}
 					title={SINGLE_ENTRY.title}
 					id={SINGLE_ENTRY.id}
-					length={MATERIALS_PART_SHADING_DATA.length}
+					length={materialsPartAllData().length - 1}
 				/>
 			{/each}
 		</div>

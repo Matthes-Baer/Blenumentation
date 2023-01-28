@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { basicsPartProgressStore } from '../../stores/LocalStorageStores';
 	import { materialsPartProgressStore } from '../../stores/LocalStorageStores';
 	import { MATERIALS_PART_SHADING_DATA } from '../../data/blender/materials-part-data';
+	import { MATERIALS_PART_MATERIALSPROPERTIES_DATA } from '../../data/blender/materials-part-data';
 	import MaterialsPartShadingSingleComponent from '../../components/materials-part/materials-part-shading-single-component.svelte';
 	import AdditionalInformation from '../../components/materials-part/AdditionalInformation.svelte';
 	import Footer from '../../components/footer.svelte';
+	import MaterialsPartMaterialPropertiesSingleComponent from '../../components/materials-part/materials-part-material-properties-single-component.svelte';
 </script>
 
 <div class="page-container mx-auto">
@@ -40,13 +41,17 @@
 		features.
 	</div>
 
-	<!-- <h1>Materials Part {$basicsPartProgressStore.First}</h1>
-
-	<h2>Normal materials</h2>
+	<h1>Material Properties</h1>
 	<div>
-		One way to work with materials is to navigate to the materials properties of an object
-		(material-properties)
-	</div> -->
+		{#each MATERIALS_PART_MATERIALSPROPERTIES_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}
+			<MaterialsPartMaterialPropertiesSingleComponent
+				title={SINGLE_ENTRY.title}
+				webp={SINGLE_ENTRY.webp}
+				description={SINGLE_ENTRY.description}
+				marginTop={SINGLE_ENTRY.id !== 13 ? '100px' : '0px'}
+			/>{/each}
+	</div>
+
 	<h1>Shading</h1>
 	<div>
 		{#each MATERIALS_PART_SHADING_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}

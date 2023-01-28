@@ -1,6 +1,17 @@
 import type { MaterialsPartDataInterface } from './../../utils/interfaces';
 
-export const MATERIALS_PART_MATERIALSPROPERTIES_DATA: MaterialsPartDataInterface[] = [];
+//? GGF. Am Ende die ids nochmal anpassen (dürfen nicht identisch sein bei beiden Variablen)
+
+export const MATERIALS_PART_MATERIALSPROPERTIES_DATA: MaterialsPartDataInterface[] = [
+	{
+		id: 13,
+		title: 'Material Property View',
+		png: '/images/materials/png/material-properties.png',
+		webp: '/images/materials/webp/material-properties.webp',
+		description:
+			'One way to work with materials is to navigate to the materials properties of an object'
+	}
+];
 
 export const MATERIALS_PART_SHADING_DATA: MaterialsPartDataInterface[] = [
 	{
@@ -98,3 +109,17 @@ export const MATERIALS_PART_SHADING_DATA: MaterialsPartDataInterface[] = [
 			'There are also so-called Normal Maps that are responsible for representing the lighting on a texture. Normal maps have blue/purple colors and can be created via Baking directly in Blender (check out the additional information below). In order to append Normal Maps one has to use the Image Texture and Normal Map nodes.'
 	}
 ];
+
+export const materialsPartAllData: () => MaterialsPartDataInterface[] = () => {
+	const combiningArray: MaterialsPartDataInterface[] = [];
+
+	for (const k of MATERIALS_PART_MATERIALSPROPERTIES_DATA) {
+		combiningArray.push(k);
+	}
+
+	for (const k of MATERIALS_PART_SHADING_DATA) {
+		combiningArray.push(k);
+	}
+
+	return combiningArray;
+};
