@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { basicsPartProgressStore } from '../../stores/LocalStorageStores';
+	import { materialsPartProgressStore } from '../../stores/LocalStorageStores';
 	import { MATERIALS_PART_SHADING_DATA } from '../../data/blender/materials-part-data';
 	import MaterialsPartShadingSingleComponent from '../../components/materials-part/materials-part-shading-single-component.svelte';
 	import AdditionalInformation from '../../components/materials-part/AdditionalInformation.svelte';
@@ -7,6 +8,24 @@
 </script>
 
 <div class="page-container mx-auto">
+	<button
+		on:click={() => {
+			$materialsPartProgressStore = {
+				ShadingWorkspaceSelection: false,
+				ShadingWorkspace: false,
+				BackgroundHDRImage: false,
+				BackgroundHDRImageChange: false,
+				NodeEditor: false,
+				MaterialOutputNode: false,
+				DiffuseBSDFAndPrincipledBSDF: false,
+				HelpWithConnectingNodes: false,
+				NodeTypes: false,
+				TextureInputs: false,
+				RoughnessMapInput: false,
+				NormalMapInput: false
+			};
+		}}>CLEAR</button
+	>
 	<!-- <h1>Materials Part {$basicsPartProgressStore.First}</h1>
 
 	<h2>Normal materials</h2>

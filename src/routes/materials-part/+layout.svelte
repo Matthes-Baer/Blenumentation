@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import LayoutShadingProgressTile from '../../components/materials-part/layout-shading-progress-tile.svelte';
 	import { MATERIALS_PART_SHADING_DATA } from '../../data/blender/materials-part-data';
@@ -15,6 +15,7 @@
 	// 	};
 	// });
 	let progressBarVisible = false;
+	let backgroundColor = 'rgba(40,40,40,0.75)';
 
 	const keydownHandler: (
 		a: KeyboardEvent & {
@@ -25,11 +26,11 @@
 			currentTarget: EventTarget & Window;
 		}
 	) => {
-		event.code == 'Digit1'
-			? (progressBarVisible = true)
-			: event.code == 'Digit2'
-			? (progressBarVisible = false)
-			: null;
+		if (event.code == 'Digit1') {
+			progressBarVisible = true;
+		} else if (event.code == 'Digit2') {
+			progressBarVisible = false;
+		}
 	};
 
 	const progressBarToggleHandler: (a: boolean) => void = (direction: boolean): void => {
@@ -39,21 +40,32 @@
 
 <svelte:window on:keydown={keydownHandler} />
 
-<div class="container-layout">
+<div class="container-layout" style:background-color={progressBarVisible ? backgroundColor : null}>
 	{#if progressBarVisible}
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<div
+			class="button button-close"
+			on:click={() => progressBarToggleHandler(false)}
+			in:fade|local={{ duration: 1000 }}
+			out:fade|local={{ duration: 500 }}
+		>
+			<i class="fa-solid fa-xmark" />
+		</div>
 		<div
 			in:fly|local={{ duration: 2000, x: -100 }}
 			out:fly|local={{ duration: 1000, x: -100 }}
 			class="container-flex"
 		>
-			<h2>Read:</h2>
-			{#each MATERIALS_PART_SHADING_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}
-				<LayoutShadingProgressTile adjustedTitle={SINGLE_ENTRY.title.replaceAll(' ', '')} />
-			{/each}
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<div class="button button-close" on:click={() => progressBarToggleHandler(false)}>
-				Close Read List
-			</div>
+
+			{#each MATERIALS_PART_SHADING_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}
+				<LayoutShadingProgressTile
+					adjustedTitle={SINGLE_ENTRY.title.replaceAll(' ', '')}
+					title={SINGLE_ENTRY.title}
+					id={SINGLE_ENTRY.id}
+					length={MATERIALS_PART_SHADING_DATA.length}
+				/>
+			{/each}
 		</div>
 	{:else}
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -63,7 +75,10 @@
 			on:click={() => progressBarToggleHandler(true)}
 			class="button button-open"
 		>
-			Open Read List
+			<div style="margin-top: 15px;">
+				<i class="fa-solid fa-square-up-right" />
+				<p style="background-color: transparent;">Read List</p>
+			</div>
 		</div>
 	{/if}
 </div>
@@ -71,32 +86,53 @@
 <slot />
 
 <style lang="scss">
+	i {
+		background-color: transparent;
+	}
 	.container {
 		&-layout {
 			width: 5%;
+			min-width: 50px;
 			position: fixed;
 			top: 100px;
 			left: 0px;
 			z-index: 9001;
-
 			background-color: transparent;
+			height: 500px;
+			overflow: scroll;
+			overflow-x: hidden;
+			transition: all 0.25s;
+
+			&::-webkit-scrollbar {
+				width: 0px; /* width of the entire scrollbar */
+			}
+
+			&::-webkit-scrollbar-track {
+				background: orange; /* color of the tracking area */
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: blue; /* color of the scroll thumb */
+				border-radius: 20px; /* roundness of the scroll thumb */
+				border: 3px solid orange; /* creates padding around scroll thumb */
+			}
 		}
 
 		&-flex {
 			display: flex;
 			flex-direction: column;
-			justify-content: space-evenly;
 			background-color: transparent;
+			width: 50px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 15px;
 		}
 	}
 
-	h2 {
-		background-color: transparent;
-		text-align: center;
-	}
 	.button {
 		background-color: transparent;
 		text-align: center;
+		cursor: pointer;
 		&-open {
 			position: absolute;
 			top: 0px;
@@ -107,6 +143,9 @@
 			background-color: var(--main-color);
 		}
 		&-close {
+			position: absolute;
+			top: 0px;
+			right: 7.5px;
 		}
 	}
 

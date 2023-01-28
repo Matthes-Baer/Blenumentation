@@ -23,11 +23,23 @@
 	const modalViewHandler: (a: boolean) => void = (direction: boolean): void => {
 		modalView = direction;
 	};
+
+	const keydownHandler: (
+		a: KeyboardEvent & {
+			currentTarget: EventTarget & Window;
+		}
+	) => void = (
+		event: KeyboardEvent & {
+			currentTarget: EventTarget & Window;
+		}
+	) => {
+		if (event.code == 'Escape') {
+			modalView = false;
+		}
+	};
 </script>
 
-<svelte:window
-	on:keydown|preventDefault={(event) => (event.key === 'Escape' ? (modalView = false) : null)}
-/>
+<svelte:window on:keydown={keydownHandler} />
 
 <div
 	class="row mx-auto"
