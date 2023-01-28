@@ -3,19 +3,17 @@
 	import { DATA } from '../../../data/blender/ThirdPartSingleTileData';
 </script>
 
-<section>
-	<div class="main-div-container">
-		{#each DATA as DATA_ENTRY (DATA_ENTRY)}
-			<SingleTile
-				layer={DATA_ENTRY.id}
-				direction={DATA_ENTRY.id % 2 === 0 ? 'end' : 'start'}
-				title={DATA_ENTRY.title}
-				webp={DATA_ENTRY.webp}
-				description={DATA_ENTRY.description}
-				link={DATA_ENTRY.link}
-			/>
-		{/each}
-	</div>
+<section class="main-div-container">
+	{#each DATA as DATA_ENTRY (DATA_ENTRY)}
+		<SingleTile
+			layer={DATA_ENTRY.id}
+			direction={DATA_ENTRY.id % 2 === 0 ? 'end' : 'start'}
+			title={DATA_ENTRY.title}
+			webp={DATA_ENTRY.webp}
+			description={DATA_ENTRY.description}
+			link={DATA_ENTRY.link}
+		/>
+	{/each}
 </section>
 
 <style>

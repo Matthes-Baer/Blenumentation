@@ -1,6 +1,7 @@
 <script>
 	import SingleEntry from '../../components/hotkeys-part/singleEntry.svelte';
 	import { sortedDocumentationData } from '../../data/blender/hotkeys-data';
+	import Footer from '../../components/footer.svelte';
 </script>
 
 <svelte:head>
@@ -13,6 +14,8 @@
 			<SingleEntry name={entry.name} description={entry.description} keystroke={entry.keystroke} />
 		{/each}
 	</div>
+
+	<Footer />
 </div>
 
 <style lang="scss">

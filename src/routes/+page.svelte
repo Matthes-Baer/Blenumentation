@@ -2,13 +2,11 @@
 	// Svelte provides out-of-the-box transitions like { fly } from 'svelte/transition'
 	// Use $: for rerender/update purposes of states
 	// function used as a action event handler (important: remove eventListener on return (destroy))
-	import InformationSection from '../components/learning archive/informationSection.svelte';
 	import FirstPartTitle from '../components/home/FirstPartTitle.svelte';
 	import Footer from '../components/footer.svelte';
 	import SecondPartInformation from '../components/home/SecondPartInformation.svelte';
 	import ThirdPartTopicOverview from '../components/home/ThirdPart/ThirdPartTopicOverview.svelte';
 	import HomepageBackgroundStuff from '../components/ui/HomepageBackgroundStuff.svelte';
-	import { onMount } from 'svelte';
 
 	const layers: number[] = [1, 2, 3, 4, 5];
 </script>
@@ -24,6 +22,7 @@
 	{#each layers as layer (layer)}
 		<HomepageBackgroundStuff {layer} layersLength={layers.length} />
 	{/each}
+	<Footer />
 </main>
 
 <!-- <Footer /> -->

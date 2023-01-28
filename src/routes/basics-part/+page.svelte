@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Footer from '../../components/footer.svelte';
 	import { onMount } from 'svelte';
 	import GeneralNavigation from '../../components/basics-part/GeneralNavigation.svelte';
 	import Modifiers from '../../components/basics-part/Modifiers.svelte';
@@ -7,6 +8,7 @@
 <div>
 	<GeneralNavigation />
 	<Modifiers />
+	<Footer />
 </div>
 
 <style lang="scss">

@@ -79,7 +79,7 @@ export const MATERIALS_PART_SHADING_DATA: MaterialsPartDataInterface[] = [
 		png: '/images/materials/png/texture-inputs.png',
 		webp: '/images/materials/webp/texture-inputs.webp',
 		description:
-			'Normal pictures can be used as texture inputs for different nodes to work with. This is as easy as dragging a image into the Shading Editor in order to convert this image to an image node within the Shader Editor.'
+			'Normal pictures can be used as texture inputs for different nodes to work with. This is as easy as dragging a image into the Shading Editor in order to convert this image to an image node within the Shader Editor. '
 	},
 	{
 		id: 11,
@@ -88,5 +88,13 @@ export const MATERIALS_PART_SHADING_DATA: MaterialsPartDataInterface[] = [
 		webp: '/images/materials/webp/roughness-map-input.webp',
 		description:
 			'A roughness map image can be connected to the roughness of an object to give specific instructions. It is important that the image is in black an white. The more white, the rougher the texture will be a the specific point, the more black, it will be less rough.'
+	},
+	{
+		id: 12,
+		title: 'Normal Map Input',
+		png: '/images/materials/png/normal-map-input.png',
+		webp: '/images/materials/webp/normal-map-input.webp',
+		description:
+			'There are also so-called Normal Maps that are responsible for representing the lighting on a texture. Normal maps have blue/purple colors and can be created via Baking directly in Blender (check out the additional information below). In order to append Normal Maps one has to use the Image Texture and Normal Map nodes.'
 	}
 ];

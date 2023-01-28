@@ -2,6 +2,8 @@
 	import { basicsPartProgressStore } from '../../stores/LocalStorageStores';
 	import { MATERIALS_PART_SHADING_DATA } from '../../data/blender/materials-part-data';
 	import MaterialsPartShadingSingleComponent from '../../components/materials-part/materials-part-shading-single-component.svelte';
+	import AdditionalInformation from '../../components/materials-part/AdditionalInformation.svelte';
+	import Footer from '../../components/footer.svelte';
 </script>
 
 <div class="page-container mx-auto">
@@ -22,6 +24,9 @@
 				marginTop={SINGLE_ENTRY.id !== 1 ? '100px' : '0px'}
 			/>{/each}
 	</div>
+
+	<AdditionalInformation />
+	<Footer />
 </div>
 
 <style lang="scss">
