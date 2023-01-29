@@ -106,7 +106,7 @@ export const MATERIALS_PART_SHADING_DATA: MaterialsPartDataInterface[] = [
 		png: '/images/materials/png/normal-map-input.png',
 		webp: '/images/materials/webp/normal-map-input.webp',
 		description:
-			'There are also so-called Normal Maps that are responsible for representing the lighting on a texture. Normal maps have blue/purple colors and can be created via Baking directly in Blender (check out the additional information below). In order to append Normal Maps one has to use the Image Texture and Normal Map nodes.'
+			'There are also so-called Normal Maps that are responsible for representing the lighting on a texture. Normal maps have blue/purple colors and can be created via Baking directly in Blender (check out the additional information below). For automatic generating a normal map based on a given texture, other software can be used, such as Gimp, for example. In order to append Normal Maps one has to use the Image Texture and Normal Map nodes.'
 	}
 ];
 
