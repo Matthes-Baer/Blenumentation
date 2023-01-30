@@ -76,7 +76,9 @@
 		>
 			<div class="button-open-content">
 				<i class="fa-solid fa-square-up-right" />
-				<p style="background-color: transparent;">Read List</p>
+				<p style="background-color: transparent;" class="d-flex flex-column align-items-center">
+					<span>Read</span><span>List</span>
+				</p>
 			</div>
 		</div>
 	{/if}
@@ -101,6 +103,11 @@
 			overflow: scroll;
 			overflow-x: hidden;
 			transition: all 0.25s;
+			transform: translateX(-25px);
+
+			&:hover {
+				transform: translateX(0px);
+			}
 
 			&::-webkit-scrollbar {
 				width: 0px; /* width of the entire scrollbar */
@@ -143,6 +150,7 @@
 
 			&-content {
 				margin-top: 15px;
+				padding: 7.5px;
 			}
 		}
 		&-close {
