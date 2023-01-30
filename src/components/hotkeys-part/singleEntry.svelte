@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { fade, slide, fly, scale } from 'svelte/transition';
 
 	export let name: string;
@@ -39,11 +38,10 @@
 	on:mouseover={mouseOver}
 	on:mouseleave={mouseLeave}
 	on:mousemove={mouseMove}
-	class="row p-2 ms-1 singleEntry"
-	data-aos="fade-up"
+	class="row p-2 ms-1 mb-4 mt-4 singleEntry"
 >
 	<h3 class="col-sm-3" id={name} data-testid="data-entry-name">{name}:</h3>
-	<div class="col-sm-7 row">
+	<div class="col-sm-9 row">
 		<div class="col-sm-8 singleEntryDescription" data-testid="data-entry-description">
 			{description}
 		</div>
@@ -60,13 +58,14 @@
 </div>
 
 <style lang="scss">
+	* {
+		align-items: center;
+	}
 	.single {
 		&Entry {
-			border-bottom: 1px solid #252525;
-
 			&Description {
 				font-size: 25px;
-				border-right: 1px solid #252525;
+				text-align: justify;
 			}
 
 			&Keystroke {
@@ -74,6 +73,8 @@
 				margin-bottom: auto;
 				font-size: 30px;
 				font-weight: 700;
+				justify-content: center;
+				text-align: center;
 			}
 		}
 	}
@@ -84,6 +85,24 @@
 		padding: 25px;
 		border: 1px solid black;
 		z-index: 9001;
+	}
+
+	@media only screen and (max-width: 1200px) {
+		* {
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.singleEntryDescription {
+			text-align: justify;
+		}
+	}
+
+	@media only screen and (max-width: 576px) {
+		.singleEntryDescription {
+			text-align: center;
+		}
 	}
 
 	// Siehe Youtube-Kurs ca. 20:19:00

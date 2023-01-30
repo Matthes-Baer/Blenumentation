@@ -87,6 +87,10 @@
 		margin-right: 15px;
 		width: 50%;
 		min-width: 300px;
+
+		& > img {
+			cursor: pointer;
+		}
 	}
 	.title {
 		margin-top: 0;

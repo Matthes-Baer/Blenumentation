@@ -21,7 +21,4 @@
 		display: flex;
 		flex-direction: column;
 	}
-
-	@media only screen and (max-width: 900px) {
-	}
 </style>

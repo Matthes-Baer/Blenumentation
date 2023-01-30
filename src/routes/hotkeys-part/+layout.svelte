@@ -13,24 +13,31 @@
 
 <slot />
 
-<style>
+<style lang="scss">
 	.nav-container {
 		width: 15%;
-		height: 100%;
+		height: 75%;
 		padding: 15px;
-		border-right: 1px solid white;
+		border-right: 1px solid var(--secondary-color);
 		position: fixed;
 		top: 85px;
 		transition: all 0.1s;
 		overflow-y: scroll;
+		top: 50%;
+		transform: translate(0px, -50%);
 	}
 	.nav-link-element {
 		text-decoration: none;
 		color: var(--font-color);
 		font-size: 1.5vw;
 		height: 100%;
-		border-bottom: 1px solid white;
 		transition: all 0.25s;
+		padding-bottom: 15px;
+		padding-top: 15px;
+
+		&:not(&:last-of-type) {
+			border-bottom: 1px solid var(--secondary-color);
+		}
 	}
 
 	.nav-link-element:hover {
@@ -45,11 +52,22 @@
 	@media only screen and (max-width: 1200px) {
 		.nav-container {
 			position: static;
-			top: 75px;
+			margin-top: 125px;
 			width: 100%;
-			height: 200px;
+			height: 400px;
 			overflow-y: scroll;
 			border-right: none;
+			transform: none;
+		}
+
+		.nav-link-element {
+			text-decoration: none;
+			color: var(--font-color);
+			font-size: 25px;
+			height: 100%;
+			transition: all 0.25s;
+			padding-bottom: 15px;
+			padding-top: 15px;
 		}
 	}
 </style>

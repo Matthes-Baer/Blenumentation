@@ -16,8 +16,8 @@
 <div
 	class="main-container d-flex flex-column"
 	style="align-self: flex-{direction}; margin-top: {layer !== 1
-		? '250px'
-		: '0px'}; transform: translate(0, {(-y * layer) / 3.5 / (layersLength - 1)}px)"
+		? '275px'
+		: '0px'}; transform: translate(0, {(-y * layer) / 8 / (layersLength - 1)}px);"
 >
 	<h2 style="align-self: flex-{direction};" class="title">{title}</h2>
 	<div

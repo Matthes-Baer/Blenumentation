@@ -9,7 +9,7 @@ export const MATERIALS_PART_MATERIALSPROPERTIES_DATA: MaterialsPartDataInterface
 		png: '/images/materials/png/material-properties.png',
 		webp: '/images/materials/webp/material-properties.webp',
 		description:
-			'One way to work with materials is to navigate to the materials properties of an object'
+			'One way to work with materials is to navigate to the material properties of an object. This can be very useful for getting a quick idea of which base colors and other fundamental properties would work on that specific object. However, the material properties only provide the most basic options. In order to create more distinguished results, the Shading Editor should be opened up.'
 	}
 ];
 

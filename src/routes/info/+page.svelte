@@ -37,5 +37,6 @@
 		</li>
 		<li>materials-part mit Content erweitern</li>
 		<li>basics-part mit Content erweitern</li>
+		<li>Bilder von Midjourney einfügen?</li>
 	</ul>
 </section>

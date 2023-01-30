@@ -68,7 +68,7 @@
 		&-circle {
 			width: 10px;
 			height: 10px;
-			background-color: red;
+			background-color: var(--secondary-color);
 			border-radius: 50%;
 			overflow: hidden;
 		}

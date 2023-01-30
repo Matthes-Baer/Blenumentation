@@ -199,7 +199,7 @@ const documentationData: documentationDataInterface[] = [
 
 // alphabetical sort function
 export const sortedDocumentationData = documentationData.sort(
-	(a: documentationDataInterface, b: documentationDataInterface): any => {
+	(a: documentationDataInterface, b: documentationDataInterface): number => {
 		const upperCaseA = a.name.toUpperCase().split('');
 		const upperCaseB = b.name.toUpperCase().split('');
 
@@ -209,5 +209,6 @@ export const sortedDocumentationData = documentationData.sort(
 			}
 			return upperCaseA.join('').charCodeAt(i) - upperCaseB.join('').charCodeAt(i) || 0;
 		}
+		throw new Error();
 	}
 );

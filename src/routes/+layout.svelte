@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { basicsPartProgressStore } from '../stores/LocalStorageStores';
 
 	let x: number = 100;
 
@@ -28,26 +27,9 @@
 			<img src="images/icon-cube.png" alt="icon cube in navbar" width="50px" height="50px" />
 		</picture>
 	</a>
-	<a href="/basics-part" class="me-3">Basics</a>
-	<a href="/materials-part" class="me-3">Materials</a>
-	<a href="/hotkeys-part" class="me-3">Hotkeys</a>
-
-	<!-- svelte-ignore a11y-missing-attribute -->
-	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<!-- <a
-		on:click={() =>
-			animateScroll.scrollTo({
-				//@ts-ignore
-				element: '#Test',
-				duration: 250,
-				delay: 50,
-				onDone: function () {
-					console.log('Scrolling done.');
-				}
-			})}
-	>
-		Testing Id div scroll
-	</a> -->
+	<a href="/basics-part" class="nav-element">Basics</a>
+	<a href="/materials-part" class="nav-element">Materials</a>
+	<a href="/hotkeys-part" class="nav-element">Hotkeys</a>
 </nav>
 
 <slot />
@@ -72,10 +54,14 @@
 		&-title {
 			margin-right: auto;
 		}
+
+		&-element {
+			margin-right: 25px;
+		}
 	}
 
 	a:hover {
-		transform: translateY(5px);
+		color: var(--secondary-color) !important;
 	}
 
 	a:visited {
@@ -85,6 +71,7 @@
 	a {
 		color: var(--font-color);
 		text-decoration: none;
+		transition: all 0.25s;
 	}
 
 	a,
@@ -93,7 +80,7 @@
 		background-color: transparent;
 	}
 
-	@media only screen and (max-width: 400px) {
+	@media only screen and (max-width: 500px) {
 		.nav {
 			&-container {
 				flex-direction: column;
@@ -103,6 +90,10 @@
 
 			&-title {
 				margin-right: 0;
+			}
+
+			&-element {
+				margin: 0;
 			}
 		}
 	}

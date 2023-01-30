@@ -22,6 +22,7 @@
 	{#each layers as layer (layer)}
 		<HomepageBackgroundStuff {layer} layersLength={layers.length} />
 	{/each}
+
 	<Footer />
 </main>
 
@@ -47,7 +48,7 @@
 		overflow-x: hidden;
 	}
 
-	@media only screen and (max-width: 400px) {
+	@media only screen and (max-width: 500px) {
 		.main-container {
 			margin-top: 150px;
 		}
