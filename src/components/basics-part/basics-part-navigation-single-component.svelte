@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { inview } from 'svelte-inview';
 	import type { ObserverEventDetails, Options } from 'svelte-inview';
-	import { materialsPartProgressStore } from '../../stores/LocalStorageStores';
+	import { basicsPartProgressStore } from '../../stores/LocalStorageStores';
 	import type { MaterialsPartAndBasicsPartProgressStoreInterface } from '../../utils/interfaces';
 	import { fade } from 'svelte/transition';
 
@@ -16,9 +16,8 @@
 	let adjustedTitle: string = title.replaceAll(' ', '');
 
 	const onEnterReadHandler = ({ detail }: CustomEvent<ObserverEventDetails>) => {
-		($materialsPartProgressStore as MaterialsPartAndBasicsPartProgressStoreInterface)[
-			adjustedTitle
-		] = true;
+		($basicsPartProgressStore as MaterialsPartAndBasicsPartProgressStoreInterface)[adjustedTitle] =
+			true;
 	};
 
 	const modalViewHandler: (a: boolean) => void = (direction: boolean): void => {

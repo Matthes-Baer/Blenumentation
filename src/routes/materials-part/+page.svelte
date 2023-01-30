@@ -9,7 +9,7 @@
 </script>
 
 <main class="container-page mx-auto">
-	<div class="container-start">
+	<section class="container-start">
 		<button
 			on:click={() => {
 				$materialsPartProgressStore = {
@@ -39,7 +39,7 @@
 			While there are possibilites to apply general material features to objects, the Shading Editor
 			can be used for advanced material adding processes.
 		</div>
-	</div>
+	</section>
 
 	<section class="container-material-properties">
 		<h1>Material Properties</h1>
@@ -63,9 +63,13 @@
 			/>{/each}
 	</section>
 
-	<AdditionalInformation />
-	<Footer />
+	<section>
+		<AdditionalInformation />
+	</section>
 </main>
+<footer>
+	<Footer />
+</footer>
 
 <style lang="scss">
 	@import '../../styles/colors.scss';

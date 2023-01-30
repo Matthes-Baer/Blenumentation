@@ -22,11 +22,11 @@
 	{#each layers as layer (layer)}
 		<HomepageBackgroundStuff {layer} layersLength={layers.length} />
 	{/each}
-
-	<Footer />
 </main>
+<footer>
+	<Footer />
+</footer>
 
-<!-- <Footer /> -->
 <style lang="scss">
 	@import '../styles/animations.scss';
 	@import '../styles/colors.scss';

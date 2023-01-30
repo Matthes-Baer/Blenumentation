@@ -18,7 +18,7 @@ export interface ThirdPartSingleTileDataInterface {
 	link: string;
 }
 
-export interface MaterialsPartDataInterface {
+export interface MaterialsPartAndBasicsPartDataInterface {
 	id: number;
 	title: string;
 	png: string;
@@ -26,6 +26,6 @@ export interface MaterialsPartDataInterface {
 	description: string;
 }
 
-export interface MaterialsPartProgressStoreInterface {
+export interface MaterialsPartAndBasicsPartProgressStoreInterface {
 	[key: string]: boolean;
 }

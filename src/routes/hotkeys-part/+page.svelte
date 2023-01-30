@@ -8,15 +8,17 @@
 	<title>Blender Hotkey Documentation</title>
 </svelte:head>
 
-<div class="mainContainer">
-	<div data-aos="fade-up" style="margin-bottom: 50px;">
+<main class="mainContainer">
+	<section data-aos="fade-up" style="margin-bottom: 50px;">
 		{#each sortedDocumentationData as entry (entry.name)}
 			<SingleEntry name={entry.name} description={entry.description} keystroke={entry.keystroke} />
 		{/each}
-	</div>
+	</section>
+</main>
 
+<footer>
 	<Footer />
-</div>
+</footer>
 
 <style lang="scss">
 	@import '../../styles/animations.scss';
