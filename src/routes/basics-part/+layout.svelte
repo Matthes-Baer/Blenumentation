@@ -52,7 +52,7 @@
 					adjustedTitle={SINGLE_ENTRY.title.replaceAll(' ', '')}
 					title={SINGLE_ENTRY.title}
 					id={SINGLE_ENTRY.id}
-					length={BASICS_PART_DATA.length - 1}
+					length={BASICS_PART_DATA.length}
 				/>
 			{/each}
 		</div>
@@ -89,7 +89,7 @@
 			left: 0px;
 			z-index: 9001;
 			background-color: transparent;
-			height: 500px;
+			height: 265px;
 			overflow: scroll;
 			overflow-x: hidden;
 			transition: all 0.25s;

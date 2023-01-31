@@ -15,7 +15,6 @@
 		{/each}
 	</section>
 </main>
-
 <footer>
 	<Footer />
 </footer>
@@ -28,7 +27,6 @@
 		margin-left: 15%;
 		margin-top: 125px;
 		transition: all 0.25s;
-		max-height: 500px;
 	}
 
 	@media only screen and (max-width: 1200px) {

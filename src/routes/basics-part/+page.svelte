@@ -2,41 +2,22 @@
 	import Footer from '../../components/footer.svelte';
 	import { BASICS_PART_DATA } from '../../data/blender/basics-part-data';
 	import BasicsPartNavigationSingleComponent from '../../components/basics-part/basics-part-navigation-single-component.svelte';
+	import { basicsPartProgressStore } from '../../stores/LocalStorageStores';
 </script>
 
-<main>
-	<section style="font-size: 50px;">
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
-		Something Libus Narum
-		<br />
+<main class="container-page mx-auto">
+	<section class="container-start">
+		<h1>Basics</h1>
+		<div>
+			Understanding how to navigate in Blender is extremely important to achieving results. While
+			Blender provides a lot of valuable features to achieve stunning 3D objects, scenes,
+			animations, and more, the beginning can be a little tedious since the user should be familiar
+			with a lot of hotkeys and core principals in order to properly move around and achieve
+			something. In this section, some basic information is provided. In combination with the hotkey
+			section one is ready to work on some first projects within Blender.
+		</div>
 	</section>
-	<section class="container-material-properties" style="margin-bottom: 1000px;">
-		<h1>Navigation</h1>
+	<section>
 		{#each BASICS_PART_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}
 			<BasicsPartNavigationSingleComponent
 				title={SINGLE_ENTRY.title}
@@ -53,6 +34,23 @@
 
 <style lang="scss">
 	@import '../../styles/colors.scss';
+
+	h1 {
+		font-size: 50px;
+	}
+
+	.container {
+		&-page {
+			width: 95%;
+			margin-top: 100px;
+		}
+
+		&-start {
+			font-size: 35px;
+			text-align: justify;
+			margin-bottom: 200px;
+		}
+	}
 
 	:global(*) {
 		background-color: var(--main-color);

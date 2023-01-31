@@ -4,7 +4,7 @@
 
 	let visible: boolean = false;
 	let clicked: boolean = false;
-	const text: string = `Blenumentation serves the purpose of being a personal short documentation for some major functions of the 3D software called Blender. While focusing on basic functions as well as shading, for example, sculpting isn't covered since this function area was not of interested for me by the time I created Blenumentation.`;
+	const text: string = `Blenumentation serves the purpose of being a personal, short documentation for some major functions of the 3D software called Blender. While focusing on basic functions as well as shading, for example, sculpting and other Blender features are not covered since these functions were not of interest to me at the time I created Blenumentation.`;
 	const textArr: Array<string> = text.split(' ');
 	let word: string;
 	let x: number;

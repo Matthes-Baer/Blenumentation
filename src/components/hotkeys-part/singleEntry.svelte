@@ -39,8 +39,9 @@
 	on:mouseleave={mouseLeave}
 	on:mousemove={mouseMove}
 	class="row p-2 ms-1 mb-4 mt-4 singleEntry"
+	id={name}
 >
-	<h3 class="col-sm-3" id={name} data-testid="data-entry-name">{name}:</h3>
+	<h3 class="col-sm-3" data-testid="data-entry-name">{name}:</h3>
 	<div class="col-sm-9 row">
 		<div class="col-sm-8 singleEntryDescription" data-testid="data-entry-description">
 			{description}

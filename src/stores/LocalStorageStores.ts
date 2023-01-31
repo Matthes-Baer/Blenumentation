@@ -4,8 +4,11 @@ import type { MaterialsPartAndBasicsPartProgressStoreInterface } from '../utils/
 // First param `preferences` is the local storage key.
 // Second param is the initial value.
 export const basicsPartProgressStore = persisted('basicsPartProgress', {
-	First: false,
-	Second: false
+	SceneCollection: false,
+	TopBarOptions: false,
+	HotkeyImportance: false,
+	Properties: false,
+	Export: false
 } as MaterialsPartAndBasicsPartProgressStoreInterface);
 
 export const materialsPartProgressStore = persisted('materialsPartProgress', {

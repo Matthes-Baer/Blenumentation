@@ -41,7 +41,7 @@
 	}
 
 	.nav-link-element:hover {
-		font-weight: bold;
+		color: var(--secondary-color);
 	}
 
 	/* This way the scroll bar disappears - https://www.geeksforgeeks.org/how-to-change-the-position-of-scrollbar-using-css/ */

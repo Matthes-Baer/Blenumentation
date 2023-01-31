@@ -10,24 +10,7 @@
 
 <main class="container-page mx-auto">
 	<section class="container-start">
-		<button
-			on:click={() => {
-				$materialsPartProgressStore = {
-					ShadingWorkspaceSelection: false,
-					ShadingWorkspace: false,
-					BackgroundHDRImage: false,
-					BackgroundHDRImageChange: false,
-					NodeEditor: false,
-					MaterialOutputNode: false,
-					DiffuseBSDFAndPrincipledBSDF: false,
-					HelpWithConnectingNodes: false,
-					NodeTypes: false,
-					TextureInputs: false,
-					RoughnessMapInput: false,
-					NormalMapInput: false
-				};
-			}}>CLEAR</button
-		>
+		<h1>Materials</h1>
 		<div class="mb-3">
 			Besides the basic navigation and information on how to create objects which mainly can be used
 			for architecture and similar themes, the topic of applying appropriate materials is especially
@@ -42,7 +25,7 @@
 	</section>
 
 	<section class="container-material-properties">
-		<h1>Material Properties</h1>
+		<h1 class="text-center">Material Properties</h1>
 		{#each MATERIALS_PART_MATERIALSPROPERTIES_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}
 			<MaterialsPartMaterialPropertiesSingleComponent
 				title={SINGLE_ENTRY.title}
@@ -52,8 +35,8 @@
 			/>{/each}
 	</section>
 
-	<section class="container-material-properties">
-		<h1>Shading</h1>
+	<section class="container-shading">
+		<h1 class="text-center">Shading</h1>
 		{#each MATERIALS_PART_SHADING_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}
 			<MaterialsPartShadingSingleComponent
 				title={SINGLE_ENTRY.title}
@@ -76,7 +59,6 @@
 
 	h1 {
 		font-size: 50px;
-		text-align: center;
 	}
 
 	.container {
@@ -88,10 +70,11 @@
 		&-start {
 			font-size: 35px;
 			text-align: justify;
-			margin-bottom: 100px;
+			margin-bottom: 200px;
 		}
 
-		&-material-properties {
+		&-material-properties,
+		&-shading {
 			margin-bottom: 100px;
 		}
 	}
