@@ -79,6 +79,14 @@
 		}
 	}
 
+	@media only screen and (max-width: 500px) {
+		.container {
+			&-page {
+				margin-top: 150px;
+			}
+		}
+	}
+
 	:global(*) {
 		background-color: var(--main-color);
 		color: var(--font-color);

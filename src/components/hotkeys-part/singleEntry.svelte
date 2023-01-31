@@ -104,6 +104,10 @@
 		.singleEntryDescription {
 			text-align: center;
 		}
+
+		.singleEntry {
+			border-bottom: 1px solid var(--secondary-color);
+		}
 	}
 
 	// Siehe Youtube-Kurs ca. 20:19:00

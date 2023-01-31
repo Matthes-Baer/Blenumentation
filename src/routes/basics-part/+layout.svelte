@@ -150,6 +150,14 @@
 		}
 	}
 
+	@media only screen and (max-width: 1200px) {
+		.container {
+			&-layout {
+				transform: translateX(-45px);
+			}
+		}
+	}
+
 	@media only screen and (max-width: 400px) {
 		.container {
 			&-layout {
