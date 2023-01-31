@@ -1,8 +1,8 @@
-import type { MaterialsPartDataInterface } from './../../utils/interfaces';
+import type { MaterialsPartAndBasicsPartDataInterface } from './../../utils/interfaces';
 
 //? GGF. Am Ende die ids nochmal anpassen (dürfen nicht identisch sein bei beiden Variablen)
 
-export const MATERIALS_PART_MATERIALSPROPERTIES_DATA: MaterialsPartDataInterface[] = [
+export const MATERIALS_PART_MATERIALSPROPERTIES_DATA: MaterialsPartAndBasicsPartDataInterface[] = [
 	{
 		id: 13,
 		title: 'Material Property View',
@@ -13,7 +13,7 @@ export const MATERIALS_PART_MATERIALSPROPERTIES_DATA: MaterialsPartDataInterface
 	}
 ];
 
-export const MATERIALS_PART_SHADING_DATA: MaterialsPartDataInterface[] = [
+export const MATERIALS_PART_SHADING_DATA: MaterialsPartAndBasicsPartDataInterface[] = [
 	{
 		id: 1,
 		title: 'Shading Workspace Selection',
@@ -110,8 +110,8 @@ export const MATERIALS_PART_SHADING_DATA: MaterialsPartDataInterface[] = [
 	}
 ];
 
-export const materialsPartAllData: () => MaterialsPartDataInterface[] = () => {
-	const combiningArray: MaterialsPartDataInterface[] = [];
+export const materialsPartAllData: () => MaterialsPartAndBasicsPartDataInterface[] = () => {
+	const combiningArray: MaterialsPartAndBasicsPartDataInterface[] = [];
 
 	for (const k of MATERIALS_PART_MATERIALSPROPERTIES_DATA) {
 		combiningArray.push(k);
