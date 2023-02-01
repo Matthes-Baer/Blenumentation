@@ -51,7 +51,13 @@
 	<div class="d-flex justify-content-evenly align-items-center image-description-container">
 		<div class="image-container">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<img class="image" alt={title} src={webp} on:click={() => modalViewHandler(true)} />
+			<img
+				class="image"
+				alt={title}
+				src={webp}
+				on:click={() => modalViewHandler(true)}
+				in:fade|local={{ duration: 500 }}
+			/>
 		</div>
 
 		<div class="text">

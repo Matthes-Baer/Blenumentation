@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	let x: number = 100;
 
@@ -22,7 +23,13 @@
 <nav class="nav-container d-flex justify-content-end align-items-center" style="min-height: {x}px;">
 	<a href="/" class="nav-title">
 		Blenumentation
-		<img src="images/icon-cube.webp" width="41.5px" height="50px" alt="Blenumentation icon" />
+		<img
+			src="images/icon-cube.webp"
+			width="41.5px"
+			height="50px"
+			alt="Blenumentation icon"
+			in:fade|local={{ duration: 500 }}
+		/>
 	</a>
 	<a href="/basics-part" class="nav-element">Basics</a>
 	<a href="/materials-part" class="nav-element">Materials</a>

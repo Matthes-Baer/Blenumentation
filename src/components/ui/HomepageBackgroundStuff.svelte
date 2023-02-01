@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	export let layer: number;
 	export let layersLength: number;
@@ -25,6 +26,7 @@
 		class:rectangle={randomNumber === 2}
 		class:triangle={randomNumber === 3}
 		class:circle={randomNumber === 4}
+		in:fade|local={{ duration: 500 }}
 	/>
 {:else}
 	<div
@@ -35,6 +37,7 @@
 		class:rectangle={randomNumber === 2}
 		class:triangleHalf={randomNumber === 3}
 		class:circle={randomNumber === 4}
+		in:fade|local={{ duration: 500 }}
 	/>
 {/if}
 
