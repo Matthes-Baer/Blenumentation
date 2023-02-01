@@ -53,6 +53,7 @@
 			on:click={() => (visible = !visible)}
 			class="slide-button"
 			aria-label="Open/Close Information Section"
+			data-testid="visible-toggle-button"
 			>{#if visible}
 				<i
 					class="fa-solid fa-lock-open slide-button-icon"
@@ -78,6 +79,7 @@
 				class="slide-input"
 				on:click={clickHandler}
 				on:mouseleave={mouseMoveClickedHandler}
+				data-testid="text-input-container"
 			>
 				{text}
 

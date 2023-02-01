@@ -24,7 +24,7 @@
 		class="description-picture-container"
 		style="flex-direction: {direction === 'start' ? 'row-reverse' : 'row'}"
 	>
-		<p class="description">{description}</p>
+		<p class="description" data-testid="description-container">{description}</p>
 		<a href={link} class="d-flex justify-content-center">
 			<img src={webp} alt="something" />
 		</a>

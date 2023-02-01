@@ -2,7 +2,6 @@
 	import Footer from '../../components/footer.svelte';
 	import { BASICS_PART_DATA } from '../../data/blender/basics-part-data';
 	import BasicsPartNavigationSingleComponent from '../../components/basics-part/basics-part-navigation-single-component.svelte';
-	import { basicsPartProgressStore } from '../../stores/LocalStorageStores';
 </script>
 
 <main class="container-page mx-auto">

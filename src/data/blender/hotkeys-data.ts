@@ -1,62 +1,86 @@
 import type { documentationDataInterface } from '../../helper/interfaces';
 
 const documentationData: documentationDataInterface[] = [
-	{ name: 'Rotate', description: 'Click on the Mesh object', keystroke: 'R' },
-	{ name: 'Grab', description: 'Click on the Mesh object', keystroke: 'G' },
-	{ name: 'Scale', description: 'Click on the Mesh object', keystroke: 'S' },
-	{ name: 'Global Location Reset', description: 'Click on the Mesh object', keystroke: 'Alt + G' },
-	{ name: 'Rotate Reset', description: 'Click on the Mesh object', keystroke: 'Alt + R' },
-	{ name: 'Scale Reset', description: 'Click on the Mesh object', keystroke: 'Alt + S' },
-	{ name: 'Add new Objects', description: 'Click somewhere', keystroke: 'Shift + A' },
+	{
+		name: 'Rotate',
+		description: 'Click on the mesh object to rotate it along its x, y, or z axis.',
+		keystroke: 'R'
+	},
+	{ name: 'Grab', description: 'Click on the mesh object to move it around.', keystroke: 'G' },
+	{ name: 'Scale', description: 'Click on the mesh object to scale it.', keystroke: 'S' },
+	{
+		name: 'Global Location Reset',
+		description: 'Click on the mesh object to reset its position to the global starting point.',
+		keystroke: 'Alt + G'
+	},
+	{
+		name: 'Rotate Reset',
+		description: 'Click on the mesh object to reset its rotation.',
+		keystroke: 'Alt + R'
+	},
+	{
+		name: 'Scale Reset',
+		description: 'Click on the mesh object to reset its scaling.',
+		keystroke: 'Alt + S'
+	},
+	{
+		name: 'Add new Objects',
+		description: 'Add new objects from the list that are available.',
+		keystroke: 'Shift + A'
+	},
 	{
 		name: 'Multi Select',
-		description: 'Click on multiple objects to select them simultaneously',
+		description: 'Click on multiple objects to select them simultaneously.',
 		keystroke: 'Shift'
 	},
 	{
 		name: 'Create a group with objects',
 		description:
-			'Click on multiple objects to group them together. It is important which object gets selected last since this decides where the main axis is for rotating the group, for example',
+			'Click on multiple objects to group them together. It is important which object gets selected last since this determines where the main axis is for rotating the group, for example.',
 		keystroke: 'Strg + J'
 	},
 	{
 		name: 'Add Object to collection',
-		description: 'Click on the object and select the respective collection',
+		description: 'Click on the object and select the respective collection to add it to it.',
 		keystroke: 'M'
 	},
-	{ name: 'Pan View', description: 'Freely move the camera around', keystroke: 'Shift + MMB' },
-	{ name: 'Move view to an object', description: 'Click on an object', keystroke: '.' },
+	{ name: 'Pan View', description: 'Freely move the camera around.', keystroke: 'Shift + MMB' },
+	{
+		name: 'Move view to an object',
+		description: 'Click on an object to change the view of the working camera to it.',
+		keystroke: '.'
+	},
 	{
 		name: 'Switch between different Shading modes',
-		description: 'Switch between "Rendered", "Solid", "Material Preview", and "Wireframe"',
+		description: 'Switch between "Rendered", "Solid", "Material Preview", and "Wireframe".',
 		keystroke: 'Z'
 	},
 	{
 		name: 'Enter Edit Mode',
 		description:
-			'Change edges, vertices and faces of an object. This also helps with not changing the origin point (Pivot point) (for different rotations).',
+			'Change the edges, vertices, and faces of an object. This also helps with not changing the origin point (the pivot point) for different rotations.',
 		keystroke: 'Tab'
 	},
 	{
 		name: 'Receive specific location data for an object',
-		description:
-			'Click on an object and press the corresponding key on the keyboard. It Opens the menu for "Item", "Tool", "View", "Edit"',
+		description: 'Click on an object. It Opens the menu for "Item", "Tool", "View", "Edit".',
 		keystroke: 'N'
 	},
 	{
 		name: 'Loop Select',
-		description: 'Click on an edge, vertex or face with Edit Mode on (Tab)',
+		description: 'Click on an edge, vertex, or face with Edit Mode on (Tab).',
 		keystroke: 'Alt'
 	},
 	{
 		name: 'Shortest Path Selection Tool',
 		description:
-			'Click on an Edge, Vertex or face with Edit Mode on (Tab), then click on another one',
+			'Click on an edge, vertex, or face with Edit Mode on (Tab), then click on another one to create the shortes path between them.',
 		keystroke: 'Strg'
 	},
 	{
 		name: 'Proportional Editing Mode',
-		description: 'Click on the object',
+		description:
+			'Click on the object to enter the corresponding editing mode. Scrolling the mouse wheel will adjust the radius of the circle.',
 		keystroke: 'O'
 	},
 	{
@@ -67,39 +91,52 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Cursor to selected',
 		description:
-			'Adjust the origin point (Pivot point). Especially helpful when being in Edit Mode (Tab), for example to put the origin on an edge.',
+			'Adjust the pivot point (the origin point), when in Edit Mode (Tab), for example, to place the origin on an edge.',
 		keystroke: 'Shift + S'
 	},
 	{
 		name: 'Reset Pivot Point',
-		description: 'Brings back the Pivot point to the starting position.',
+		description: 'Returns the pivot point to the original position.',
 		keystroke: 'Shift + C'
 	},
 	{
 		name: 'Select everything that is linked in Edit Mode',
 		description:
-			'Click on face, edge, vertex while being in Edit Mode (Tab), then use the corresponding keystroke to select the whole object.',
+			'Click on the face, edge, or vertex while in Edit Mode (Tab), then use the corresponding keystroke to select the whole object.',
 		keystroke: 'L'
 	},
-	{ name: 'Extrude', description: 'Click on face, vertex, edge', keystroke: 'E' },
-	{ name: 'Merge', description: 'Select multiple on faces, vertices, edges', keystroke: 'M' },
-	{ name: 'Delete Mode', description: 'Select object (with or without Edit Mode)', keystroke: 'X' },
+	{
+		name: 'Extrude',
+		description:
+			'Click on the face, vertex, or edge to extrude another face, vertex, or edge from it.',
+		keystroke: 'E'
+	},
+	{
+		name: 'Merge',
+		description: 'Select multiple faces, vertices, or edges and merge them together.',
+		keystroke: 'M'
+	},
+	{
+		name: 'Delete Mode',
+		description: 'Select object (with or without Edit Mode) to delete it.',
+		keystroke: 'X'
+	},
 	{
 		name: 'Fill',
 		description:
-			'Selecting two edges/multiple vertices, will fill in the "gap" between. If face is provided, by clicking on the corresponding edge, it will copy it.',
+			'By selecting two edges or multiple vertices, this will fill in the "gap" between them. If the face is provided, by clicking on the corresponding edge, it will copy it.',
 		keystroke: 'F'
 	},
 	{
 		name: 'Join',
 		description:
-			'Similar to Fill but it will divide the face, for example, instead of having a line filled between two vertices and having one face on both sides of that line.',
+			'For example, it will try to join two vertices together and divide respective faces along the way.',
 		keystroke: 'J'
 	},
 	{
 		name: 'Loop Cut',
 		description:
-			'While being in Edit Mode. With scrolling the number of loops are increased/decreased',
+			'Can be used while being in Edit Mode. With scrolling the number of loops is increased/decreased.',
 		keystroke: 'Strg + R'
 	},
 	{
