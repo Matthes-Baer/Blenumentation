@@ -9,7 +9,6 @@
 
 	onMount(() => {
 		randomNumber = Math.floor(Math.random() * layersLength);
-		console.log(randomNumber);
 	});
 </script>
 

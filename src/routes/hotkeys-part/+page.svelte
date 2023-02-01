@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Blender Hotkey Documentation</title>
+	<title>Hotkeys</title>
 </svelte:head>
 
 <main class="mainContainer">

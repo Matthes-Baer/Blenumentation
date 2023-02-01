@@ -8,6 +8,11 @@
 	import MaterialsPartMaterialPropertiesSingleComponent from '../../components/materials-part/materials-part-material-properties-single-component.svelte';
 </script>
 
+<svelte:head>
+	<title>Materials</title>
+	<meta name="description" content="Information covering Material Properties as well as Shading." />
+</svelte:head>
+
 <main class="container-page mx-auto">
 	<section class="container-start">
 		<h1>Materials</h1>
@@ -25,7 +30,7 @@
 	</section>
 
 	<section class="container-material-properties">
-		<h1 class="text-center">Material Properties</h1>
+		<h2 class="text-center">Material Properties</h2>
 		{#each MATERIALS_PART_MATERIALSPROPERTIES_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}
 			<MaterialsPartMaterialPropertiesSingleComponent
 				title={SINGLE_ENTRY.title}
@@ -36,7 +41,7 @@
 	</section>
 
 	<section class="container-shading">
-		<h1 class="text-center">Shading</h1>
+		<h2 class="text-center">Shading</h2>
 		{#each MATERIALS_PART_SHADING_DATA as SINGLE_ENTRY (SINGLE_ENTRY.id)}
 			<MaterialsPartShadingSingleComponent
 				title={SINGLE_ENTRY.title}
@@ -57,7 +62,8 @@
 <style lang="scss">
 	@import '../../styles/colors.scss';
 
-	h1 {
+	h1,
+	h2 {
 		font-size: 50px;
 	}
 

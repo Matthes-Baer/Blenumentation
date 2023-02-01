@@ -12,7 +12,11 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Blenumentation</title>
+	<meta
+		name="description"
+		content="Personal Blender documentation covering basic features, materials, and shading, as well as basic hotkeys."
+	/>
 </svelte:head>
 
 <main class="mx-auto main-container">

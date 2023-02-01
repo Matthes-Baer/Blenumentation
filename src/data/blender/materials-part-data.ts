@@ -5,11 +5,19 @@ import type { MaterialsPartAndBasicsPartDataInterface } from './../../utils/inte
 export const MATERIALS_PART_MATERIALSPROPERTIES_DATA: MaterialsPartAndBasicsPartDataInterface[] = [
 	{
 		id: 13,
-		title: 'Material Property View',
+		title: 'Material Properties View',
 		png: '/images/materials/png/material-properties.png',
 		webp: '/images/materials/webp/material-properties.webp',
 		description:
 			'One way to work with materials is to navigate to the material properties of an object. This can be very useful for getting a quick idea of which base colors and other fundamental properties would work on that specific object. However, the material properties only provide the most basic options. In order to create more distinguished results, the Shading Editor should be opened up.'
+	},
+	{
+		id: 14,
+		title: 'Principled BSDF',
+		png: '/images/materials/png/principled-bsdf.png',
+		webp: '/images/materials/webp/principled-bsdf.webp',
+		description:
+			'The Material Properties view basically consists of the Principled BSDF node, which can also be used in the shading editor. However, there are not any additional nodes attached to it here.'
 	}
 ];
 

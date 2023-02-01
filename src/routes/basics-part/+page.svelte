@@ -4,6 +4,11 @@
 	import BasicsPartNavigationSingleComponent from '../../components/basics-part/basics-part-navigation-single-component.svelte';
 </script>
 
+<svelte:head>
+	<title>Basics</title>
+	<meta name="description" content="Information covering Blender basics." />
+</svelte:head>
+
 <main class="container-page mx-auto">
 	<section class="container-start">
 		<h1>Basics</h1>

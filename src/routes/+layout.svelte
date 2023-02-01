@@ -22,10 +22,7 @@
 <nav class="nav-container d-flex justify-content-end align-items-center" style="min-height: {x}px;">
 	<a href="/" class="nav-title">
 		Blenumentation
-		<picture>
-			<source srcset="images/icon-cube.webp" type="image/webp" width="50px" height="50px" />
-			<img src="images/icon-cube.png" alt="icon cube in navbar" width="50px" height="50px" />
-		</picture>
+		<img src="images/icon-cube.webp" width="41.5px" height="50px" alt="Blenumentation icon" />
 	</a>
 	<a href="/basics-part" class="nav-element">Basics</a>
 	<a href="/materials-part" class="nav-element">Materials</a>
@@ -35,9 +32,6 @@
 <slot />
 
 <style lang="scss">
-	picture {
-		background-color: transparent;
-	}
 	.nav {
 		&-container {
 			width: 100%;
@@ -75,7 +69,6 @@
 	}
 
 	a,
-	source,
 	img {
 		background-color: transparent;
 	}

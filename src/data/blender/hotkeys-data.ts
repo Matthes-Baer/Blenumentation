@@ -63,7 +63,7 @@ const documentationData: documentationDataInterface[] = [
 	},
 	{
 		name: 'Receive specific location data for an object',
-		description: 'Click on an object. It Opens the menu for "Item", "Tool", "View", "Edit".',
+		description: 'This opens the menu for "Item", "Tool", "View", "Edit".',
 		keystroke: 'N'
 	},
 	{
@@ -80,7 +80,7 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Proportional Editing Mode',
 		description:
-			'Click on the object to enter the corresponding editing mode. Scrolling the mouse wheel will adjust the radius of the circle.',
+			'Click on the object to enter the corresponding editing mode. Scrolling the mouse wheel will adjust the radius of the circle for scaling, for example.',
 		keystroke: 'O'
 	},
 	{
@@ -142,18 +142,18 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Subdivide',
 		description:
-			'While being in Edit Mode. Choose Subdivide from the appearing list. Works on edges, multiple vertices and faces.',
+			'While being in Edit Mode: Choose Subdivide from the appearing list. Works on edges, multiple vertices, and faces.',
 		keystroke: 'Right Mouse Button'
 	},
 	{
 		name: 'Bevel',
-		description: 'While being in Edit Mode. Works on edges, multiple vertices and faces.',
+		description: 'While being in Edit Mode: Works on edges, multiple vertices, and faces.',
 		keystroke: 'Strg + B'
 	},
 	{
 		name: 'Inset',
 		description:
-			'While being in Edit Mode. Works on faces. Would also be achievable by using E + S in Edit Mode. This can be applied on the whole object with the individual mode of inset being activated.',
+			'While being in Edit Mode: Works on faces. Would also be achievable by using E + S in Edit Mode. This can be applied on the whole object with the individual mode of inset being activated.',
 		keystroke: 'I'
 	},
 	{
@@ -169,7 +169,7 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Separate',
 		description:
-			'While in Edit Mode the separate function is responsible for unlinking the selected face, for example, from the overall grid that was selected.',
+			'While in Edit Mode the Separate function is responsible for unlinking the selected face, for example, from the overall grid that was selected.',
 		keystroke: 'P'
 	},
 	{
@@ -181,7 +181,7 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Reset Vectors',
 		description:
-			'This is a helpful technique if the shading of an object goes kinda funky as soon as it was edited to smooth, for example (when beveling or modyfing a lot in general).',
+			'This is a helpful technique if the shading of an object goes kind of funky as soon as it is edited to be smooth, for example when beveling or modyfing a lot.',
 		keystroke: 'Alt + N -> Reset Vectors'
 	},
 	{
@@ -193,7 +193,7 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Biset',
 		description:
-			'Basically similar to loop cuts or Knive but with more control to it. Can be found in the menu that pops up.',
+			'Basically similar to loop cuts or Knife but with more control to it. Can be found in the menu that pops up.',
 		keystroke: 'Spacebar + Shift'
 	},
 	{
@@ -204,13 +204,13 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Spin',
 		description:
-			'Gives access to create duplicates in a circle shape. Can be found in the menu that pops up. Also includes the Spin Duplicates function',
+			'Gives access to create duplicates in a circle shape. Can be found in the menu that pops up. Also includes the Spin Duplicates function.',
 		keystroke: 'Spacebar + Shift'
 	},
 	{
 		name: 'Smooth',
 		description:
-			'Flatten angles of selected vertices. Can be found in the menu that pops up. Also includes the Randomize function',
+			'Flatten angles of selected vertices. Can be found in the menu that pops up. Also includes the Randomize function.',
 		keystroke: 'Spacebar + Shift'
 	},
 	{
