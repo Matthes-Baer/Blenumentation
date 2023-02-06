@@ -29,3 +29,9 @@ export interface MaterialsPartAndBasicsPartDataInterface {
 export interface MaterialsPartAndBasicsPartProgressStoreInterface {
 	[key: string]: boolean;
 }
+
+export interface documentationDataInterface {
+	name: string;
+	description: string;
+	keystroke: string;
+}

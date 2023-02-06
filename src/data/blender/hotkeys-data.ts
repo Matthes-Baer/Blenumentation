@@ -1,4 +1,4 @@
-import type { documentationDataInterface } from '../../helper/interfaces';
+import type { documentationDataInterface } from '../../utils/interfaces';
 
 const documentationData: documentationDataInterface[] = [
 	{
