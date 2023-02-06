@@ -4,8 +4,6 @@
 	import { onMount } from 'svelte';
 
 	export let adjustedTitle: string;
-	export let id: number;
-	export let length: number;
 	export let title: string;
 	let shortTitle: string;
 	let borderBottom: string = '1px solid var(--secondary-color)';
@@ -29,7 +27,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
 	class="container-main"
-	style:border-bottom={id !== length ? borderBottom : null}
+	style:border-bottom={title !== 'Normal Map Input' ? borderBottom : null}
 	on:click={$materialsPartProgressStore[adjustedTitle]
 		? () => ($materialsPartProgressStore[adjustedTitle] = false)
 		: null}

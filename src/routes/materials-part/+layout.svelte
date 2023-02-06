@@ -61,8 +61,6 @@
 				<MaterialsPartLayoutProgressTile
 					adjustedTitle={SINGLE_ENTRY.title.replaceAll(' ', '')}
 					title={SINGLE_ENTRY.title}
-					id={SINGLE_ENTRY.id}
-					length={materialsPartAllData().length - 1}
 				/>
 			{/each}
 		</div>
