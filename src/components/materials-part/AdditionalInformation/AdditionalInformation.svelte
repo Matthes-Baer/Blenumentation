@@ -28,6 +28,12 @@
 		h3="Free 3D Textures"
 		text="This website provides access to freely usable 3D textures for Blender."
 	/>
+
+	<SingleTileAdditionalInformation
+		href="https://www.youtube.com/watch?v=Wg244y2f9Fw"
+		h3="Basics of Material Shading (Part 1)"
+		text="This video covers a lot of information about all kinds of nodes within the Shading Editor. It also contains helpful shortcuts as well as a Part 2 that covers PBR textures. If one is getting started with the Shading editor, this is the video to watch."
+	/>
 </section>
 
 <style lang="scss">
