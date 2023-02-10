@@ -40,5 +40,13 @@ export const BASICS_PART_DATA: MaterialsPartAndBasicsPartDataInterface[] = [
 		webp: '/images/basics/webp/export.webp',
 		description:
 			'When exporting objects and scenes to Three.js, one has to make use of .glb or .gltf files. It is also important that all materials have been baked in order to import them successfully into Three.js code.'
+	},
+	{
+		id: 6,
+		title: 'Blender in Threejs',
+		png: '/images/basics/png/blender-in-threejs.png',
+		webp: '/images/basics/webp/blender-in-threejs.webp',
+		description:
+			'When it comes to using Blender files in Three.js, a setup with React Three Fiber is needed. In addition to that, the extension glTF Tools is pretty handy in order to easily convert glb files to gltf or vice versa. It also arrives with a viewer for gltf files to check the files how they look before actually implementing them. Besides that, the extension also allows you to modify the corresponding gltf file. For example, since lights can be added and exported within a blender file, these lights could be adjusted in terms of their intensity, for example, with the help of this extension. The picture shows the main procedure for implementing a blender file. There is also the useGLTF hook from @react-three/drei, which could achieve a similar result. It is also important to mention that I adjusted the canvas to an animated canvas via @react-spring/three to make use of the corresponding library. With specific browser settings, the WebGL does not work as needed for making Three.js work on the respective page (probably hardware acceleration in Chrome). A switch to another browser will help.'
 	}
 ];

@@ -89,7 +89,7 @@
 			left: 0px;
 			z-index: 9001;
 			background-color: transparent;
-			height: 265px;
+			height: 295px;
 			overflow: scroll;
 			overflow-x: hidden;
 			transition: all 0.25s;

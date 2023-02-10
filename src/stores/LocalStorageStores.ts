@@ -8,7 +8,8 @@ export const basicsPartProgressStore = persisted('basicsPartProgress', {
 	TopBarOptions: false,
 	HotkeyImportance: false,
 	Properties: false,
-	Export: false
+	Export: false,
+	BlenderinThreejs: false
 } as MaterialsPartAndBasicsPartProgressStoreInterface);
 
 export const materialsPartProgressStore = persisted('materialsPartProgress', {
