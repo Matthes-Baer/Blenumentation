@@ -222,18 +222,23 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Shear',
 		description:
-			'Shear selected items along the horizontal screen axis. Can be found in the menu that pops up. Also includes the To Sphere function',
+			'Shear selected items along the horizontal screen axis. Can be found in the menu that pops up. Also includes the To Sphere function.',
 		keystroke: 'Spacebar + Shift'
 	},
 	{
 		name: 'Rip Region',
 		description:
-			'Rip polygons and move the result. Use it in Vertex Select. Can be found in the menu that pops up. Also includes the Rip Edge function',
+			'Rip polygons and move the result. Use it in Vertex Select. Can be found in the menu that pops up. Also includes the Rip Edge function.',
 		keystroke: 'Spacebar + Shift'
+	},
+	{
+		name: 'Jump To Active Camera',
+		description: 'Jump into the view of the chosen active camera.',
+		keystroke: 'Strg + Numpad 0'
 	}
 ];
 
-// alphabetical sort function
+//? alphabetical sort function:
 export const sortedDocumentationData = documentationData.sort(
 	(a: documentationDataInterface, b: documentationDataInterface): number => {
 		const upperCaseA = a.name.toUpperCase().split('');
