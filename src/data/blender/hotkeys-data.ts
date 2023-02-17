@@ -240,7 +240,7 @@ const documentationData: documentationDataInterface[] = [
 		name: 'Expand Selected View',
 		description:
 			'Hover over a specific view, for example, the scene collection, in order to expand it. Undo the action with the same hotkey combination.',
-		keystroke: 'Strg + Leertaste'
+		keystroke: 'Strg + Spacebar'
 	}
 ];
 
