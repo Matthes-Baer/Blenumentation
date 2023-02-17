@@ -37,7 +37,7 @@ const documentationData: documentationDataInterface[] = [
 		name: 'Create a group with objects',
 		description:
 			'Click on multiple objects to group them together. It is important which object gets selected last since this determines where the main axis is for rotating the group, for example.',
-		keystroke: 'Strg + J'
+		keystroke: 'Ctrl + J'
 	},
 	{
 		name: 'Add Object to collection',
@@ -75,7 +75,7 @@ const documentationData: documentationDataInterface[] = [
 		name: 'Shortest Path Selection Tool',
 		description:
 			'Click on an edge, vertex, or face with Edit Mode on (Tab), then click on another one to create the shortes path between them.',
-		keystroke: 'Strg'
+		keystroke: 'Ctrl'
 	},
 	{
 		name: 'Proportional Editing Mode',
@@ -137,7 +137,7 @@ const documentationData: documentationDataInterface[] = [
 		name: 'Loop Cut',
 		description:
 			'Can be used while being in Edit Mode. With scrolling the number of loops is increased/decreased.',
-		keystroke: 'Strg + R'
+		keystroke: 'Ctrl + R'
 	},
 	{
 		name: 'Subdivide',
@@ -148,7 +148,7 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Bevel',
 		description: 'While being in Edit Mode: Works on edges, multiple vertices, and faces.',
-		keystroke: 'Strg + B'
+		keystroke: 'Ctrl + B'
 	},
 	{
 		name: 'Inset',
@@ -234,13 +234,13 @@ const documentationData: documentationDataInterface[] = [
 	{
 		name: 'Jump To Active Camera',
 		description: 'Jump into the view of the chosen active camera.',
-		keystroke: 'Strg + Numpad 0'
+		keystroke: 'Ctrl + Numpad 0'
 	},
 	{
 		name: 'Expand Selected View',
 		description:
 			'Hover over a specific view, for example, the scene collection, in order to expand it. Undo the action with the same hotkey combination.',
-		keystroke: 'Strg + Spacebar'
+		keystroke: 'Ctrl + Spacebar'
 	}
 ];
 
