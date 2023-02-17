@@ -235,6 +235,12 @@ const documentationData: documentationDataInterface[] = [
 		name: 'Jump To Active Camera',
 		description: 'Jump into the view of the chosen active camera.',
 		keystroke: 'Strg + Numpad 0'
+	},
+	{
+		name: 'Expand Selected View',
+		description:
+			'Hover over a specific view, for example, the scene collection, in order to expand it. Undo the action with the same hotkey combination.',
+		keystroke: 'Strg + Leertaste'
 	}
 ];
 
