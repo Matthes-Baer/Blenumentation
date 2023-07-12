@@ -105,6 +105,7 @@
 	.text {
 		text-align: justify;
 		width: 75%;
+		white-space: pre-wrap;
 	}
 
 	* {

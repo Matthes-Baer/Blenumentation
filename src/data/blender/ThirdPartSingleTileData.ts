@@ -7,7 +7,7 @@ export const DATA: Array<ThirdPartSingleTileDataInterface> = [
 		png: `/images/blender-basics.PNG`,
 		webp: `/images/blender-basics.webp`,
 		description:
-			'The Basics of Blender cover some crucial information about how to navigate and manage some first actions within this 3D software.',
+			"The Basics of Blender provide essential information on navigating and performing initial actions in this 3D software. This part serves as a foundational guide for users, offering key insights into managing the software's interface and getting started with basic operations.",
 		link: '/basics-part'
 	},
 	{
@@ -16,7 +16,7 @@ export const DATA: Array<ThirdPartSingleTileDataInterface> = [
 		png: '/images/blender-material.PNG',
 		webp: '/images/blender-material.webp',
 		description:
-			'With knowledge about the basics of Blender one is able to move forwared to applying materials. Due to the familiarity to Three.js I am also mentioning the Baking process, for example.',
+			'By acquiring a solid understanding of the fundamentals of Blender, users can progress towards applying materials and exploring advanced features like the Baking process, which is especially beneficial for those familiar with Three.js.',
 		link: '/materials-part'
 	},
 	{
@@ -25,7 +25,7 @@ export const DATA: Array<ThirdPartSingleTileDataInterface> = [
 		png: '/images/blender-hotkeys.PNG',
 		webp: '/images/blender-hotkeys.webp',
 		description:
-			'While general knowledge about basics and materials is gold, it is key to be aware of some important hotkeys within Blender in order to achive a proper working effiency.',
+			'In addition to grasping the basics and materials, it is crucial to be familiar with essential hotkeys within Blender to enhance overall workflow efficiency. Mastering these hotkeys significantly contributes to a smooth and productive working experience.',
 		link: '/hotkeys-part'
 	}
 ];
