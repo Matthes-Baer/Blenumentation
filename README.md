@@ -29,6 +29,6 @@ Throughout the project, my main goal was to gain familiarity with the Svelte fra
 To set up the project locally, follow these steps:
 1. Clone the repository: `git clone https://github.com/Matthes-Baer/Blenumentation.git`
 2. Install dependencies: `npm install`
-3. Start the development server: `npm start`
+3. Start the development server: `npm run dev`
 
 
