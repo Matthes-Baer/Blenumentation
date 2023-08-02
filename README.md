@@ -1,5 +1,5 @@
 # Project: <a href="https://blenumentation.vercel.app/" target="_blank">Blenumentation</a>
-A personal Blender documentation that served the purpose of learning to work with the Svelte Kit framework.
+A personal Blender documentation that served the purpose of learning to work with the Svelte framework.
 
 ## Tech Stack 📚
 <div>
