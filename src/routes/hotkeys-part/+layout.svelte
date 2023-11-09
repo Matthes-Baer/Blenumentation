@@ -16,28 +16,23 @@
 <style lang="scss">
 	.nav-container {
 		width: 15%;
-		height: 75%;
-		padding: 15px;
-		border-right: 1px solid var(--secondary-color);
+		height: 85%;
+		padding: 5px;
 		position: fixed;
-		top: 85px;
+		top: 15%;
 		transition: all 0.1s;
 		overflow-y: scroll;
-		top: 50%;
-		transform: translate(0px, -50%);
-		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
-			0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07),
-			0 32px 64px rgba(0, 0, 0, 0.07);
 	}
 
 	.nav-link-element {
 		text-decoration: none;
 		color: var(--font-color);
-		font-size: 1.5vw;
+		font-size: 1vw;
 		height: 100%;
 		transition: all 0.25s;
-		padding-bottom: 15px;
-		padding-top: 15px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		border-right: 1px solid var(--secondary-color);
 
 		&:not(&:last-of-type) {
 			border-bottom: 1px solid var(--secondary-color);
@@ -57,7 +52,9 @@
 		.nav-container {
 			position: static;
 			margin-top: 125px;
-			width: 100%;
+			width: 95%;
+			margin-left: auto;
+			margin-right: auto;
 			height: 400px;
 			overflow-y: scroll;
 			border-right: none;
@@ -72,6 +69,7 @@
 			transition: all 0.25s;
 			padding-bottom: 15px;
 			padding-top: 15px;
+			border: none;
 		}
 	}
 </style>

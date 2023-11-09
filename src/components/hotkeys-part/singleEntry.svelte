@@ -41,12 +41,12 @@
 	class="row p-2 ms-1 mb-4 mt-4 singleEntry"
 	id={name}
 >
-	<h3 class="col-sm-3" data-testid="data-entry-name">{name}:</h3>
-	<div class="col-sm-9 row">
-		<div class="col-sm-8 singleEntryDescription" data-testid="data-entry-description">
+	<h3 class="col-lg-3" data-testid="data-entry-name">{name}:</h3>
+	<div class="col-lg-9 row">
+		<div class="col-lg-8 singleEntryDescription" data-testid="data-entry-description">
 			{description}
 		</div>
-		<div class="col-sm-4 d-flex singleEntryKeystroke" data-testid="data-entry-keystroke">
+		<div class="col-lg-4 d-flex singleEntryKeystroke" data-testid="data-entry-keystroke">
 			{keystroke}
 		</div>
 	</div>
@@ -77,6 +77,15 @@
 				justify-content: center;
 				text-align: center;
 			}
+
+			&::before {
+				display: block;
+				content: ' ';
+				margin-top: 150px;
+				height: 75px;
+				visibility: hidden;
+				pointer-events: none;
+			}
 		}
 	}
 
@@ -100,7 +109,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 576px) {
+	@media only screen and (max-width: 1200px) {
 		.singleEntryDescription {
 			text-align: center;
 		}
